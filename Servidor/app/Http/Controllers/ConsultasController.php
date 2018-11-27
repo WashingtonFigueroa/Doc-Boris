@@ -56,14 +56,36 @@ class ConsultasController extends Controller
             ->paginate(10);
         return response()->json($consultas, 200);
     }
-
-    public function leer() {
-//        $file = new File(storage_path('app/public/' . 'archivos/IMG_00332.JPG'));
+    /*
+     * Lee nuevos archivos una vez subido a la carpeta archivos dentro de public
+     * */
+    public function leerRadiografias() {
         $files = [];
-        foreach (Storage::disk('public')->files('archivos') as $filename) {
-            Storage::putFile('radiografias', new File(storage_path('app/public/' . $filename)));
+        foreach (Storage::disk('publico')->files('archivos') as $filename) {
+            $name = explode('/', $filename)[1];
+            if(!Storage::exists('radiografias/' . $name)) {
+                Storage::putFileAs('radiografias', new File(public_path($filename)), $name);
+                array_push($files, $filename);
+            }
+        }
+        if(sizeof($files) === 0) {
+            return response()->json([
+                'mensaje' => 'No existen nuevos archivos'
+            ]);
+        } else {
+            return response()->json($files, 200);
+        }
+    }
+
+    public function radiografias() {
+        $files = [];
+        foreach (Storage::files('radiografias') as $filename) {
             array_push($files, $filename);
         }
         return response()->json($files, 200);
+    }
+
+    public function verRadiografia($filename) {
+        return response()->file(storage_path('app/radiografias/' . $filename));
     }
 }

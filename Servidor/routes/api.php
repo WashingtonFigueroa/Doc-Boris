@@ -17,4 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('leer', 'ConsultasController@leer');
+Route::get('leer-radiografias', 'ConsultasController@leerRadiografias');
+Route::get('radiografias', 'ConsultasController@radiografias');
+Route::get('ver-radiografia/{filename}', 'ConsultasController@verRadiografia');
