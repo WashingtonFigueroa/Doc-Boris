@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Consultas;
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ConsultasController extends Controller
 {
@@ -53,5 +55,15 @@ class ConsultasController extends Controller
             ->orWhere('cliente_id', 'like', '%'. $search . '%')
             ->paginate(10);
         return response()->json($consultas, 200);
+    }
+
+    public function leer() {
+//        $file = new File(storage_path('app/public/' . 'archivos/IMG_00332.JPG'));
+        $files = [];
+        foreach (Storage::disk('public')->files('archivos') as $filename) {
+            Storage::putFile('radiografias', new File(storage_path('app/public/' . $filename)));
+            array_push($files, $filename);
+        }
+        return response()->json($files, 200);
     }
 }
