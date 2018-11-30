@@ -1,12 +1,14 @@
 <div class="login-page" [@routerTransition]>
     <div class="row justify-content-md-center">
         <div class="col-md-4">
-            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
-            <h1>SB Admin BS4 Angular5</h1>
+            <img class="user-avatar" src="assets/images/logo1.png" width="150px" />
+            <h1><span class="spl1">Nordent RX</span>
+                <span class="spl2">Radiografía y Tomografía Dental</span>
+            </h1>
             <form role="form">
                 <div class="form-content">
                     <div class="form-group">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Full Name">
+                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Nombre completo">
                     </div>
 
                     <div class="form-group">
@@ -14,14 +16,14 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Password">
+                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Contraseña">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Repeat Password">
+                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Repetir contraseña">
                     </div>
                 </div>
-                <a class="btn rounded-btn" [routerLink]="['/dashboard']"> Register </a>&nbsp;
-                <a class="btn rounded-btn" [routerLink]="['/login']"> Log in </a>
+                <a class="btn rounded-btn" [routerLink]="['/dashboard']"> Registrar </a>&nbsp;
+                <a class="btn rounded-btn" [routerLink]="['/login']">Iniciar Sesión</a>
             </form>
         </div>
     </div>

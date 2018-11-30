@@ -1,4 +1,4 @@
-$topnav-background-color: #222;
+$topnav-background-color: #69a1c6;
 :host {
     display: block;
 }
@@ -44,6 +44,7 @@ $topnav-background-color: #222;
         font-size: 18px;
         line-height: 40px;
         padding: 0 25px;
+        margin-bottom: 15px;
     }
     .rounded-btn:hover,
     .rounded-btn:focus,
@@ -61,6 +62,13 @@ $topnav-background-color: #222;
         font-size: 36px;
         small {
             color: rgba(255, 255, 255, 0.7);
+        }
+        span.spl1 {
+        display: block;
+        }
+        span.spl2 {
+        display: block;
+        font-size: 41%
         }
     }
 
@@ -85,7 +93,7 @@ $topnav-background-color: #222;
         }
     }
     .form-content {
-        padding: 40px 0;
+        padding: 30px 0;
     }
     .user-avatar {
         -webkit-border-radius: 50%;

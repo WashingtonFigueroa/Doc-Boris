@@ -14,13 +14,13 @@ export class DashboardComponent implements OnInit {
     constructor() {
         this.sliders.push(
             {
-                imagePath: 'assets/images/slider1.jpg',
-                label: 'First slide label',
+                imagePath: 'assets/images/nordent.jpg',
+                label: 'Nordent RX',
                 text:
-                    'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+                    'Radiografía y Tomografía Dental'
             },
             {
-                imagePath: 'assets/images/slider2.jpg',
+                imagePath: 'assets/images/slider1.jpg',
                 label: 'Second slide label',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
