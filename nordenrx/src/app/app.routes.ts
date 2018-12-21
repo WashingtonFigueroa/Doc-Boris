@@ -1,5 +1,5 @@
 import {RouterModule, Routes} from '@angular/router';
-import {ConsultasComponent, ContactosComponent, NosotrosComponent} from './components/rutas';
+import {NosotrosComponent, ConsultasComponent, ContactosComponent} from './components/rutas';
 
 const app_routes: Routes = [
     {path: '', component: NosotrosComponent},
