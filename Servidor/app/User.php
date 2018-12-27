@@ -5,13 +5,10 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
     use Notifiable;
-    use SoftDeletes;
-    protected $primaryKey = 'usuario_id';
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'tipo_usuario_id', 'nombres', 'cuenta', 'password',
+        'name', 'email', 'password',
     ];
 
     /**
@@ -30,8 +27,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function tipoUsuario() {
-        return $this->belongsTo(Tipousuario::class, 'tipo_usuario_id');
-    }
 }

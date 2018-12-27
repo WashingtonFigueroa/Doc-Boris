@@ -6,6 +6,8 @@ use App\Consultas;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 
 class ConsultasController extends Controller
 {
@@ -64,6 +66,17 @@ class ConsultasController extends Controller
         foreach (Storage::disk('publico')->files('archivos') as $filename) {
             $name = explode('/', $filename)[1];
             if(!Storage::exists('radiografias/' . $name)) {
+
+                $client = new Client();
+                $result = $client->post('http://localhost:8080/api/upload', [
+                    'multipart' => [
+                        [
+                            'name' => 'archivo',
+                            'contents' => new File(public_path($filename)),
+                            'filename' => $name
+                        ]
+                    ]
+                ]);
                 Storage::putFileAs('radiografias', new File(public_path($filename)), $name);
                 array_push($files, $filename);
             }

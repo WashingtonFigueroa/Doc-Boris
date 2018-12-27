@@ -2,6 +2,10 @@ import {RouterModule, Routes} from '@angular/router';
 import {NosotrosComponent, ConsultasComponent, ContactosComponent, LoginComponent} from './components/rutas';
 
 const app_routes: Routes = [
+    {
+      path: 'admin',
+      loadChildren: './admin/admin.module#AdminModule'
+    },
     {path: '', component: NosotrosComponent},
     {path: 'consultas', component: ConsultasComponent},
     {path: 'contactos', component: ContactosComponent},
