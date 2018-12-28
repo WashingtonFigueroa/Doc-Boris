@@ -38,7 +38,7 @@ class Kernel extends ConsoleKernel
                         'multipart' => [
                             [
                                 'name' => 'archivo',
-                                'contents' => new File(public_path($filename)),
+                                'contents' => fopen(public_path($filename), 'r'),
                                 'filename' => $name
                             ]
                         ]

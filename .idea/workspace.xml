@@ -2,129 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595c7e26-8189-4e83-8430-2045099d99a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/aplicacion.vbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Cliente.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Console/Commands/LeerRadiografias.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Consultas.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/ClienteController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/ConsultasController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/PrivilegioController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/TipousuarioController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/UsuarioController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Middleware/Cors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Privilegio.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Doc-Boris.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Doc-Boris.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12faa5b5-4f32-4b80-b263-eca587521c34.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Servidor/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Tipousuario.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/bootstrap/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Servidor/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/cache.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Servidor/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Servidor/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/hashing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/jwt.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/database/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/migrations/2013_09_12_223334_create_tipousuarios_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/migrations/2014_10_12_33333_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/migrations/2018_10_12_223525_create_privilegios_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/migrations/2018_10_12_223538_create_clientes_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/migrations/2018_10_12_223550_create_consultas_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/DISEÑO ORGANIZACIONAL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/Direccion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/IMG_00332.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/IMG_0044 2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/IMG_0049.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/IMG_0072.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/Rebeca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/factura.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/fondo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/logo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/materias.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/quantixSoft.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/archivos/quantixSoftware2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/public/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Servidor/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/routes/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/run.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/storage/framework/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/storage/framework/testing/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/storage/framework/views/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/storage/logs/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/webpack.mix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/local/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/app/Http/Controllers/ConsultasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/local/app/Http/Controllers/ConsultasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/local/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/local/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/DISEÑO ORGANIZACIONAL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/Direccion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/Doc.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/IMG_00332.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/IMG_0044 2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/IMG_0049.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/IMG_0072.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/factura.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/fondo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/fondo2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/logo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/materias.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/quantixSoft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/quantixSoftware2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/public/archivos/token with firebase.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/admin-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/admin-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +48,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/Servidor/composer.json</pharConfigPath>
   </component>
   <component name="DatabaseView">
@@ -149,12 +65,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="boris@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="boris@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="servidor: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="servidor: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="radiografias: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -163,8 +92,12 @@
     <session id="353104109">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -172,48 +105,91 @@
           <entry key="SCHEMA:boris" value="3" />
           <entry key="clientes" value="1" />
           <entry key="consultas" value="2" />
-          <entry key="env" value="1" />
-          <entry key="html" value="3" />
+          <entry key="css" value="6" />
+          <entry key="env" value="2" />
+          <entry key="html" value="17" />
+          <entry key="jpg" value="2" />
+          <entry key="json" value="2" />
           <entry key="migrations" value="1" />
           <entry key="password_resets" value="1" />
-          <entry key="php" value="48" />
-          <entry key="png" value="1" />
+          <entry key="php" value="127" />
+          <entry key="png" value="5" />
           <entry key="privilegios" value="1" />
-          <entry key="sql" value="1" />
-          <entry key="ts" value="12" />
+          <entry key="radiografias" value="4" />
+          <entry key="sql" value="12" />
+          <entry key="ts" value="33" />
           <entry key="usuarios" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="1" />
-          <entry key="Database Element" value="7" />
-          <entry key="HTML" value="3" />
-          <entry key="Image" value="1" />
-          <entry key="PHP" value="48" />
-          <entry key="Scratch" value="1" />
-          <entry key="TypeScript" value="12" />
+          <entry key=".env file" value="2" />
+          <entry key="CSS" value="6" />
+          <entry key="Database Element" value="11" />
+          <entry key="HTML" value="17" />
+          <entry key="Image" value="7" />
+          <entry key="JSON" value="2" />
+          <entry key="PHP" value="127" />
+          <entry key="Scratch" value="12" />
+          <entry key="TypeScript" value="33" />
           <entry key="UML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="1" />
-          <entry key="TsLintLanguageService" value="1" />
+          <entry key="Angular2LanguageService" value="3" />
+          <entry key="TsLintLanguageService" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="572" />
-          <entry key="ts" value="65" />
-          <entry key="txt" value="7" />
+          <entry key="css" value="70" />
+          <entry key="env" value="12" />
+          <entry key="html" value="311" />
+          <entry key="php" value="1649" />
+          <entry key="sql" value="12" />
+          <entry key="ts" value="535" />
+          <entry key="txt" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="572" />
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="TypeScript" value="65" />
+          <entry key=".env file" value="12" />
+          <entry key="CSS" value="70" />
+          <entry key="HTML" value="311" />
+          <entry key="PHP" value="1649" />
+          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="Scratch" value="12" />
+          <entry key="TypeScript" value="535" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="741820669">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="108" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="108" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="10" />
         </counts>
       </usages-collector>
     </session>
@@ -221,18 +197,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/local/app/Console/Kernel.php">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#31#76#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="483">
+              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>timezon</find>
+      <find>timezone</find>
+      <find>check</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -241,12 +221,34 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/nordenrx/src/app/app.routes.ts" />
-        <option value="$PROJECT_DIR$/local/routes/api.php" />
         <option value="$PROJECT_DIR$/local/config/filesystems.php" />
-        <option value="$PROJECT_DIR$/local/app/Http/Controllers/ConsultasController.php" />
+        <option value="$PROJECT_DIR$/servidor/.env" />
+        <option value="$PROJECT_DIR$/servidor/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/local/config/database.php" />
+        <option value="$PROJECT_DIR$/servidor/config/database.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/785685c0-fd74-42cd-8221-919326a2f536/console.sql" />
         <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" />
+        <option value="$PROJECT_DIR$/servidor/app/Radiografia.php" />
+        <option value="$PROJECT_DIR$/servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/admin-routing.module.ts" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts" />
+        <option value="$PROJECT_DIR$/local/config/app.php" />
+        <option value="$PROJECT_DIR$/servidor/config/app.php" />
+        <option value="$PROJECT_DIR$/local/routes/api.php" />
+        <option value="$PROJECT_DIR$/local/app/Http/Controllers/ConsultasController.php" />
         <option value="$PROJECT_DIR$/servidor/routes/api.php" />
+        <option value="$PROJECT_DIR$/../servidor/config/filesystems.php" />
+        <option value="$PROJECT_DIR$/../servidor/app/Http/Controllers/RadiografiaController.php" />
+        <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/RadiografiaController.php" />
         <option value="$PROJECT_DIR$/local/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/nordenrx/src/environments/environment.prod.ts" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts" />
+        <option value="$PROJECT_DIR$/servidor/app/Http/Middleware/Cors.php" />
+        <option value="$PROJECT_DIR$/local/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/servidor/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.css" />
       </list>
     </option>
   </component>
@@ -1507,18 +1509,32 @@
       <path value="$PROJECT_DIR$/Servidor/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/Servidor/vendor/jakub-onderka/php-console-highlighter" />
       <path value="$PROJECT_DIR$/Servidor/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/servidor/vendor/laravel/nexmo-notification-channel" />
+      <path value="$PROJECT_DIR$/servidor/vendor/laravel/slack-notification-channel" />
+      <path value="$PROJECT_DIR$/servidor/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/servidor/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/servidor/vendor/symfony/contracts" />
+      <path value="$PROJECT_DIR$/servidor/vendor/php-http/guzzle6-adapter" />
+      <path value="$PROJECT_DIR$/servidor/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/servidor/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/servidor/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/servidor/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/servidor/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/servidor/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/servidor/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/servidor/vendor/nexmo/client" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1529,51 +1545,88 @@
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="radiografias" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="radiografia" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
               <item name="servidor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
+              <item name="servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
+              <item name="servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
+              <item name="servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/app/Console/Kernel.php&#10;schedule&#9;null&#9;null&#10;api&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/routes/api.php&#10;upload&#9;null&#9;null&#10;cliente&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/database/migrations/2018_10_12_223538_create_clientes_table.php&#10;files&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/config/filesystems.php&#10;schedul&#9;null&#9;null&#10;filesys&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/config/filesystems.php&#10;storage&#9;null&#9;null&#10;consultacontro&#9;null&#9;null&#10;.env&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/.env&#10;api.php&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/routes/api.php&#10;app.mo&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/app/app.module.ts&#10;app.compo&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/app/app.component.html&#10;index&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/index.html" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/app/admin/radiografia/radiografia.component.css&#10;kernel.php&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/app/Http/Kernel.php&#10;cors&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/app/Http/Middleware/Cors.php&#10;kernel.&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/app/Http/Kernel.php&#10;cors.php&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/app/Http/Middleware/Cors.php&#10;cors.&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/app/Http/Middleware/Cors.php&#10;servi&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/app/admin/radiografia/radiografia.service.ts&#10;enviro&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/environments/environment.prod.ts&#10;api.php&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/routes/api.php&#10;app/console/kernel&#9;null&#9;null&#10;kern&#9;null&#9;null&#10;schedule&#9;null&#9;null&#10;files&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/config/filesystems.php&#10;.&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/config/filesystems.php&#10;file&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/config/filesystems.php&#10;radio&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/app/Http/Controllers/RadiografiaController.php&#10;api&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/routes/api.php&#10;consulta&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/app/Http/Controllers/ConsultasController.php&#10;composer.json&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/composer.json&#10;filesystem.&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/config/filesystems.php&#10;filesystem&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/config/filesystems.php&#10;Consul&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/app/Http/Controllers/ConsultasController.php&#10;radiogra&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/app/Http/Controllers/RadiografiaController.php&#10;api.&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/routes/api.php&#10;app.php&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/config/app.php&#10;radiograf&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/app/Http/Controllers/RadiografiaController.php&#10;radiografiac&#9;null&#9;null&#10;pi.php&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/routes/api.php&#10;radiografiacontro&#9;null&#9;null&#10;con&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/app/Http/Controllers/ConsultasController.php&#10;upload&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/app/Http/Controllers/UploadController.php&#10;consul&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/app/Http/Controllers/ConsultasController.php&#10;radiografias&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php&#10;database.php&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/config/database.php&#10;appservi&#9;null&#9;null&#10;.env&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/.env&#10;uplo&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/servidor/app/Http/Controllers/UploadController.php&#10;radiografi&#9;null&#9;null&#10;cliente&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/database/migrations/2018_10_12_223538_create_clientes_table.php&#10;schedul&#9;null&#9;null&#10;filesys&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/local/config/filesystems.php&#10;storage&#9;null&#9;null&#10;consultacontro&#9;null&#9;null&#10;app.mo&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/app/app.module.ts&#10;app.compo&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/app/app.component.html&#10;index&#9;FILE&#9;file://C:/Users/HP User/Documents/trabajos/washington/Doc-Boris/nordenrx/src/index.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="C:\Users\HP User\Documents\trabajos\washington\Doc-Boris\nordenrx\node_modules\tslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="ts.external.directory.path" value="C:\Users\HP User\Documents\trabajos\washington\Doc-Boris\nordenrx\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP User\Documents\trabajos\washington\Doc-Boris\nordenrx\src\app\admin\radiografia" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1597,24 +1650,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545880086458</updated>
-      <workItem from="1545880091176" duration="10072000" />
+      <workItem from="1545880091176" duration="12438000" />
+      <workItem from="1545946545004" duration="8413000" />
+      <workItem from="1545959558476" duration="762000" />
+      <workItem from="1545960947080" duration="1947000" />
+      <workItem from="1545967599707" duration="3404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10072000" />
+    <option name="totallyTimeSpent" value="26964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24963397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3272328" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32991204" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1622,10 +1678,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.4692082" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.4882698" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1644,230 +1701,157 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/components/rutas.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/components/nosotros/nosotros.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/components/consultas/consultas.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/components/header/header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/admin-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.spec.ts">
+    <entry file="file://$PROJECT_DIR$/../local/storage/app/radiografias/materias.png" />
+    <entry file="file://$PROJECT_DIR$/../local/storage/app/radiografias/logo2.png" />
+    <entry file="file://$PROJECT_DIR$/../local/storage/app/radiografias/logo1.png" />
+    <entry file="file://$PROJECT_DIR$/../local/storage/app/radiografias/fondo2.jpg" />
+    <entry file="file://$PROJECT_DIR$/../local/storage/app/radiografias/fondo.jpg" />
+    <entry file="file://$PROJECT_DIR$/../servidor/.env" />
+    <entry file="file://$PROJECT_DIR$/../servidor/app/Providers/AppServiceProvider.php" />
+    <entry file="file://$PROJECT_DIR$/../local/config/database.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/config/database.php" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/380a5f47-080a-4e52-854b-f4520e29de4a/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/app.module.ts">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5b0ea43c-d51e-4116-ba3a-cb657defc27f/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../servidor/database/migrations/2014_10_12_000000_create_users_table.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/app/Http/Controllers/UploadController.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/app/Radiografia.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/app/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/app/app.routes.ts" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/app/admin/admin-routing.module.ts" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/app/components/contactos/contactos.component.html" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/app/components/consultas/consultas.component.html" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/app/admin/radiografia/radiografia.component.html" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/app/admin/admin.module.ts" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/environments/environment.prod.ts" />
+    <entry file="file://$PROJECT_DIR$/../nordenrx/src/app/admin/radiografia/radiografia.service.ts" />
+    <entry file="das://785685c0-fd74-42cd-8221-919326a2f536/schema/servidor/table/radiografias" />
+    <entry file="file://$PROJECT_DIR$/../local/config/app.php" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/785685c0-fd74-42cd-8221-919326a2f536/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/.env">
+    <entry file="file://$PROJECT_DIR$/../servidor/config/app.php" />
+    <entry file="file://$PROJECT_DIR$/../local/routes/api.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/composer.json" />
+    <entry file="file://$PROJECT_DIR$/../local/composer.json" />
+    <entry file="file://$PROJECT_DIR$/../local/app/Http/Controllers/ConsultasController.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/config/filesystems.php" />
+    <entry file="file://$PROJECT_DIR$/../local/config/filesystems.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/routes/api.php" />
+    <entry file="file://$PROJECT_DIR$/../servidor/app/Http/Controllers/RadiografiaController.php" />
+    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/RadiografiaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <caret line="79" column="40" lean-forward="true" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/12faa5b5-4f32-4b80-b263-eca587521c34/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://12faa5b5-4f32-4b80-b263-eca587521c34/schema/boris/table/clientes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://12faa5b5-4f32-4b80-b263-eca587521c34/schema/boris/table/migrations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://12faa5b5-4f32-4b80-b263-eca587521c34/schema/boris/table/password_resets">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://12faa5b5-4f32-4b80-b263-eca587521c34/schema/boris/table/privilegios">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://12faa5b5-4f32-4b80-b263-eca587521c34/schema/boris/table/usuarios">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://12faa5b5-4f32-4b80-b263-eca587521c34/schema/boris/table/consultas">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/vendor/laravel/framework/src/Illuminate/Support/Facades/Storage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/config/filesystems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/database/migrations/2018_10_12_223538_create_clientes_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="uml://DATABASE/12faa5b5-4f32-4b80-b263-eca587521c34.SCHEMA:boris">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>12faa5b5-4f32-4b80-b263-eca587521c34.SCHEMA:boris</OriginalElement>
-          <nodes>
-            <node x="269.0" y="0.0">12faa5b5-4f32-4b80-b263-eca587521c34.TABLE:boris.privilegios</node>
-            <node x="0.0" y="480.0">12faa5b5-4f32-4b80-b263-eca587521c34.TABLE:boris.consultas</node>
-            <node x="475.0" y="480.0">12faa5b5-4f32-4b80-b263-eca587521c34.TABLE:boris.password_resets</node>
-            <node x="0.0" y="0.0">12faa5b5-4f32-4b80-b263-eca587521c34.TABLE:boris.usuarios</node>
-            <node x="269.0" y="251.0">12faa5b5-4f32-4b80-b263-eca587521c34.TABLE:boris.clientes</node>
-            <node x="255.0" y="480.0">12faa5b5-4f32-4b80-b263-eca587521c34.TABLE:boris.migrations</node>
-            <node x="0.0" y="251.0">12faa5b5-4f32-4b80-b263-eca587521c34.TABLE:boris.tipousuarios</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.9590643274853801" x="323.5" y="332.0" />
-          <SelectedNodes>
-            <node>12faa5b5-4f32-4b80-b263-eca587521c34.TABLE:boris.privilegios</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/storage/app/radiografias/token with firebase.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/local/vendor/laravel/framework/src/Illuminate/Console/Scheduling/Schedule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/app/Http/Controllers/ConsultasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="469">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="495">
+          <caret line="41" column="51" lean-forward="true" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
-            <element signature="e#31#76#0#PHP" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/environments/environment.prod.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/app/Http/Middleware/Cors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Middleware/Cors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
         </state>
       </provider>
     </entry>

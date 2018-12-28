@@ -1,0 +1,39 @@
+<!-- start banner Area -->
+<section class="banner-area relative about-banner" id="home">
+  <div class="overlay overlay-bg"></div>
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="about-content col-lg-12">
+        <h1 class="text-white">
+          Radiografias
+        </h1>
+        <p class="text-white link-nav"><a routerLink="/">Seleccionar radiografias</a>  <span class="lnr lnr-arrow-right"></span> Asignarlos</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End banner Area -->
+
+<!-- Start contact-page Area -->
+<section class="contact-page-area section-gap">
+  <div class="container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4"
+             *ngFor="let radiografia of radiografias">
+          <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <img class="card-img-top img" src="{{img}}{{radiografia.nombre}}" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title text-center">{{radiografia.created_at | date: 'd/M/y H:m:s'}}</h4>
+<!--            <p class="card-text">text</p>
+            <a href="#" class="btn btn-primary">button</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End contact-page Area -->

@@ -99,6 +99,10 @@ class ConsultasController extends Controller
     }
 
     public function verRadiografia($filename) {
+/*        return response()->json([
+            'response' => $filename,
+            'storage_path' => storage_path('app/radiografias/' . $filename)
+        ], 200);*/
         return response()->file(storage_path('app/radiografias/' . $filename));
     }
 }

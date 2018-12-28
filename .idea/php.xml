@@ -79,12 +79,26 @@
       <path value="$PROJECT_DIR$/Servidor/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/Servidor/vendor/jakub-onderka/php-console-highlighter" />
       <path value="$PROJECT_DIR$/Servidor/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/servidor/vendor/laravel/nexmo-notification-channel" />
+      <path value="$PROJECT_DIR$/servidor/vendor/laravel/slack-notification-channel" />
+      <path value="$PROJECT_DIR$/servidor/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/servidor/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/servidor/vendor/symfony/contracts" />
+      <path value="$PROJECT_DIR$/servidor/vendor/php-http/guzzle6-adapter" />
+      <path value="$PROJECT_DIR$/servidor/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/servidor/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/servidor/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/servidor/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/servidor/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/servidor/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/servidor/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/servidor/vendor/nexmo/client" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
   <component name="PhpUnit">
     <phpunit_settings>
-      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/Servidor/vendor/autoload.php" />
+      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/servidor/vendor/autoload.php" />
     </phpunit_settings>
   </component>
 </project>

@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "nordenrx"
+  "defaultProject": "nordenrx",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

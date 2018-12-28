@@ -18,3 +18,6 @@ use Illuminate\Http\Request;
 });*/
 
 Route::post('upload', 'UploadController@upload');
+Route::get('no-asignadas', 'RadiografiaController@noAsignadas');
+Route::get('radiografia/{filename}',
+            'RadiografiaController@radiografia');
