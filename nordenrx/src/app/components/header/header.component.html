@@ -1,29 +1,13 @@
-<header id="header" id="home">
-  <div class="header-top">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
-          <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>
-        </div>
-        <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
-          <a class="btns">+593 99 439 4807</a>
-          <a class="btns">info@nordentrx.com</a>
-        </div>
-      </div>
-    </div>
+<nav class="banner">
+  <div class="banner__logo-box">
+    <a href="/"><img src="/assets/img/logo.png" alt="Logo" class="banner__logo" width="150px"></a>
   </div>
-  <div class="container main-menu">
-    <div class="row align-items-center justify-content-between d-flex">
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li routerLinkActive="/"><a routerLink="about">Sobre Nosotros</a></li>
-          <li routerLinkActive="consultas"><a routerLink="consultas">Consultas</a></li>
-          <li routerLinkActive="contactos"><a routerLink="contactos">Contactos</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-      <div>
-        <a routerLink="login" style="color: #f7f7f7">Iniciar Sesion&nbsp;&nbsp;&nbsp;</a>
-      </div>
-    </div>
+  <ul class="navegacion">
+    <li routerLinkActive="/"><a routerLink="about">Sobre Nosotros</a></li>
+    <li routerLinkActive="consultas"><a routerLink="consultas">Consultas</a></li>
+    <li routerLinkActive="contactos"><a routerLink="contactos">Contactos</a></li>
+  </ul>
+  <div id="btnbtn" class="boton">
+    <a class="btn-login" routerLink="login">Iniciar Sesión &nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i></a>
   </div>
-</header><!-- #header -->
+</nav>
