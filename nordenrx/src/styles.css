@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-pagination {
+  background-color: #007bff;
+  color: whitesmoke;
+  border: none;
+  padding: .5em 1em;
+  transition: .2s ease;
+}
+.btn-pagination:hover,
+.btn-pagination:focus {
+  cursor: pointer;
+  background-color: #0053aa;
+}
+.btn-pagination[disabled] {
+  background-color: lightgrey;
+  color: #1b1e21;
+  cursor: not-allowed;
+}
+.btn {
+  margin-left: 1em;
+}

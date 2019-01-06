@@ -1,0 +1,63 @@
+<h3>
+  Listar Clientes
+</h3>
+<section class="contact-page-area section-gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <button
+          routerLink="/admin/clientes/crear"
+          class="btn btn-primary">Crear Cliente</button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive" *ngIf="paginacion !== null">
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th>N.</th>
+              <th>Nombres</th>
+              <th>Cedula</th>
+              <th>Fecha de Nacimiento</th>
+              <th>Celular</th>
+              <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cliente of paginacion.data; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ cliente.nombres }}</td>
+              <td>{{ cliente.cedula }}</td>
+              <td>{{ cliente.fecha_nacimiento | date: 'd/M/y' }}</td>
+              <td>{{ cliente.celular }}</td>
+              <td>
+                <button
+                  routerLink="/admin/clientes/editar/{{cliente.cliente_id}}"
+                  class="btn btn-xs btn-info">
+                  <i class="fa fa-pencil-square-o"></i>
+                </button>
+                <button
+                  (click)="destroy(cliente, i)"
+                  class="btn btn-xs btn-danger">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div *ngIf="paginacion !== null && paginacion.last_page > 1">
+          <button class="btn-pagination" [disabled]="paginacion.first_page_url === null" (click)="go(paginacion.first_page_url)">Primero</button>
+          <button class="btn-pagination" [disabled]="paginacion.prev_page_url === null" (click)="go(paginacion.prev_page_url)">&laquo;</button>
+          <button class="btn-pagination"
+            (click)="go(page.url)"
+            *ngFor="let page of pages">{{ page.page }}</button>
+          <button class="btn-pagination" [disabled]="paginacion.next_page_url === null" (click)="go(paginacion.next_page_url)">&raquo;</button>
+          <button class="btn-pagination" [disabled]="paginacion.last_page_url === null" (click)="go(paginacion.last_page_url)">Último</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
