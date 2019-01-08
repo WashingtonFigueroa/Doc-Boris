@@ -32,14 +32,14 @@ export class LoginComponent implements OnInit {
         this.loginService.login(this.loginGroup.value)
             .subscribe((res: any) => {
                 if (res.autenticado) {
-                    this.toastr.success('Ingresando al sistema');
+                    this.toastr.success('BIENVENIDO');
                     console.log('sistema');
                     localStorage.setItem('token', res.token);
                     this.router.navigate(['contactos']);
                 }
             }, (error) => {
-                this.toastr.error('Credenciales invalidas', 'Error de autenticacion');
                 console.log('error');
+                this.toastr.error('Credenciales invalidas', 'Error de autenticacion');
                 this.loginGroup.reset();
             });
     }
