@@ -18,6 +18,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { ToastrModule } from 'ngx-toastr';
 import {AdminModule} from './admin/admin.module';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import {AdminModule} from './admin/admin.module';
       AdminModule,
       ReactiveFormsModule,
       FormsModule,
+      BrowserAnimationsModule,
+      NoopAnimationsModule,
       ToastrModule.forRoot()
   ],
   providers: [

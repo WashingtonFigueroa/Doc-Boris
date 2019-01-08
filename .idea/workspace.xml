@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595c7e26-8189-4e83-8430-2045099d99a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Doc-Boris.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7aab9286-cd20-44f3-a2a9-ece42a49e975.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eba9b920-4f7f-4edd-a4e0-03f5bd365679.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nordenrx/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +129,7 @@
           <entry key="html" value="2366" />
           <entry key="php" value="2492" />
           <entry key="sql" value="12" />
-          <entry key="ts" value="3199" />
+          <entry key="ts" value="3217" />
           <entry key="txt" value="53" />
         </counts>
       </usages-collector>
@@ -159,7 +142,7 @@
           <entry key="PHP" value="2492" />
           <entry key="PLAIN_TEXT" value="53" />
           <entry key="Scratch" value="12" />
-          <entry key="TypeScript" value="3199" />
+          <entry key="TypeScript" value="3217" />
         </counts>
       </usages-collector>
     </session>
@@ -198,8 +181,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nordenrx/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="396">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="e#167#214#0" expanded="true" />
               </folding>
@@ -481,12 +464,12 @@
       <workItem from="1546649405358" duration="37000" />
       <workItem from="1546783453566" duration="13714000" />
       <workItem from="1546861547574" duration="2471000" />
-      <workItem from="1546953862816" duration="1140000" />
+      <workItem from="1546953862816" duration="1435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49657000" />
+    <option name="totallyTimeSpent" value="49952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -848,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="396">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#167#214#0" expanded="true" />
           </folding>
