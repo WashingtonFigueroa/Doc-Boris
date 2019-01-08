@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595c7e26-8189-4e83-8430-2045099d99a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/components/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/components/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/components/header/header.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/components/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/components/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/components/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/components/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/components/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/assets/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,6 +188,7 @@
           <entry key="css" value="2" />
           <entry key="html" value="4" />
           <entry key="json" value="1" />
+          <entry key="php" value="3" />
           <entry key="ts" value="3" />
         </counts>
       </usages-collector>
@@ -205,6 +197,7 @@
           <entry key="CSS" value="2" />
           <entry key="HTML" value="4" />
           <entry key="JSON" value="1" />
+          <entry key="PHP" value="3" />
           <entry key="TypeScript" value="3" />
         </counts>
       </usages-collector>
@@ -218,6 +211,7 @@
           <entry key="css" value="21" />
           <entry key="html" value="23" />
           <entry key="json" value="2" />
+          <entry key="php" value="105" />
           <entry key="ts" value="30" />
         </counts>
       </usages-collector>
@@ -226,6 +220,7 @@
           <entry key="CSS" value="21" />
           <entry key="HTML" value="23" />
           <entry key="JSON" value="2" />
+          <entry key="PHP" value="105" />
           <entry key="TypeScript" value="30" />
         </counts>
       </usages-collector>
@@ -233,11 +228,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/components/footer/footer.component.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Servidor/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="25" selection-start-line="25" selection-end-line="28" selection-end-column="75" />
+            <state>
+              <folding>
+                <element signature="e#40#85#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Servidor/app/Http/Controllers/UsuarioController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="30" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Servidor/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="20" column="57" lean-forward="true" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -262,7 +280,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/nordenrx/src/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/local/config/filesystems.php" />
         <option value="$PROJECT_DIR$/servidor/.env" />
         <option value="$PROJECT_DIR$/servidor/app/Providers/AppServiceProvider.php" />
@@ -312,6 +329,8 @@
         <option value="$PROJECT_DIR$/nordenrx/src/app/components/header/header.component.css" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/components/login/login.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/components/footer/footer.component.html" />
+        <option value="$PROJECT_DIR$/Servidor/app/Http/Controllers/UsuarioController.php" />
+        <option value="$PROJECT_DIR$/Servidor/routes/api.php" />
       </list>
     </option>
   </component>
@@ -426,7 +445,7 @@
       <path value="$PROJECT_DIR$/servidor/vendor/nexmo/client" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1540" />
     <option name="height" value="865" />
   </component>
@@ -447,37 +466,7 @@
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="footer" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -540,12 +529,12 @@
       <workItem from="1546783453566" duration="13714000" />
       <workItem from="1546861547574" duration="2471000" />
       <workItem from="1546953862816" duration="1435000" />
-      <workItem from="1546957144398" duration="4127000" />
+      <workItem from="1546957144398" duration="6873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54714000" />
+    <option name="totallyTimeSpent" value="57460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -560,7 +549,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2579425" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31013617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -576,7 +565,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.21124361" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.37478706" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.4882698" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -596,20 +585,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/app/Http/Middleware/Cors.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -758,13 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="6" lean-forward="true" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -957,8 +925,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/components/footer/footer.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="25" selection-start-line="25" selection-end-line="28" selection-end-column="75" />
+        <state relative-caret-position="162">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#40#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/app/Http/Controllers/UsuarioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="20" column="57" lean-forward="true" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
         </state>
       </provider>
     </entry>

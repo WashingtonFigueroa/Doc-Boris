@@ -19,9 +19,10 @@ use Illuminate\Http\Request;
 //login
 Route::post('login', 'AuthenticationController@login');
 Route::post('logout', 'AuthenticationController@logout');
-
-
-
+//usuario
+Route::resource('usuarios', 'UsuarioController');
+Route::resource('listaUsuarios', 'UsuarioController@listaUsers');
+//sistema
 Route::post('upload', 'UploadController@upload');
 Route::get('no-asignadas', 'RadiografiaController@noAsignadas');
 Route::get('radiografia/{filename}',
