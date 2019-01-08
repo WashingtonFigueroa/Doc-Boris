@@ -10,6 +10,13 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ConsultasComponent } from './components/consultas/consultas.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { LoginComponent } from './components/login/login.component';
+import {LoginService} from "./components/login/login.service";
+import {CommonModule} from "@angular/common";
+import {HttpClientModule} from "../../node_modules/@angular/common/http";
+import {AdminRoutingModule} from "./admin/admin-routing.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -23,9 +30,17 @@ import { LoginComponent } from './components/login/login.component';
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+      CommonModule,
+      HttpClientModule,
+      AdminRoutingModule,
+      ReactiveFormsModule,
+      FormsModule,
+      ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+      LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
