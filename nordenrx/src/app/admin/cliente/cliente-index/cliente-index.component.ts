@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ClienteService} from '../cliente.service';
 import {environment} from '../../../../environments/environment.prod';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-cliente-index',
@@ -12,7 +13,10 @@ export class ClienteIndexComponent implements OnInit {
   base = environment.base;
   paginacion: any = null;
   pages: any = [];
-  constructor(private clienteService: ClienteService) {
+  buscarGroup: FormGroup;
+  constructor(private clienteService: ClienteService,
+              private fb: FormBuilder) {
+    this.createForm();
     this.clienteService.index()
       .subscribe((res: any) => {
         this.paginacion = res;
@@ -21,6 +25,12 @@ export class ClienteIndexComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  createForm() {
+    this.buscarGroup = this.fb.group({
+      'valor' : new FormControl()
+    });
   }
 
   loadPages() {
@@ -40,6 +50,10 @@ export class ClienteIndexComponent implements OnInit {
         this.loadPages();
       });
   }
+
+  buscar() {
+  }
+
   destroy(cliente, index) {
     if (confirm('Esta seguro de eliminar a ' + cliente.nombres + '?')) {
       this.clienteService.destroy(cliente.cliente_id)
