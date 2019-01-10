@@ -17,23 +17,59 @@
 <!-- Start contact-page Area -->
 <section class="contact-page-area section-gap">
   <div class="container">
-    <div class="container-fluid">
-      <div class="text-right">
-        <button class="btn btn-primary">Asociar a consulta</button>
+    <div *ngIf="!asociado" class="container-fluid">
+      <div class="row">
+        <div class="col-8">
+          <span class="text-info">*Seleccione una radiografia</span>
+        </div>
+        <div class="col-4 text-right">
+          <button
+            (click)="asociado = true"
+            class="btn btn-primary">Asociar a consulta</button>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-4"
-             *ngFor="let radiografia of radiografias">
+             *ngFor="let radiografia of radiografias; let i = index">
           <label class="container">
-            <input type="checkbox">
+            <input type="checkbox"
+                   [checked]="radiografia.checked"
+                   [disabled]="imagen !== null && radiografia.checked === false"
+                   (change)="updateImagen(radiografia, i)">
             <span class="checkmark"></span>
           </label>
-          <img class="card-img-top img" src="{{img}}{{radiografia.nombre}}" alt="Card image cap">
+          <img class="card-img-top img" src="{{img}}{{radiografia.data.nombre}}" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title text-center">{{radiografia.created_at | date: 'd/M/y H:m:s'}}</h4>
+            <h4 class="card-title text-center">{{radiografia.data.created_at | date: 'd/M/y H:m:s'}}</h4>
 <!--            <p class="card-text">text</p>
             <a href="#" class="btn btn-primary">button</a>-->
           </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="asociado" class="container-fluid">
+      <div class="row">
+        <div class="offset-8 col-4">
+          <form>
+            <legend>Consulta</legend>
+            <section class="form-group">
+              <label for="">Cliente</label>
+              <select name="" id="" class="form-control">
+                <option value="" *ngFor="let cliente of clientes">
+                  {{ cliente.nombres }}
+                </option>
+              </select>
+            </section>
+            <section class="form-group">
+              <label for="">Numero de Factura</label>
+              <input type="text" class="form-control">
+            </section>
+            <section class="form-group">
+              <img src="{{img}}{{imagen.nombre}}" class="img">
+            </section>
+            <button class="btn btn-danger" (click)="asociado = false">Cancelar</button>
+            <button class="btn btn-primary">Guardar</button>
+          </form>
         </div>
       </div>
     </div>

@@ -52,6 +52,12 @@ export class ClienteIndexComponent implements OnInit {
   }
 
   buscar() {
+    const valor = this.buscarGroup.value.valor;
+    this.clienteService.buscar(valor)
+      .subscribe((res: any) => {
+        this.paginacion = res;
+        this.loadPages();
+      });
   }
 
   destroy(cliente, index) {

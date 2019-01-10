@@ -19,6 +19,22 @@ class ClienteController extends Controller
         return response()->json($clientes, 200);
     }
 
+    public function listar() {
+        return response()->json(Cliente::orderBy('nombres')->get(), 200);
+    }
+    public function buscar($valor = null) {
+        if ($valor === null) {
+            $clientes = Cliente::orderBy('nombres')->paginate(10);
+        } else {
+            $clientes = Cliente::where('nombres', 'like', '%' . $valor . '%')
+                ->orWhere('cedula', 'like', '%' . $valor . '%')
+                ->orWhere('celular', 'like', '%' . $valor . '%')
+                ->orderBy('nombres')
+                ->paginate(10);
+        }
+        return response()->json($clientes, 200);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

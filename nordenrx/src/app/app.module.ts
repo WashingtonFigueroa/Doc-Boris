@@ -35,7 +35,6 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-b
     app_routing,
       CommonModule,
       HttpClientModule,
-      AdminModule,
       ReactiveFormsModule,
       FormsModule,
       BrowserAnimationsModule,

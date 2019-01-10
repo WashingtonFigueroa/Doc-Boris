@@ -31,3 +31,6 @@ Route::apiResources([
     'clientes' => 'API\ClienteController',
     'consultas' => 'API\ConsultaController',
 ]);
+
+Route::get('buscar-clientes/{valor?}', 'API\ClienteController@buscar');
+Route::get('listar-clientes', 'API\ClienteController@listar');

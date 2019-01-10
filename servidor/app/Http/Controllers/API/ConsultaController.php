@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Consulta;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,10 @@ class ConsultaController extends Controller
      */
     public function index()
     {
-        //
+        $consultas = Consulta::join('clientes', 'clientes.cliente_id', '=', 'consultas.cliente_id')
+                                ->orderBy('numero_factura')
+                                ->paginate(10);
+        return response()->json($consultas, 200);
     }
 
     /**
@@ -25,7 +29,8 @@ class ConsultaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $consulta = Consulta::create($request->all());
+        return response()->json($consulta, 201);
     }
 
     /**
@@ -36,7 +41,7 @@ class ConsultaController extends Controller
      */
     public function show($id)
     {
-        //
+        return response()->json(Consulta::find($id), 200);
     }
 
     /**
@@ -48,7 +53,9 @@ class ConsultaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $consulta = Consulta::find($id);
+        $consulta->update($request->all());
+        return response()->json($consulta, 200);
     }
 
     /**
@@ -59,6 +66,8 @@ class ConsultaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $consulta = Consulta::find($id);
+        $consulta->delete();
+        return response()->json($consulta, 200);
     }
 }

@@ -21,9 +21,6 @@ import {ClienteService} from './cliente/cliente.service';
     FormsModule,
   ],
   declarations: [RadiografiaComponent, ClienteComponent, ClienteIndexComponent, ClienteCreateComponent, ClienteEditComponent],
-  exports: [
-    RadiografiaComponent
-  ],
   providers: [RadiografiaService, ClienteService]
 })
 export class AdminModule { }

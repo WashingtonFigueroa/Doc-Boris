@@ -13,6 +13,9 @@ export class ClienteService {
   index() {
     return this.http.get(this.base + 'clientes');
   }
+  listar() {
+    return this.http.get(this.base + 'listar-clientes');
+  }
   show(cliente_id) {
     return this.http.get(this.base + 'clientes/' + cliente_id);
   }
@@ -27,5 +30,8 @@ export class ClienteService {
   }
   go(url: string) {
     return this.http.get(url);
+  }
+  buscar(valor: string) {
+    return this.http.get(this.base + 'buscar-clientes/' + valor);
   }
 }
