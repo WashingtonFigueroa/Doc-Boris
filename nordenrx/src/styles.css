@@ -16,7 +16,7 @@
   color: #1b1e21;
   cursor: not-allowed;
 }
-.btn {
+.btn{
   margin-left: 1em;
 }
 .form-right {
@@ -25,7 +25,7 @@
 /*customized styles*/
 .header-title {
   box-sizing: border-box;
-  padding: 1em 0.7em;
+  padding: 1em 0em;
 }
 .admin-container-card {
   margin-top: 1em;
@@ -49,9 +49,32 @@
   border-radius: 3px;
 }
 /*buttons*/
-a.btn-danger-link {
+.btn-danger-link, .btn-danger-link:hover {
   border: 1px solid gray;
+  color: gray;
   border-radius: 3px;
   cursor: pointer;
   padding: .5em 1em;
+}
+.btn-create {
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: whitesmoke;
+  padding: .5em 4em .5em 1em;
+}
+.btn-create:hover {
+  background-color: #0053aa;
+  color: whitesmoke;
+}
+.btn-create:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+/*table*/
+.table thead {
+  background-color: #007bff;
+  color: whitesmoke;
 }

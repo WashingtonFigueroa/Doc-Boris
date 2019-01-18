@@ -20,14 +20,14 @@
   <br><br>
   <div *ngIf="!asociado" class="container">
     <div class="row">
-      <div class="col-8">
-        <span class="text-info">*Seleccione una radiografia</span>
-      </div>
-      <div class="col-4 text-right">
+      <div class="col-4">
         <button
           [disabled]="imagen === null"
           (click)="asociado = true"
-          class="btn btn-primary">Asociar a consulta</button>
+          class="btn-create"><i class="fa fa-check"></i> Asociar a consulta</button>
+      </div>
+      <div class="col-8 text-right">
+        <span class="text-info">*Seleccione una radiografia</span>
       </div>
     </div>
     <div class="admin-container-card">
@@ -53,32 +53,36 @@
         <img src="{{img}}{{imagen.nombre}}" class="img">
       </div>
       <div class="col-4">
-        <form (submit)="save()" [formGroup]="consultaGroup">
-          <legend>Consulta</legend>
-          <section class="form-group">
-            <label for="cliente_id">Cliente</label>
-            <select name="cliente_id"
-                    id="cliente_id"
-                    formControlName="cliente_id"
-                    class="form-control">
-              <option [value]="cliente.cliente_id" *ngFor="let cliente of clientes">
-                {{ cliente.nombres }}
-              </option>
-            </select>
-          </section>
-          <section class="form-group">
-            <label for="numero_factura">Numero de Factura</label>
-            <input type="text"
-                   id="numero_factura"
-                   class="form-control"
-                   formControlName="numero_factura"
-                   name="numero_factura">
-          </section>
-          <section class="text-right">
-            <a class="btn-danger-link" (click)="asociado = false">Cancelar</a>
-            <button class="btn btn-primary">Guardar</button>
-          </section>
-        </form>
+        <div class="card">
+          <div class="card-body">
+            <form (submit)="save()" [formGroup]="consultaGroup">
+              <legend>Consulta</legend>
+              <section class="form-group">
+                <label for="cliente_id">Cliente</label>
+                <select name="cliente_id"
+                        id="cliente_id"
+                        formControlName="cliente_id"
+                        class="form-control">
+                  <option [value]="cliente.cliente_id" *ngFor="let cliente of clientes">
+                    {{ cliente.nombres }}
+                  </option>
+                </select>
+              </section>
+              <section class="form-group">
+                <label for="numero_factura">Numero de Factura</label>
+                <input type="text"
+                       id="numero_factura"
+                       class="form-control"
+                       formControlName="numero_factura"
+                       name="numero_factura">
+              </section>
+              <section class="text-right">
+                <a class="btn-danger-link" (click)="asociado = false">Cancelar</a>
+                <button class="btn btn-primary">Guardar</button>
+              </section>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
