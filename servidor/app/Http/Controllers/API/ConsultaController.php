@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Consulta;
+use App\Radiografia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -29,7 +30,15 @@ class ConsultaController extends Controller
      */
     public function store(Request $request)
     {
+        $radiografia_id = $request->input('radiografia_id');
+        $consulta = null;
         $consulta = Consulta::create($request->all());
+        if ($consulta !== null) {
+            $radiografia = Radiografia::find($radiografia_id);
+            $radiografia->asignado = true;
+            $radiografia->consulta_id = $consulta->consulta_id;
+            $radiografia->save();
+        }
         return response()->json($consulta, 201);
     }
 

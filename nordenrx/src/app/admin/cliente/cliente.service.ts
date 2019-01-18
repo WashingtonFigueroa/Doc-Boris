@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ClienteService {
 
-  base = environment.base;
+  base = environment.servidor;
   constructor(private http: HttpClient) { }
 
   index() {

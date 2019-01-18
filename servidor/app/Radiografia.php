@@ -12,6 +12,7 @@ class Radiografia extends Model
         'archivo',
         'nombre',
         'asignado',
+        'consulta_id',
     ];
 
 }

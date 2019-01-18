@@ -11,6 +11,12 @@ import { ClienteCreateComponent } from './cliente/cliente-create/cliente-create.
 import { ClienteEditComponent } from './cliente/cliente-edit/cliente-edit.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ClienteService} from './cliente/cliente.service';
+import { ConsultaComponent } from './consulta/consulta.component';
+import { ConsultaCreateComponent } from './consulta/consulta-create/consulta-create.component';
+import { ConsultaEditComponent } from './consulta/consulta-edit/consulta-edit.component';
+import { ConsultaIndexComponent } from './consulta/consulta-index/consulta-index.component';
+import {ConsultaService} from './consulta/consulta.service';
+import { AdminComponent } from './admin.component';
 
 @NgModule({
   imports: [
@@ -20,7 +26,7 @@ import {ClienteService} from './cliente/cliente.service';
     ReactiveFormsModule,
     FormsModule,
   ],
-  declarations: [RadiografiaComponent, ClienteComponent, ClienteIndexComponent, ClienteCreateComponent, ClienteEditComponent],
-  providers: [RadiografiaService, ClienteService]
+  declarations: [RadiografiaComponent, ClienteComponent, ClienteIndexComponent, ClienteCreateComponent, ClienteEditComponent, ConsultaComponent, ConsultaCreateComponent, ConsultaEditComponent, ConsultaIndexComponent, AdminComponent],
+  providers: [RadiografiaService, ClienteService, ConsultaService]
 })
 export class AdminModule { }

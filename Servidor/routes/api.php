@@ -24,13 +24,14 @@ Route::resource('usuarios', 'UsuarioController');
 Route::resource('listaUsuarios', 'UsuarioController@listaUsers');
 //sistema
 Route::post('upload', 'UploadController@upload');
-Route::get('no-asignadas', 'RadiografiaController@noAsignadas');
+Route::get('radiografias-no-asignadas', 'RadiografiaController@noAsignadas');
 Route::get('radiografia/{filename}',
             'RadiografiaController@radiografia');
+/*APIs de recursos*/
 Route::apiResources([
     'clientes' => 'API\ClienteController',
     'consultas' => 'API\ConsultaController',
 ]);
-
+/*Clientes*/
 Route::get('buscar-clientes/{valor?}', 'API\ClienteController@buscar');
 Route::get('listar-clientes', 'API\ClienteController@listar');

@@ -29,12 +29,13 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->call(function () {
+            $servidor = 'http://localhost:8000/api/';
             $files = [];
             foreach (Storage::disk('publico')->files('archivos') as $filename) {
                 $name = explode('/', $filename)[1];
                 if(!Storage::exists('radiografias/' . $name)) {
                     $client = new Client();
-                    $result = $client->post('http://localhost:8080/api/upload', [
+                    $result = $client->post($servidor . 'upload', [
                         'multipart' => [
                             [
                                 'name' => 'archivo',

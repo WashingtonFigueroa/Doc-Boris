@@ -10,7 +10,7 @@ import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 })
 export class ClienteIndexComponent implements OnInit {
 
-  base = environment.base;
+  base = environment.servidor;
   paginacion: any = null;
   pages: any = [];
   buscarGroup: FormGroup;

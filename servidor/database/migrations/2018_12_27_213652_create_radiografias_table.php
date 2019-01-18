@@ -18,6 +18,7 @@ class CreateRadiografiasTable extends Migration
             $table->string('archivo');
             $table->string('nombre');
             $table->boolean('asignado')->default(false);
+            $table->integer('consulta_id')->unsigned()->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
