@@ -1,0 +1,22 @@
+$primary: #007bff;
+$primary-dark: #005dc0;
+.admin-nav {
+  background-color: $primary;
+  text-align: right;
+}
+.admin-nav a.nav-link {
+  color: whitesmoke;
+  margin-left: auto;
+}
+.admin-nav .space {
+  flex: 1 auto;
+}
+.admin-nav .active {
+  background-color: $primary-dark;
+}
+.dropdown-menu {
+  left: -200px;
+}
+.dropdown-item {
+  font-size: .8em;
+}
