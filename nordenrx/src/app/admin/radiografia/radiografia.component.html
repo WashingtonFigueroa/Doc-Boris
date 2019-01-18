@@ -1,5 +1,6 @@
-<!-- start banner Area -->
-<!--<section class="banner-area relative about-banner" id="home">
+<!--
+ start banner Area
+<section class="banner-area relative about-banner" id="home">
   <div class="overlay overlay-bg"></div>
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
@@ -11,77 +12,74 @@
       </div>
     </div>
   </div>
-</section>-->
-<!-- End banner Area -->
+</section>
+ End banner Area
+-->
 
-<!-- Start contact-page Area -->
-<section class="contact-page-area section-gap">
-  <div class="container">
-    <div *ngIf="!asociado" class="container-fluid">
-      <div class="row">
-        <div class="col-8">
-          <span class="text-info">*Seleccione una radiografia</span>
-        </div>
-        <div class="col-4 text-right">
-          <button
-            (click)="asociado = true"
-            class="btn btn-primary">Asociar a consulta</button>
-        </div>
+<div class="container">
+  <br><br>
+  <div *ngIf="!asociado" class="container">
+    <div class="row">
+      <div class="col-8">
+        <span class="text-info">*Seleccione una radiografia</span>
       </div>
-      <div class="row">
-        <div class="col-md-4"
-             *ngFor="let radiografia of radiografias; let i = index">
-          <label class="container">
-            <input type="checkbox"
-                   [checked]="radiografia.checked"
-                   [disabled]="imagen !== null && radiografia.checked === false"
-                   (change)="updateImagen(radiografia, i)">
-            <span class="checkmark"></span>
-          </label>
-          <img class="card-img-top img" src="{{img}}{{radiografia.data.nombre}}" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">{{radiografia.data.created_at | date: 'd/M/y H:m:s'}}</h4>
-<!--            <p class="card-text">text</p>
-            <a href="#" class="btn btn-primary">button</a>-->
-          </div>
-        </div>
+      <div class="col-4 text-right">
+        <button
+          [disabled]="imagen === null"
+          (click)="asociado = true"
+          class="btn btn-primary">Asociar a consulta</button>
       </div>
     </div>
-    <div *ngIf="asociado" class="container-fluid">
-      <div class="row">
-        <div class="col-8">
-          <img src="{{img}}{{imagen.nombre}}" class="img">
-        </div>
-        <div class="col-4">
-          <form (submit)="save()" [formGroup]="consultaGroup">
-            <legend>Consulta</legend>
-            <section class="form-group">
-              <label for="cliente_id">Cliente</label>
-              <select name="cliente_id"
-                      id="cliente_id"
-                      formControlName="cliente_id"
-                      class="form-control">
-                <option [value]="cliente.cliente_id" *ngFor="let cliente of clientes">
-                  {{ cliente.nombres }}
-                </option>
-              </select>
-            </section>
-            <section class="form-group">
-              <label for="numero_factura">Numero de Factura</label>
-              <input type="text"
-                     id="numero_factura"
-                     class="form-control"
-                     formControlName="numero_factura"
-                     name="numero_factura">
-            </section>
-            <section class="text-right">
-              <a class="btn btn-danger" (click)="asociado = false">Cancelar</a>
-              <button class="btn btn-primary">Guardar</button>
-            </section>
-          </form>
+    <div class="admin-container-card">
+      <div class="admin-card"
+           *ngFor="let radiografia of radiografias; let i = index">
+        <label class="container">
+          <input type="checkbox"
+                 [checked]="radiografia.checked"
+                 [disabled]="imagen !== null && radiografia.checked === false"
+                 (change)="updateImagen(radiografia, i)">
+          <span class="checkmark"></span>
+        </label>
+        <img class="img" src="{{img}}{{radiografia.data.nombre}}">
+        <div class="card-body text-right">
+          <span class="timestamp">{{radiografia.data.created_at | date: 'dd/MM/y HH:mm:ss'}}</span>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- End contact-page Area -->
+  <div *ngIf="asociado" class="container-fluid">
+    <div class="row">
+      <div class="col-8">
+        <img src="{{img}}{{imagen.nombre}}" class="img">
+      </div>
+      <div class="col-4">
+        <form (submit)="save()" [formGroup]="consultaGroup">
+          <legend>Consulta</legend>
+          <section class="form-group">
+            <label for="cliente_id">Cliente</label>
+            <select name="cliente_id"
+                    id="cliente_id"
+                    formControlName="cliente_id"
+                    class="form-control">
+              <option [value]="cliente.cliente_id" *ngFor="let cliente of clientes">
+                {{ cliente.nombres }}
+              </option>
+            </select>
+          </section>
+          <section class="form-group">
+            <label for="numero_factura">Numero de Factura</label>
+            <input type="text"
+                   id="numero_factura"
+                   class="form-control"
+                   formControlName="numero_factura"
+                   name="numero_factura">
+          </section>
+          <section class="text-right">
+            <a class="btn-danger-link" (click)="asociado = false">Cancelar</a>
+            <button class="btn btn-primary">Guardar</button>
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
