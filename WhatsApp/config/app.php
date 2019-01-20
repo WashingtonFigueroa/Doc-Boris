@@ -1,4 +1,4 @@
-<?php
+-<?php
 
 return [
 
@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        NotificationChannels\ChatAPI\ChatAPIServiceProvider::class,
 
         /*
          * Application Service Providers...

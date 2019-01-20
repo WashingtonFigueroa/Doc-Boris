@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ca7343889332c2b8ecca11c251430c",
+    "content-hash": "88eae4df1f7b5b9fc09731a3bbbaccf4",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2605,7 +2605,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -3103,6 +3103,53 @@
                 "environment"
             ],
             "time": "2018-10-30T17:29:25+00:00"
+        },
+        {
+            "name": "wilsonglasser/laravel-chatapi-whatsapp",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wilsonglasser/laravel-chatapi-whatsapp.git",
+                "reference": "c27ece4e999e0f2e2a8efffffdaf7e879a5a54fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wilsonglasser/laravel-chatapi-whatsapp/zipball/c27ece4e999e0f2e2a8efffffdaf7e879a5a54fa",
+                "reference": "c27ece4e999e0f2e2a8efffffdaf7e879a5a54fa",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.2",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "illuminate/notifications": "^5.3",
+                "illuminate/support": "^5.1|^5.2|^5.3",
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NotificationChannels\\ChatAPI\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wilson Glasser",
+                    "email": "wilsonglasser@gmail.com",
+                    "homepage": "https://github.com/wilsonglasser/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Send WhatsApp messages with Chat API",
+            "homepage": "https://github.com/wilsonglasser/laravel-chatapi-whatsapp",
+            "time": "2018-11-05T06:11:27+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
