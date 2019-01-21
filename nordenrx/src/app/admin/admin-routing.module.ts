@@ -41,7 +41,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'clientes',
+        redirectTo: 'radiografias',
         pathMatch: 'full'
       }
     ]

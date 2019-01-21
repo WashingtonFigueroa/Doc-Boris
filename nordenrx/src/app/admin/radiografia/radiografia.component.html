@@ -50,7 +50,7 @@
   <div *ngIf="asociado" class="container-fluid">
     <div class="row">
       <div class="col-8">
-        <img src="{{img}}{{imagen.nombre}}" class="img">
+        <img src="{{img}}{{imagen.nombre}}" class="img" style="height: 500px">
       </div>
       <div class="col-4">
         <div class="card">
@@ -58,27 +58,67 @@
             <form (submit)="save()" [formGroup]="consultaGroup">
               <legend>Consulta</legend>
               <section class="form-group">
-                <label for="cliente_id">Cliente</label>
-                <select name="cliente_id"
-                        id="cliente_id"
-                        formControlName="cliente_id"
-                        class="form-control">
-                  <option [value]="cliente.cliente_id" *ngFor="let cliente of clientes">
-                    {{ cliente.nombres }}
-                  </option>
-                </select>
-              </section>
-              <section class="form-group">
-                <label for="numero_factura">Numero de Factura</label>
+                <label>Numero de Factura</label>
                 <input type="text"
-                       id="numero_factura"
                        class="form-control"
                        formControlName="numero_factura"
                        name="numero_factura">
+
+                <!--<label for="cliente_id">Cliente</label>-->
+                <!--<select name="cliente_id"-->
+                        <!--id="cliente_id"-->
+                        <!--formControlName="cliente_id"-->
+                        <!--class="form-control">-->
+                  <!--<option [value]="cliente.cliente_id" *ngFor="let cliente of clientes">-->
+                    <!--{{ cliente.nombres }}-->
+                  <!--</option>-->
+                <!--</select>-->
+
+                <label for="tipo_doc">Tipo Documento</label>
+                <select name="tipo_doc"
+                        id="tipo_doc"
+                        formControlName="tipo_doc"
+                        class="form-control">
+                  <option> Cedula </option>
+                  <option> Ruc </option>
+                  <option> Pasaporte </option>
+                </select>
+
+                <label>Docuemento</label>
+                <input type="text"
+                       class="form-control"
+                       formControlName="documento"
+                       name="documento">
+
+                <label>Razon Social</label>
+                <input type="text"
+                       class="form-control"
+                       formControlName="razonsocial"
+                       name="razonsocial">
+
+                <label>Dirección</label>
+                <input type="text"
+                       class="form-control"
+                       formControlName="direccion"
+                       name="direccion">
+
+                <label>Fecha Nacimiento</label>
+                <input type="date"
+                       class="form-control"
+                       formControlName="fecha"
+                       name="fecha">
+
+                <label>Valor</label>
+                <input type="number"
+                       class="form-control"
+                       formControlName="Valor"
+                       name="Valor">
+
+
               </section>
               <section class="text-right">
                 <a class="btn-danger-link" (click)="asociado = false">Cancelar</a>
-                <button class="btn btn-primary">Guardar</button>
+                <button class="btn btn-primary">Guardar Datos</button>
               </section>
             </form>
           </div>

@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
                     this.toastr.success('BIENVENIDO');
                     console.log('sistema');
                     localStorage.setItem('token', res.token);
-                    this.router.navigate(['/admin/clientes']);
+                    this.router.navigate(['/admin/radiografias']);
                 }
             }, (error) => {
                 console.log('error');
