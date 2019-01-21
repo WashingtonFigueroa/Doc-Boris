@@ -10,6 +10,10 @@ export class ConsultaService {
   base = environment.servidor;
   constructor(private http: HttpClient) { }
 
+  index() {
+    return this.http.get(this.base + 'consultas');
+  }
+
   store(request) {
     return this.http.post(this.base + 'consultas', request);
   }

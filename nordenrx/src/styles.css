@@ -59,6 +59,8 @@
 .btn-create {
   border: none;
   cursor: pointer;
+  min-width: 220px;
+  text-align: left;
   background-color: #007bff;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -77,4 +79,9 @@
 .table thead {
   background-color: #007bff;
   color: whitesmoke;
+}
+/*imagenes*/
+.img-radiografia {
+  width: 150px;
+  height: 80px;
 }

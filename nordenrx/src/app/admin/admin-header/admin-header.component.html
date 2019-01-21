@@ -14,7 +14,8 @@
   <li class="nav-item">
     <a routerLink="/admin/radiografias"
        class="nav-link"
-       [class.active]="router.url === '/admin/radiografias'">Radiografías</a>
+       [class.active]="router.url === '/admin/radiografias' ||
+       router.url === '/admin/consultas/listar'">Radiografías</a>
   </li>
 <!--  <li class="nav-item">
     <a href="#tab5Id" class="nav-link" [class.active]="router.url === '/admin/radiografias'">Tomografias</a>

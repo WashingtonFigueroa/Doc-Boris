@@ -6,6 +6,8 @@ import {ClienteIndexComponent} from './cliente/cliente-index/cliente-index.compo
 import {ClienteCreateComponent} from './cliente/cliente-create/cliente-create.component';
 import {ClienteEditComponent} from './cliente/cliente-edit/cliente-edit.component';
 import {AdminComponent} from './admin.component';
+import {ConsultaIndexComponent} from './consulta/consulta-index/consulta-index.component';
+import {ConsultaComponent} from './consulta/consulta.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,21 @@ const routes: Routes = [
       {
         path: 'radiografias',
         component: RadiografiaComponent
+      },
+      {
+        path: 'consultas',
+        component: ConsultaComponent,
+        children: [
+          {
+            path: 'listar',
+            component: ConsultaIndexComponent
+          },
+          {
+            path: '',
+            redirectTo: 'listar',
+            pathMatch: 'full'
+          }
+        ]
       },
       {
         path: 'clientes',

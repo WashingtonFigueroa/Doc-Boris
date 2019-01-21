@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ConsultaService} from '../consulta.service';
+import {environment} from '../../../../environments/environment.prod';
 
 @Component({
   selector: 'app-consulta-index',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultaIndexComponent implements OnInit {
 
-  constructor() { }
+  consultas: any = null;
+  base = environment.servidor;
+  constructor(private consultaService: ConsultaService) {
+    this.consultaService.index()
+      .subscribe((res: any) => {
+        this.consultas = res;
+      });
+  }
 
   ngOnInit() {
   }
