@@ -22,6 +22,7 @@ class CreateConsultasTable extends Migration
                     ->onDelete('cascade');
             $table->string('numero_factura');
             $table->string('imagen');
+            $table->float('valor', 8, 2);
             $table->softDeletes();
             $table->timestamps();
         });

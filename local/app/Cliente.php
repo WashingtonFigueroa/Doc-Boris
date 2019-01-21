@@ -11,9 +11,13 @@ class Cliente extends Model
     protected $table = 'clientes';
     protected $primaryKey = 'cliente_id';
     protected $fillable = [
-        'cedula',
         'nombres',
-        'fecha_nacimiento'
+        'tipo_documento',
+        'documento',
+        'razon_social',
+        'direccion',
+        'fecha_nacimiento',
+        'celular'
     ];
     protected $dates = ['deleted_at'];
 

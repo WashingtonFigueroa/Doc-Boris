@@ -29,7 +29,10 @@ export class ClienteEditComponent implements OnInit {
   createForm() {
     this.clienteGroup = this.fb.group({
       'nombres' : new FormControl(this.cliente.nombres, [Validators.required]),
-      'cedula' : new FormControl(this.cliente.cedula, [Validators.required]),
+      'tipo_documento' : new FormControl(this.cliente.tipo_documento, [Validators.required]),
+      'documento' : new FormControl(this.cliente.documento, [Validators.required]),
+      'razon_social' : new FormControl(this.cliente.razon_social, [Validators.required]),
+      'direccion' : new FormControl(this.cliente.direccion, [Validators.required]),
       'fecha_nacimiento' : new FormControl(this.cliente.fecha_nacimiento, [Validators.required]),
       'celular' : new FormControl(this.cliente.celular, [Validators.required])
     });

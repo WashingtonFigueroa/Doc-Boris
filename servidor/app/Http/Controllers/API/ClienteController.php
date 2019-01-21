@@ -27,7 +27,11 @@ class ClienteController extends Controller
             $clientes = Cliente::orderBy('nombres')->paginate(10);
         } else {
             $clientes = Cliente::where('nombres', 'like', '%' . $valor . '%')
-                ->orWhere('cedula', 'like', '%' . $valor . '%')
+                ->orWhere('tipo_documento', 'like', '%' . $valor . '%')
+                ->orWhere('documento', 'like', '%' . $valor . '%')
+                ->orWhere('razon_social', 'like', '%' . $valor . '%')
+                ->orWhere('direccion', 'like', '%' . $valor . '%')
+                ->orWhere('fecha_nacimiento', 'like', '%' . $valor . '%')
                 ->orWhere('celular', 'like', '%' . $valor . '%')
                 ->orderBy('nombres')
                 ->paginate(10);

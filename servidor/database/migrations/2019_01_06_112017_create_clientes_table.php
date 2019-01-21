@@ -16,7 +16,10 @@ class CreateClientesTable extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->increments('cliente_id');
             $table->string('nombres');
-            $table->string('cedula');
+            $table->enum('tipo_documento', ['cedula', 'ruc', 'pasaporte']);
+            $table->string('documento');
+            $table->string('razon_social');
+            $table->string('direccion');
             $table->date('fecha_nacimiento');
             $table->string('celular')->nullable();
             $table->softDeletes();

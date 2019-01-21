@@ -14,6 +14,7 @@ export class RadiografiaComponent implements OnInit {
 
   radiografias: any = [];
   clientes: any = [];
+  cliente: any = null;
   imagen: any = null;
   asociado = false;
   img = environment.servidor + 'radiografia/';
@@ -53,6 +54,12 @@ export class RadiografiaComponent implements OnInit {
         this.clientes = res;
       });
   }
+  loadCliente() {
+    this.clienteService.show(this.consultaGroup.value.cliente_id)
+      .subscribe((res: any) => {
+        this.cliente = res;
+      });
+  }
   updateImagen(radiografia: any, index) {
     if (this.imagen === null) {
       if (radiografia.checked === false) {
@@ -75,7 +82,8 @@ export class RadiografiaComponent implements OnInit {
       'radiografia_id' : [0, [Validators.required]],
       'cliente_id' : [0, [Validators.required]],
       'numero_factura' : ['', [Validators.required]],
-      'imagen' : ['', [Validators.required]]
+      'imagen' : ['', [Validators.required]],
+      'valor' : [0.00, [Validators.required]]
     });
   }
 

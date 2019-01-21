@@ -12,7 +12,10 @@ class Cliente extends Model
     protected $primaryKey = 'cliente_id';
     protected $fillable = [
         'nombres',
-        'cedula',
+        'tipo_documento',
+        'documento',
+        'razon_social',
+        'direccion',
         'fecha_nacimiento',
         'celular',
     ];

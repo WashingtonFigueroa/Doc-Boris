@@ -11,8 +11,27 @@
               <input type="text" class="form-control" formControlName="nombres" name="nombres" id="nombres" autofocus>
             </section>
             <section class="form-group">
-              <label for="cedula">Cedula</label>
-              <input type="text" class="form-control" formControlName="cedula" name="cedula" id="cedula">
+              <label for="tipo_documento">Tipo de Documento</label>
+              <select name="tipo_documento"
+                      class="form-control"
+                      formControlName="tipo_documento"
+                      id="tipo_documento">
+                <option value="cedula">Cedula</option>
+                <option value="ruc">RUC</option>
+                <option value="pasaporte">Pasaporte</option>
+              </select>
+            </section>
+            <section class="form-group">
+              <label for="documento">Documento</label>
+              <input type="text" class="form-control" formControlName="documento" name="documento" id="documento">
+            </section>
+            <section class="form-group">
+              <label for="razon_social">Razón Social</label>
+              <input type="text" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
+            </section>
+            <section class="form-group">
+              <label for="direccion">Dirección</label>
+              <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
             </section>
             <section class="form-group">
               <label for="fecha_nacimiento">Fecha Nacimiento</label>
