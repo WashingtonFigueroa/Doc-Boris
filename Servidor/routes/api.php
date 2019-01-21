@@ -24,6 +24,7 @@ Route::resource('usuarios', 'UsuarioController');
 Route::resource('listaUsuarios', 'UsuarioController@listaUsers');
 //sistema
 Route::post('upload', 'UploadController@upload');
+Route::post('upload-tomografia', 'UploadController@uploadTomografia');
 Route::get('radiografias-no-asignadas', 'RadiografiaController@noAsignadas');
 Route::get('radiografia/{filename}',
             'RadiografiaController@radiografia');
@@ -31,6 +32,7 @@ Route::get('radiografia/{filename}',
 Route::apiResources([
     'clientes' => 'API\ClienteController',
     'consultas' => 'API\ConsultaController',
+    'consultas_tomografias' => 'API\ConsultaTomografiaController',
 ]);
 /*Clientes*/
 Route::get('buscar-clientes/{valor?}', 'API\ClienteController@buscar');

@@ -31,7 +31,7 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
             $servidor = 'http://localhost:8000/api/';
             $files = [];
-            foreach (Storage::disk('publico')->files('archivos') as $filename) {
+            foreach (Storage::disk('publico')->files('radiografias') as $filename) {
                 $name = explode('/', $filename)[1];
                 if(!Storage::exists('radiografias/' . $name)) {
                     $client = new Client();
@@ -48,8 +48,24 @@ class Kernel extends ConsoleKernel
                     array_push($files, $filename);
                 }
             }
-/*            $controller = new \App\Http\Controllers\ConsultasController();
-            $controller->leerRadiografias();*/
+            foreach (Storage::disk('publico')->files('tomografias') as $filename) {
+                $name = explode('/', $filename)[1];
+                if(!Storage::exists('tomografias/' . $name)) {
+                    $client = new Client();
+                    $result = $client->post($servidor . 'upload-tomografia', [
+                        'multipart' => [
+                            [
+                                'name' => 'archivo',
+                                'contents' => fopen(public_path($filename), 'r'),
+                                'filename' => $name
+                            ]
+                        ]
+                    ]);
+                    Storage::putFileAs('tomografias', new File(public_path($filename)), $name);
+                    array_push($files, $filename);
+                }
+            }
+
         })->everyMinute();
     }
 
