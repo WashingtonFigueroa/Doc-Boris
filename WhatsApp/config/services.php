@@ -13,6 +13,10 @@ return [
     | to have a conventional place to find your various credentials.
     |
     */
+    'chatapi' => [
+        'token'         => env('CHATAPI_TOKEN', ''),
+        'api_url'       => env('CHATAPI_URL', ''),
+    ],
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
