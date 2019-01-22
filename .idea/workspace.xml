@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595c7e26-8189-4e83-8430-2045099d99a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/servidor/resources/views/radiografia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/local/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/public/radiografias/descarga (3) - copia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/public/radiografias/descarga (3).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/public/radiografias/images (1) - copia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/public/radiografias/images (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/public/radiografias/radiografia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servidor/app/Http/Controllers/API/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/app/Http/Controllers/API/ClienteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servidor/app/Http/Controllers/API/ConsultaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/app/Http/Controllers/API/ConsultaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servidor/app/Radiografia.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/app/Radiografia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor/app/Mail/RadiografiaMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/app/Mail/RadiografiaMail.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +138,7 @@
           <entry key="css" value="1184" />
           <entry key="env" value="79" />
           <entry key="html" value="6539" />
-          <entry key="php" value="7001" />
+          <entry key="php" value="7017" />
           <entry key="scss" value="263" />
           <entry key="sql" value="12" />
           <entry key="ts" value="6662" />
@@ -166,7 +152,7 @@
           <entry key="CSS" value="1184" />
           <entry key="HTML" value="6532" />
           <entry key="JavaScript" value="7" />
-          <entry key="PHP" value="6547" />
+          <entry key="PHP" value="6563" />
           <entry key="PLAIN_TEXT" value="79" />
           <entry key="SCSS" value="263" />
           <entry key="Scratch" value="12" />
@@ -209,8 +195,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/servidor/app/Mail/RadiografiaMail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+            <state relative-caret-position="349">
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -539,12 +525,12 @@
       <workItem from="1547947306161" duration="2015000" />
       <workItem from="1548067751177" duration="9457000" />
       <workItem from="1548079574784" duration="8597000" />
-      <workItem from="1548160861521" duration="12129000" />
+      <workItem from="1548160861521" duration="12192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121054000" />
+    <option name="totallyTimeSpent" value="121117000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,8 +860,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/servidor/app/Mail/RadiografiaMail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        <state relative-caret-position="349">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
         </state>
       </provider>
     </entry>

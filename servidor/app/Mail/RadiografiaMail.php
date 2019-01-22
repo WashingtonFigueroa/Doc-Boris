@@ -31,7 +31,7 @@ class RadiografiaMail extends Mailable
     {
         /*example*/
         return $this->view('radiografia', $this->envio)
-            ->from('auditoriasis3930@gmail.com', 'Nordent RX')
+            ->from('quantix.software@gmail.com', 'Nordent RX')
             ->to('w.figo.1991@gmail.com', 'Doc. Boris')
             ->subject('Radiografias Nordent RX')
             ->attach(storage_path('app/radiografias/'.$this->envio['filename']));
