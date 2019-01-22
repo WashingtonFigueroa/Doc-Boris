@@ -28,12 +28,12 @@ class UsuarioController extends Controller
             return response()->json([
                 'error' => 'La confirmacion de password no coincide'
             ], 500);
-        } else {
-            $user = new User();
-            $user->name = $request->input('name');
-            $user->email = $request->input('email');
-            $user->password = Hash::make($request->input('password'));
             $user->save();
+        } else {
+        $user = new User();
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
             return response()->json($user, 201);
         }
     }

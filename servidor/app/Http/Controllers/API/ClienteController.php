@@ -15,25 +15,25 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::orderBy('nombres')->paginate(10);
+        $clientes = Cliente::orderBy('razon_social')->paginate(10);
         return response()->json($clientes, 200);
     }
 
     public function listar() {
-        return response()->json(Cliente::orderBy('nombres')->get(), 200);
+        return response()->json(Cliente::orderBy('razon_social')->get(), 200);
     }
 
     public function buscar($valor = null) {
         if ($valor === null) {
-            $clientes = Cliente::orderBy('nombres')->paginate(10);
+            $clientes = Cliente::orderBy('razon_social')->paginate(10);
         } else {
-            $clientes = Cliente::where('nombres', 'like', '%' . $valor . '%')
-                ->orWhere('tipo_documento', 'like', '%' . $valor . '%')
+            $clientes = Cliente::where('tipo_documento', 'like', '%' . $valor . '%')
                 ->orWhere('documento', 'like', '%' . $valor . '%')
                 ->orWhere('razon_social', 'like', '%' . $valor . '%')
                 ->orWhere('direccion', 'like', '%' . $valor . '%')
                 ->orWhere('fecha_nacimiento', 'like', '%' . $valor . '%')
                 ->orWhere('celular', 'like', '%' . $valor . '%')
+                ->orWhere('genero', 'like', '%' . $valor . '%')
                 ->orderBy('nombres')
                 ->paginate(10);
         }

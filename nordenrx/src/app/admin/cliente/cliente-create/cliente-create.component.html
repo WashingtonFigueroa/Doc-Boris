@@ -1,52 +1,68 @@
 <div class="container">
   <h3 class="header-title">Registrar Cliente</h3>
   <div class="row">
-    <div class="offset-8 col-md-4">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-body">
           <form [formGroup]="clienteGroup" (submit)="store()">
-            <legend>Registrar Cliente</legend>
-            <section class="form-group">
-              <label for="nombres">Nombres</label>
-              <input type="text" class="form-control" formControlName="nombres" name="nombres" id="nombres" autofocus>
-            </section>
-            <section class="form-group">
-              <label for="tipo_documento">Tipo de Documento</label>
-              <select name="tipo_documento"
-                      class="form-control"
-                      formControlName="tipo_documento"
-                      id="tipo_documento">
-                <option value="cedula">Cedula</option>
-                <option value="ruc">RUC</option>
-                <option value="pasaporte">Pasaporte</option>
-              </select>
-            </section>
-            <section class="form-group">
-              <label for="documento">Documento</label>
-              <input type="text" class="form-control" formControlName="documento" name="documento" id="documento">
-            </section>
-            <section class="form-group">
-              <label for="razon_social">Razón Social</label>
-              <input type="text" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
-            </section>
-            <section class="form-group">
-              <label for="direccion">Dirección</label>
-              <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
-            </section>
-            <section class="form-group">
-              <label for="fecha_nacimiento">Fecha Nacimiento</label>
-              <input type="date" class="form-control" formControlName="fecha_nacimiento" name="fecha_nacimiento" id="fecha_nacimiento">
-            </section>
-            <section class="form-group">
-              <label for="celular">Celular</label>
-              <input type="text" class="form-control" formControlName="celular" name="celular" id="celular">
-            </section>
-            <section class="text-right">
-              <a routerLink="/admin/clientes" class="btn-danger-link">Cancelar</a>
-              <button
-                [disabled]="clienteGroup.status === 'INVALID'"
-                class="btn btn-primary">Guardar</button>
-            </section>
+
+            <div class="row">
+              <div class="col-md-6">
+                <section class="form-group">
+                  <label for="tipo_documento">Tipo de Documento</label>
+                  <select name="tipo_documento"
+                          class="form-control"
+                          formControlName="tipo_documento"
+                          id="tipo_documento">
+                    <option value="cedula">Cedula</option>
+                    <option value="ruc">RUC</option>
+                    <option value="pasaporte">Pasaporte</option>
+                  </select>
+                </section>
+                <section class="form-group">
+                  <label for="documento">Documento</label>
+                  <input type="text" class="form-control" formControlName="documento" name="documento" id="documento" maxlength="13">
+                </section>
+                <section class="form-group">
+                  <label for="razon_social">Razón Social</label>
+                  <input type="text" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
+                </section>
+                <section class="form-group">
+                  <label for="direccion">Dirección</label>
+                  <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
+                </section>
+              </div>
+
+
+              <div class="col-md-6">
+                <section class="form-group">
+                  <label for="fecha_nacimiento">Fecha Nacimiento</label>
+                  <input type="date" class="form-control" formControlName="fecha_nacimiento" name="fecha_nacimiento" id="fecha_nacimiento">
+                </section>
+                <section class="form-group">
+                  <label for="celular">Celular</label>
+                  <input type="text" class="form-control" formControlName="celular" name="celular" id="celular" maxlength="10">
+                </section>
+                <section class="form-group">
+                  <label for="genero">Seleccione Genero</label>
+                  <select name="genero"
+                          class="form-control"
+                          formControlName="genero"
+                          id="genero">
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                  </select>
+                </section>
+                <section class="text-right">
+                  <a routerLink="/admin/clientes" class="btn-danger-link">Cancelar</a>
+                  <button
+                          [disabled]="clienteGroup.status === 'INVALID'"
+                          class="btn btn-primary">Guardar</button>
+                </section>
+              </div>
+            </div>
+
+
           </form>
         </div>
       </div>

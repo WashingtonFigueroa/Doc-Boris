@@ -11,13 +11,13 @@ class Cliente extends Model
     protected $table = 'clientes';
     protected $primaryKey = 'cliente_id';
     protected $fillable = [
-        'nombres',
         'tipo_documento',
         'documento',
         'razon_social',
         'direccion',
         'fecha_nacimiento',
         'celular',
+        'genero',
     ];
     protected $dates = ['deleted_at'];
 }

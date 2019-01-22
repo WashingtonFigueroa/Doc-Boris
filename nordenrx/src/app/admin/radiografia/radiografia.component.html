@@ -54,104 +54,115 @@
   </div>
   <div *ngIf="asociado" class="container-fluid">
     <div class="row">
-      <div class="col-8">
-        <img src="{{img}}{{imagen.nombre}}" class="img" style="height: 500px">
+      <div class="col-6">
+        <img src="{{img}}{{imagen.nombre}}" class="img" style="height: 400px">
       </div>
-      <div class="col-4">
+      <div class="col-6">
         <div class="card">
           <div class="card-body">
             <form (submit)="save()" [formGroup]="consultaGroup">
               <legend>Consulta</legend>
-              <section class="form-group">
-                <label>Número de Factura</label>
-                <input type="text"
-                       class="form-control"
-                       formControlName="numero_factura"
-                       name="numero_factura">
-              </section>
-              <section class="form-group">
-                <label for="cliente_id">Cliente</label>
-                <select name="cliente_id"
-                        id="cliente_id"
-                        formControlName="cliente_id"
-                        (change)="loadCliente()"
-                        class="form-control">
-                  <option [value]="cliente.cliente_id" *ngFor="let cliente of clientes">
-                    {{ cliente.nombres }}
-                  </option>
-                </select>
-              </section>
-              <section class="form-group">
-                <label for="valor">Valor</label>
-                <input type="number"
-                       id="valor"
-                       step="0.01"
-                       class="form-control"
-                       formControlName="valor"
-                       name="Valor">
-              </section>
-              <section *ngIf="cliente !== null" class="form-group">
-                <label for="tipo_documento">Tipo Documento</label>
-                <input type="text"
-                       class="form-control"
-                       id="tipo_documento"
-                       [value]="cliente.tipo_documento"
-                       disabled
-                       name="tipo_documento">
-                <!--                <select name="tipo_doc"
-                                        id="tipo_doc"
-                                        formControlName="tipo_documento"
-                                        class="form-control">
-                                  <option> Cedula </option>
-                                  <option> Ruc </option>
-                                  <option> Pasaporte </option>
-                                </select>-->
-              </section>
-              <section *ngIf="cliente !== null" class="form-group">
-                <label for="documento">Documento</label>
-                <input type="text"
-                       id="documento"
-                       class="form-control"
-                       [value]="cliente.documento"
-                       disabled
-                       name="documento">
-              </section>
-              <section *ngIf="cliente !== null" class="form-group">
-                <label for="razon_social">Razón Social</label>
-                <input type="text"
-                       id="razon_social"
-                       class="form-control"
-                       [value]="cliente.razon_social"
-                       disabled
-                       name="razon_social">
-              </section>
-              <section *ngIf="cliente !== null" class="form-group">
-                <label for="direccion">Dirección</label>
-                <input type="text"
-                       id="direccion"
-                       class="form-control"
-                       [value]="cliente.direccion"
-                       disabled
-                       name="direccion">
-              </section>
-              <section *ngIf="cliente !== null" class="form-group">
-                <label for="fecha_nacimiento">Fecha Nacimiento</label>
-                <input type="date"
-                       [value]="cliente.fecha_nacimiento"
-                       disabled
-                       id="fecha_nacimiento"
-                       class="form-control"
-                       name="fecha_nacimiento">
-              </section>
-              <section *ngIf="cliente !== null" class="form-group">
-                <label for="celular">Celular</label>
-                <input type="text"
-                       class="form-control"
-                       id="celular"
-                       [value]="cliente.celular"
-                       disabled
-                       name="fecha_nacimiento">
-              </section>
+              <div class="row">
+              <div class="col-6">
+                    <section class="form-group">
+                      <label>Número de Factura</label>
+                      <input type="text"
+                             class="form-control"
+                             formControlName="numero_factura"
+                             name="numero_factura">
+                    </section>
+                    <section class="form-group">
+                      <label for="cliente_id">Cliente</label>
+                      <select name="cliente_id"
+                              id="cliente_id"
+                              formControlName="cliente_id"
+                              (change)="loadCliente()"
+                              class="form-control">
+                        <option [value]="cliente.cliente_id" *ngFor="let cliente of clientes">
+                          {{ cliente.nombres }}
+                        </option>
+                      </select>
+                    </section>
+                <section *ngIf="cliente !== null" class="form-group">
+                  <label for="tipo_documento">Tipo Documento</label>
+                  <input type="text"
+                         class="form-control"
+                         id="tipo_documento"
+                         [value]="cliente.tipo_documento"
+                         disabled
+                         name="tipo_documento">
+                  <!--                <select name="tipo_doc"
+                                          id="tipo_doc"
+                                          formControlName="tipo_documento"
+                                          class="form-control">
+                                    <option> Cedula </option>
+                                    <option> Ruc </option>
+                                    <option> Pasaporte </option>
+                                  </select>-->
+                </section>
+                <section *ngIf="cliente !== null" class="form-group">
+                  <label for="documento">Documento</label>
+                  <input type="text"
+                         id="documento"
+                         class="form-control"
+                         [value]="cliente.documento"
+                         disabled
+                         name="documento">
+                </section>
+                <section *ngIf="cliente !== null" class="form-group">
+                  <label for="razon_social">Razón Social</label>
+                  <input type="text"
+                         id="razon_social"
+                         class="form-control"
+                         [value]="cliente.razon_social"
+                         disabled
+                         name="razon_social">
+                </section>
+
+              </div>
+              <div class="col-6">
+
+                    <section *ngIf="cliente !== null" class="form-group">
+                      <label for="direccion">Dirección</label>
+                      <input type="text"
+                             id="direccion"
+                             class="form-control"
+                             [value]="cliente.direccion"
+                             disabled
+                             name="direccion">
+                    </section>
+                    <section *ngIf="cliente !== null" class="form-group">
+                      <label for="fecha_nacimiento">Fecha Nacimiento</label>
+                      <input type="date"
+                             [value]="cliente.fecha_nacimiento"
+                             disabled
+                             id="fecha_nacimiento"
+                             class="form-control"
+                             name="fecha_nacimiento">
+                    </section>
+                    <section *ngIf="cliente !== null" class="form-group">
+                      <label for="celular">Celular</label>
+                      <input type="text"
+                             class="form-control"
+                             id="celular"
+                             [value]="cliente.celular"
+                             disabled
+                             name="fecha_nacimiento">
+                    </section>
+                <section class="form-group">
+                  <label for="valor">Valor</label>
+                  <input type="number"
+                         id="valor"
+                         step="0.01"
+                         class="form-control"
+                         formControlName="valor"
+                         name="Valor">
+                </section>
+
+              </div>
+              </div>
+
+
               <section class="text-right">
                 <a class="btn-danger-link" (click)="asociado = false">Cancelar</a>
                 <button class="btn btn-primary">Guardar Datos</button>

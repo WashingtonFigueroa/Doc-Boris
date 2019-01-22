@@ -28,27 +28,27 @@
     <div class="col-12">
       <div class="table-responsive" *ngIf="paginacion !== null">
         <table class="table table-hover">
-          <thead>
+          <thead style="background-color: #0f192a">
           <tr>
             <th>N.</th>
-            <th>Nombres</th>
             <th>Razón Social</th>
             <th>Tipo Documento</th>
             <th>Documento</th>
             <th>Fecha de Nacimiento</th>
             <th>Celular</th>
+            <th>Genero</th>
             <th>Acciones</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let cliente of paginacion.data; let i = index">
             <td>{{ i + 1 }}</td>
-            <td>{{ cliente.nombres }}</td>
             <td>{{ cliente.razon_social }}</td>
             <td>{{ cliente.tipo_documento }}</td>
             <td>{{ cliente.documento }}</td>
             <td>{{ cliente.fecha_nacimiento | date: 'dd/MM/y' }}</td>
             <td>{{ cliente.celular }}</td>
+            <td>{{ cliente.genero }}</td>
             <td>
               <button
                 routerLink="/admin/clientes/editar/{{cliente.cliente_id}}"

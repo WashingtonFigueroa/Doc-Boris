@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ClienteService} from '../cliente.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {ToastrModule} from "ngx-toastr";
 
 @Component({
   selector: 'app-cliente-edit',
@@ -15,7 +16,8 @@ export class ClienteEditComponent implements OnInit {
   constructor(private clienteService: ClienteService,
               private route: ActivatedRoute,
               private router: Router,
-              private fb: FormBuilder) {
+              private fb: FormBuilder,
+              private toastr: ToastrModule) {
     this.route.params.subscribe((param: any) => {
       this.cliente_id = param.cliente_id;
       this.clienteService.show(param.cliente_id)
@@ -28,7 +30,6 @@ export class ClienteEditComponent implements OnInit {
 
   createForm() {
     this.clienteGroup = this.fb.group({
-      'nombres' : new FormControl(this.cliente.nombres, [Validators.required]),
       'tipo_documento' : new FormControl(this.cliente.tipo_documento, [Validators.required]),
       'documento' : new FormControl(this.cliente.documento, [Validators.required]),
       'razon_social' : new FormControl(this.cliente.razon_social, [Validators.required]),
