@@ -14,5 +14,6 @@ class Radiografia extends Model
         'asignado',
         'consulta_id',
     ];
+    protected $guarded = ['created_at'];
 
 }

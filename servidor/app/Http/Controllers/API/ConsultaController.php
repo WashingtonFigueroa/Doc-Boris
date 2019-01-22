@@ -22,6 +22,16 @@ class ConsultaController extends Controller
         return response()->json($consultas, 200);
     }
 
+/*    public function buscar($valor = null) {
+        if ($valor === null) {
+            $consultas = Cliente::orderBy('numero_factura')->paginate(10);
+        } else {
+            $consultas = Cliente::where('numero_factura', 'like', '%' . $valor . '%')
+                ->orderBy('numero_factura')
+                ->paginate(10);
+        }
+        return response()->json($consultas, 200);
+    }*/
     /**
      * Store a newly created resource in storage.
      *

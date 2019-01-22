@@ -28,6 +28,8 @@ Route::post('upload-tomografia', 'UploadController@uploadTomografia');
 Route::get('radiografias-no-asignadas', 'RadiografiaController@noAsignadas');
 Route::get('radiografia/{filename}',
             'RadiografiaController@radiografia');
+Route::post('send-file', 'UploadController@sendFile');
+
 /*APIs de recursos*/
 Route::apiResources([
     'clientes' => 'API\ClienteController',

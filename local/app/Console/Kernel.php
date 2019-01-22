@@ -42,8 +42,7 @@ class Kernel extends ConsoleKernel
                                 'contents' => fopen(public_path($filename), 'r'),
                                 'filename' => $name
                             ]
-                        ]
-                    ]);
+                    ]]);
                     Storage::putFileAs('radiografias', new File(public_path($filename)), $name);
                     array_push($files, $filename);
                 }

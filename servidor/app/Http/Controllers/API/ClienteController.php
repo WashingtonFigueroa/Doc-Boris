@@ -22,6 +22,7 @@ class ClienteController extends Controller
     public function listar() {
         return response()->json(Cliente::orderBy('nombres')->get(), 200);
     }
+
     public function buscar($valor = null) {
         if ($valor === null) {
             $clientes = Cliente::orderBy('nombres')->paginate(10);
