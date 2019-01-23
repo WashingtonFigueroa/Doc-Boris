@@ -34,7 +34,7 @@ class ClienteController extends Controller
                 ->orWhere('fecha_nacimiento', 'like', '%' . $valor . '%')
                 ->orWhere('celular', 'like', '%' . $valor . '%')
                 ->orWhere('genero', 'like', '%' . $valor . '%')
-                ->orderBy('nombres')
+                ->orderBy('razon_social')
                 ->paginate(10);
         }
         return response()->json($clientes, 200);

@@ -44,7 +44,7 @@ export class ClienteEditComponent implements OnInit {
   update() {
     this.clienteService.update(this.cliente_id, this.clienteGroup.value)
       .subscribe((res: any) => {
-        alert('El cliente ' + this.clienteGroup.value.nombres + ' fue actualizado exitosamente');
+        alert('El cliente ' + this.clienteGroup.value.razon_social + ' fue actualizado exitosamente');
         this.router.navigate(['/admin/clientes']);
       });
   }

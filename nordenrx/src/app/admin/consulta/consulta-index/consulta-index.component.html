@@ -32,7 +32,7 @@
           <tr>
             <th>N.</th>
             <th>N. de Factura</th>
-            <th>Nombres</th>
+            <th>Razon Social</th>
             <th>Celular</th>
             <th>Valor</th>
             <th>Radiografía</th>
@@ -42,7 +42,7 @@
           <tr *ngFor="let consulta of consultas.data; let i = index">
             <td>{{ i + 1 }}</td>
             <td>{{ consulta.numero_factura }}</td>
-            <td>{{ consulta.nombres }}</td>
+            <td>{{ consulta.razon_social }}</td>
             <td>{{ consulta.celular }}</td>
             <td>{{ consulta.valor }}</td>
             <td><img src="{{base}}radiografia/{{consulta.imagen.split('/')[1]}}" class="img-radiografia"></td>

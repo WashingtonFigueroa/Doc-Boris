@@ -35,7 +35,7 @@ export class ClienteCreateComponent implements OnInit {
   store() {
     this.clienteService.store(this.clienteGroup.value)
       .subscribe((res: any) => {
-        alert('El cliente ' + res.nombres + ' fue guardado exitosamente');
+        alert('El cliente ' + res.razon_social + ' fue guardado exitosamente');
         this.router.navigate(['/admin/clientes']);
       });
   }
