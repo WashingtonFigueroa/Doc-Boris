@@ -14,7 +14,16 @@ export class RadiografiaComponent implements OnInit {
 
   radiografias: any = [];
   clientes: any = [];
-  cliente: any = null;
+  cliente: any = {
+    cliente_id : 0,
+    razon_social : '',
+    tipo_documento : '',
+    documento : '',
+    direccion : '',
+    fecha_nacimiento : '',
+    celular : '',
+    genero : 'varon',
+  };
   imagen: any = null;
   asociado = false;
   img = environment.servidor + 'radiografia/';
@@ -31,6 +40,27 @@ export class RadiografiaComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  resetCliente() {
+    this.cliente = {
+      cliente_id : 0,
+      razon_social : '',
+      tipo_documento : '',
+      documento : '',
+      direccion : '',
+      fecha_nacimiento : '',
+      celular : '',
+      genero : 'varon',
+    };
+    this.consultaGroup.patchValue({
+      'cliente_id' : 0,
+      'razon_social' : '',
+      'direccion' : '',
+      'fecha_nacimiento' : '',
+      'celular' : '',
+      'genero' : 'varon'
+    });
+  }
   resetValues() {
     this.radiografias = [];
     this.clientes = [];
@@ -80,11 +110,51 @@ export class RadiografiaComponent implements OnInit {
   createForm() {
     this.consultaGroup = this.fb.group({
       'radiografia_id' : [0, [Validators.required]],
+      'tipo_documento' : ['cedula', [Validators.required]],
+      'documento' : ['', [Validators.required]],
+      'razon_social' : ['', [Validators.required]],
+      'direccion' : ['', [Validators.required]],
+      'fecha_nacimiento' : ['', [Validators.required]],
+      'celular' : ['', [Validators.required]],
+      'genero' : ['varon', [Validators.required]],
       'cliente_id' : [0, [Validators.required]],
       'numero_factura' : ['', [Validators.required]],
       'imagen' : ['', [Validators.required]],
       'valor' : [0.00, [Validators.required]]
     });
+  }
+
+  searchPerson() {
+    this.resetCliente();
+    const tipo_documento = this.consultaGroup.value.tipo_documento;
+    const documento = this.consultaGroup.value.documento;
+    console.log(this.cliente);
+    this.radiografiaService
+        .sri(tipo_documento, documento)
+        .subscribe((res: any) => {
+          if (res.type === 'sri') {
+            this.cliente.razon_social = res.data.nombreCompleto;
+            this.cliente.tipo_documento = 'cedula';
+            this.cliente.documento = res.data.identificacion;
+          } else {
+            this.consultaGroup.patchValue({
+              'cliente_id' : res.data.cliente_id,
+              'razon_social' : res.data.razon_social,
+              'tipo_documento' : res.data.tipo_documento,
+              'documento' : res.data.documento,
+              'direccion' : res.data.direccion,
+              'fecha_nacimiento' : res.data.fecha_nacimiento,
+              'celular' : res.data.celular
+            });
+            this.cliente.razon_social = res.data.razon_social;
+            this.cliente.tipo_documento = res.data.tipo_documento;
+            this.cliente.documento = res.data.documento;
+            this.cliente.direccion = res.data.direccion;
+            this.cliente.fecha_nacimiento = res.data.fecha_nacimiento;
+            this.cliente.celular = res.data.celular;
+          }
+          console.log(res);
+        });
   }
 
   save() {

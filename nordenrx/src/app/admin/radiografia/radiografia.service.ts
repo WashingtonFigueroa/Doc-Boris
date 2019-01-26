@@ -13,8 +13,7 @@ export class RadiografiaService {
   noAsignadas() {
     return this.http.get(this.base + 'radiografias-no-asignadas');
   }
-  sri(cedula: string) {
-    const url = 'https://declaraciones.sri.gob.ec/sri-registro-civil-servicio-internet/rest/DatosRegistroCivil/obtenerPorNumeroIdentificacion?numeroIdentificacion=';
-    return this.http.get(url + cedula);
+  sri(tipo_documento: string, documento: string) {
+    return this.http.get(`${this.base}sri/${tipo_documento}/${documento}`);
   }
 }

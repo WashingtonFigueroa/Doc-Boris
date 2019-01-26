@@ -30,6 +30,7 @@ Route::get('radiografia/{filename}',
             'RadiografiaController@radiografia');
 Route::post('send-file', 'UploadController@sendFile');
 
+Route::get('sri/{tipo_documento}/{documento}', 'API\ClienteController@sri');
 /*APIs de recursos*/
 Route::apiResources([
     'clientes' => 'API\ClienteController',

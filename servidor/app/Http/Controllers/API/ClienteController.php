@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Cliente;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -87,5 +88,31 @@ class ClienteController extends Controller
         $cliente = Cliente::find($id);
         $cliente->delete();
         return response()->json($cliente, 200);
+    }
+
+    public function sri($tipo_documento, $documento) {
+        $clientes = Cliente::where('tipo_documento', '=', $tipo_documento)
+                ->where('documento', 'like', '%'.$documento.'%')
+                ->count();
+        if ($clientes > 0) {
+            $data = Cliente::where('tipo_documento', '=', $tipo_documento)
+                ->where('documento', 'like', '%'.$documento.'%')
+                ->first();
+            $type = 'local';
+        } else {
+            $request = curl_init();
+            curl_setopt ($request, CURLOPT_URL, 'https://declaraciones.sri.gob.ec/sri-registro-civil-servicio-internet/rest/DatosRegistroCivil/obtenerPorNumeroIdentificacion?numeroIdentificacion='.$documento);
+            curl_setopt ($request, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt ($request, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt ($request, CURLOPT_CONNECTTIMEOUT, 0);
+            $response = curl_exec($request);
+            curl_close($request);
+            $data = json_decode($response,true);
+            $type = 'sri';
+        }
+        return response()->json([
+            'data' => $data,
+            'type' => $type
+        ], 200);
     }
 }
