@@ -144,7 +144,8 @@ export class RadiografiaComponent implements OnInit {
               'documento' : res.data.documento,
               'direccion' : res.data.direccion,
               'fecha_nacimiento' : res.data.fecha_nacimiento,
-              'celular' : res.data.celular
+              'celular' : res.data.celular,
+              'genero' : res.data.genero
             });
             this.cliente.razon_social = res.data.razon_social;
             this.cliente.tipo_documento = res.data.tipo_documento;
