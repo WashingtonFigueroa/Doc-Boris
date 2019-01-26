@@ -7,50 +7,61 @@
         <h1 class="text-white">
           Consultas
         </h1>
-        <p class="text-white link-nav"><a routerLink="/">Sobre Nosotros </a>  <span class="lnr lnr-arrow-right"></span>Consultas</p>
+        <p class="text-white link-nav">Sobre Nosotros<span class="lnr lnr-arrow-right"></span>Consultas</p>
       </div>
     </div>
   </div>
 </section>
 <!-- End banner Area -->
 
-<!-- Start contact-page Area -->
-<section class="contact-page-area section-gap">
-  <div class="container">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-8">
-              <h1>Mi historial</h1>
-              <br>
-              <form role="form">
-                <div class="form-group">
-                  <label>
-                    Ingrese Cedula
-                  </label>
-                  <input type="email" class="form-control"/>
-                </div>
-                <div class="form-group">
-                  <label>
-                    Seleccione Fecha
-                  </label>
-                  <input type="date" class="form-control"/>
-                </div>
+<div class="container">
+  <h3 class="header-title">Consultas</h3>
+  <div class="row">
 
-
-                <button type="submit" class="btn btn-primary">
-                  Consultar
-                </button>
-              </form>
-            </div>
-            <div class="col-md-4">
-              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fboris.almeida.75&tabs=timeline&width=0&height=0&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="0" height="0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-            </div>
-          </div>
+    <div class="col-12">
+      <form
+              (submit)="buscar()"
+              [formGroup]="buscarGroup"
+              class="form-inline form-right">
+        <div class="form-group">
+          <label for=""></label>
+          <input
+                  type="search"
+                  name="valor" id=""
+                  formControlName="valor"
+                  class="form-control" placeholder="Buscar..." aria-describedby="helpId">
         </div>
+        <button class="btn btn-primary">Buscar</button>
+      </form>
+    </div>
+  </div>
+  <br>
+  <div class="row" *ngIf="consultas !== null">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead style="background-color: #0f192a">
+          <tr>
+            <th>N.</th>
+            <th>N. de Factura</th>
+            <th>Razon Social</th>
+            <th>Celular</th>
+            <th>Valor</th>
+            <th>Radiografía</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let consulta of consultas.data; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ consulta.numero_factura }}</td>
+            <td>{{ consulta.razon_social }}</td>
+            <td>{{ consulta.celular }}</td>
+            <td>{{ consulta.valor }}</td>
+            <td><img src="{{base}}radiografia/{{consulta.imagen.split('/')[1]}}" class="img-radiografia"></td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-</section>
-<!-- End contact-page Area -->
+</div>
