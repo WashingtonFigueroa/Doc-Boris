@@ -36,6 +36,8 @@
     </div>
   </div>
   <div *ngIf="asociado" class="container-fluid">
+    <button class="btn btn-dark" routerLink="/admin/radiografias">Atras</button>
+    <hr>
     <div class="row">
       <div class="col-6">
         <img src="{{img}}{{imagen.nombre}}" class="img" style="height: 400px">
@@ -83,22 +85,22 @@
                         </div>
                       </div>
                     </section>
-                <section class="form-group">
-                  <label>Tipo de Documento</label>
-                  <input type="text"
-                         class="form-control"
-                         [value]="cliente.tipo_documento"
-                         disabled>
-                </section>
-                <section class="form-group">
-                  <label for="documento">Documento</label>
-                  <input type="text"
-                         id="documento"
-                         class="form-control"
-                         [value]="cliente.documento"
-                         disabled
-                         name="documento">
-                </section>
+                <!--<section class="form-group">-->
+                  <!--<label>Tipo de Documento</label>-->
+                  <!--<input type="text"-->
+                         <!--class="form-control"-->
+                         <!--[value]="cliente.tipo_documento"-->
+                         <!--disabled>-->
+                <!--</section>-->
+                <!--<section class="form-group">-->
+                  <!--<label for="documento">Documento</label>-->
+                  <!--<input type="text"-->
+                         <!--id="documento"-->
+                         <!--class="form-control"-->
+                         <!--[value]="cliente.documento"-->
+                         <!--disabled-->
+                         <!--name="documento">-->
+                <!--</section>-->
                 <section class="form-group">
                   <label for="razon_social">Razón Social</label>
                   <input type="text"
@@ -107,8 +109,6 @@
                          formControlName="razon_social"
                          name="razon_social">
                 </section>
-              </div>
-              <div class="col-6">
                 <section class="form-group">
                   <label for="direccion">Dirección</label>
                   <input type="text"
@@ -117,6 +117,8 @@
                          formControlName="direccion"
                          name="direccion">
                 </section>
+              </div>
+              <div class="col-6">
                 <section class="form-group">
                   <label for="fecha_nacimiento">Fecha Nacimiento</label>
                   <input type="date"
@@ -138,7 +140,7 @@
                   <input type="radio"
                          value="varon"
                          formControlName="genero"
-                         name="genero"> Varon
+                         name="genero"> Hombre
                   <input type="radio"
                          value="mujer"
                          formControlName="genero"

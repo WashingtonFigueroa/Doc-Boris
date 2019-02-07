@@ -120,7 +120,7 @@ export class RadiografiaComponent implements OnInit {
       'cliente_id' : [0, [Validators.required]],
       'numero_factura' : ['', [Validators.required]],
       'imagen' : ['', [Validators.required]],
-      'valor' : [0.00, [Validators.required]]
+      'valor' : ['', [Validators.required]]
     });
   }
 
