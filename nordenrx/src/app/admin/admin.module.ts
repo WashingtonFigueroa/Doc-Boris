@@ -18,6 +18,11 @@ import { ConsultaIndexComponent } from './consulta/consulta-index/consulta-index
 import {ConsultaService} from './consulta/consulta.service';
 import { AdminComponent } from './admin.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { ReporteComponent } from './reporte/reporte.component';
+import { ReporteIndexComponent } from './reporte/reporte-index/reporte-index.component';
+import { ReporteUpdateComponent } from './reporte/reporte-update/reporte-update.component';
+import { ReporteCreateComponent } from './reporte/reporte-create/reporte-create.component';
+import {ReporteService} from "./reporte/reporte.service";
 
 @NgModule({
   imports: [
@@ -27,7 +32,7 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  declarations: [RadiografiaComponent, ClienteComponent, ClienteIndexComponent, ClienteCreateComponent, ClienteEditComponent, ConsultaComponent, ConsultaCreateComponent, ConsultaEditComponent, ConsultaIndexComponent, AdminComponent, AdminHeaderComponent],
-  providers: [RadiografiaService, ClienteService, ConsultaService]
+  declarations: [RadiografiaComponent, ClienteComponent, ClienteIndexComponent, ClienteCreateComponent, ClienteEditComponent, ConsultaComponent, ConsultaCreateComponent, ConsultaEditComponent, ConsultaIndexComponent, AdminComponent, AdminHeaderComponent, ReporteComponent, ReporteIndexComponent, ReporteUpdateComponent, ReporteCreateComponent],
+  providers: [RadiografiaService, ClienteService, ConsultaService, ReporteService]
 })
 export class AdminModule { }

@@ -18,7 +18,7 @@ class ConsultaController extends Controller
     public function index()
     {
         $consultas = Consulta::join('clientes', 'clientes.cliente_id', '=', 'consultas.cliente_id')
-                                ->orderBy('numero_factura')
+                                ->orderBy('numero_factura', 'desc')
                                 ->paginate(10);
         return response()->json($consultas, 200);
     }

@@ -30,22 +30,25 @@
         <table class="table table-hover">
           <thead style="background-color: #0f192a">
           <tr>
-            <th>N.</th>
             <th>N. de Factura</th>
+            <th>Documento</th>
             <th>Razon Social</th>
-            <th>Celular</th>
             <th>Valor</th>
             <th>Radiografía</th>
+            <th>Enviar</th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let consulta of consultas.data; let i = index">
-            <td>{{ i + 1 }}</td>
             <td>{{ consulta.numero_factura }}</td>
+            <td>{{ consulta.documento }}</td>
             <td>{{ consulta.razon_social }}</td>
-            <td>{{ consulta.celular }}</td>
             <td>{{ consulta.valor }}</td>
             <td><img src="{{base}}radiografia/{{consulta.imagen.split('/')[1]}}" class="img-radiografia"></td>
+            <td>
+              <button routerLink="/consultas/" type="button" class="btn-ctrl">
+              <i class="fa fa-envelope-o fa-fw"></i>
+            </button></td>
           </tr>
           </tbody>
         </table>

@@ -34,6 +34,7 @@ class Kernel extends ConsoleKernel
             foreach (Storage::disk('publico')->files('radiografias') as $filename) {
                 $name = explode('/', $filename)[1];
                 if(!Storage::exists('radiografias/' . $name)) {
+                    Storage::putFileAs('radiografias', new File(public_path($filename)), $name);
                     $client = new Client();
                     $result = $client->post($servidor . 'upload', [
                         'multipart' => [
@@ -43,13 +44,13 @@ class Kernel extends ConsoleKernel
                                 'filename' => $name
                             ]
                     ]]);
-                    Storage::putFileAs('radiografias', new File(public_path($filename)), $name);
                     array_push($files, $filename);
                 }
             }
             foreach (Storage::disk('publico')->files('tomografias') as $filename) {
                 $name = explode('/', $filename)[1];
                 if(!Storage::exists('tomografias/' . $name)) {
+                    Storage::putFileAs('tomografias', new File(public_path($filename)), $name);
                     $client = new Client();
                     $result = $client->post($servidor . 'upload-tomografia', [
                         'multipart' => [
@@ -60,7 +61,6 @@ class Kernel extends ConsoleKernel
                             ]
                         ]
                     ]);
-                    Storage::putFileAs('tomografias', new File(public_path($filename)), $name);
                     array_push($files, $filename);
                 }
             }

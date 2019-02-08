@@ -32,7 +32,6 @@
           <tr>
             <th>N.</th>
             <th>Razón Social</th>
-            <th>Tipo Documento</th>
             <th>Documento</th>
             <th>Fecha de Nacimiento</th>
             <th>Celular</th>
@@ -44,7 +43,6 @@
           <tr *ngFor="let cliente of paginacion.data; let i = index">
             <td>{{ i + 1 }}</td>
             <td>{{ cliente.razon_social }}</td>
-            <td>{{ cliente.tipo_documento }}</td>
             <td>{{ cliente.documento }}</td>
             <td>{{ cliente.fecha_nacimiento | date: 'dd/MM/y' }}</td>
             <td>{{ cliente.celular }}</td>

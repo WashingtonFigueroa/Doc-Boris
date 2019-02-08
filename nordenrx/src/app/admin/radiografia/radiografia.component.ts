@@ -4,6 +4,7 @@ import { environment } from '../../../environments/environment.prod';
 import {ClienteService} from '../cliente/cliente.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ConsultaService} from '../consulta/consulta.service';
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-radiografia',
@@ -26,13 +27,16 @@ export class RadiografiaComponent implements OnInit {
   };
   imagen: any = null;
   asociado = false;
-  img = environment.servidor + 'radiografia/';
+  mostrar = false;
+
+    img = environment.servidor + 'radiografia/';
   consultaGroup: FormGroup;
 
   constructor(private radiografiaService: RadiografiaService,
               private consultaService: ConsultaService,
               private fb: FormBuilder,
-              private clienteService: ClienteService) {
+              private clienteService: ClienteService,
+              private toastrService: ToastrService) {
     this.load();
     this.createForm();
   }
@@ -109,33 +113,35 @@ export class RadiografiaComponent implements OnInit {
 
   createForm() {
     this.consultaGroup = this.fb.group({
-      'radiografia_id' : [0, [Validators.required]],
-      'tipo_documento' : ['cedula', [Validators.required]],
+      'radiografia_id' : [0],
+      'tipo_documento' : ['cedula'],
       'documento' : ['', [Validators.required]],
       'razon_social' : ['', [Validators.required]],
-      'direccion' : ['', [Validators.required]],
+      'direccion' : [''],
       'fecha_nacimiento' : ['', [Validators.required]],
-      'celular' : ['', [Validators.required]],
-      'genero' : ['varon', [Validators.required]],
-      'cliente_id' : [0, [Validators.required]],
+      'celular' : [''],
+      'genero' : [''],
+      'cliente_id' : [0],
       'numero_factura' : ['', [Validators.required]],
-      'imagen' : ['', [Validators.required]],
+      'imagen' : [''],
       'valor' : ['', [Validators.required]]
     });
   }
 
   searchPerson() {
+    this.mostrar =true;
     this.resetCliente();
-    const tipo_documento = this.consultaGroup.value.tipo_documento;
     const documento = this.consultaGroup.value.documento;
     console.log(this.cliente);
     this.radiografiaService
-        .sri(tipo_documento, documento)
+        .sri(documento)
         .subscribe((res: any) => {
+          this.mostrar = false;
           if (res.type === 'sri') {
-            this.cliente.razon_social = res.data.nombreCompleto;
-            this.cliente.tipo_documento = 'cedula';
-            this.cliente.documento = res.data.identificacion;
+                  this.consultaGroup.patchValue({
+                      'razon_social' : res.data.data.nombreCompleto,
+                      'direccion' : res.data.data.residencia,
+                  });
           } else {
             this.consultaGroup.patchValue({
               'cliente_id' : res.data.cliente_id,
@@ -154,7 +160,10 @@ export class RadiografiaComponent implements OnInit {
             this.cliente.fecha_nacimiento = res.data.fecha_nacimiento;
             this.cliente.celular = res.data.celular;
           }
-          console.log(res);
+        }, (error) =>
+        {
+            this.mostrar = false;
+            this.toastrService.error('Erronia', 'Cedula');
         });
   }
 

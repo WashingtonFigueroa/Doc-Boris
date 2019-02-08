@@ -1,172 +1,114 @@
 <div class="container">
-  <br><br>
-  <div *ngIf="!asociado" class="container">
-    <div class="row">
-      <div class="col-4">
-        <button
-          [disabled]="imagen === null"
-          (click)="asociado = true"
-          class="btn-create"><i class="fa fa-check"></i> Asociar a consulta</button>
-      </div>
-      <div class="col-4 text-center">
-        <button
-          routerLink="/admin/consultas"
-          class="btn-create"><i class="fa fa-search"></i> Consultas </button>
-      </div>
-      <div class="col-4 text-right">
-        <span class="text-info">*Seleccione una radiografia</span>
-      </div>
-    </div>
-    <hr>
-    <div class="admin-container-card">
-      <div class="admin-card"
-           *ngFor="let radiografia of radiografias; let i = index">
-        <label class="container">
-          <input type="checkbox"
-                 [checked]="radiografia.checked"
-                 [disabled]="imagen !== null && radiografia.checked === false"
-                 (change)="updateImagen(radiografia, i)">
-          <span class="checkmark"></span>
-        </label>
-        <img class="img" src="{{img}}{{radiografia.data.nombre}}">
-        <div class="card-body text-right">
-          <span class="timestamp">{{radiografia.data.created_at | date: 'dd/MM/y HH:mm:ss'}}</span>
+    <br><br>
+    <div *ngIf="!asociado" class="container">
+        <div class="row">
+            <div class="col-4">
+                <button [disabled]="imagen === null" (click)="asociado = true" class="btn-create"><i class="fa fa-check"></i> Asociar a consulta</button>
+            </div>
+            <div class="col-4 text-center">
+                <button routerLink="/admin/consultas" class="btn-create"><i class="fa fa-search"></i> Consultas </button>
+            </div>
+            <div class="col-4 text-right">
+                <span class="text-info">*Seleccione una radiografia</span>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div *ngIf="asociado" class="container-fluid">
-    <button class="btn btn-dark" routerLink="/admin/radiografias">Atras</button>
-    <hr>
-    <div class="row">
-      <div class="col-6">
-        <img src="{{img}}{{imagen.nombre}}" class="img" style="height: 400px">
-      </div>
-      <div class="col-6">
-        <div class="card">
-          <div class="card-body">
-            <form [formGroup]="consultaGroup" *ngIf="cliente !== null">
-              <legend>Consulta</legend>
-              <div class="row">
-              <div class="col-6">
-                    <section class="form-group">
-                      <label>Número de Factura</label>
-                      <input type="text"
-                             class="form-control"
-                             formControlName="numero_factura"
-                             name="numero_factura">
-                    </section>
-                <section *ngIf="cliente !== null" class="form-group">
-                  <label for="tipo_documento">Tipo Documento</label>
-                  <!--                  <input type="text"
-                                           class="form-control"
-                                           id="tipo_documento"
-                                           [value]="cliente.tipo_documento"
-                                           disabled
-                                           name="tipo_documento">-->
-                  <select id="tipo_documento"
-                          formControlName="tipo_documento"
-                          name="tipo_documento"
-                          class="form-control">
-                    <option value="cedula"> Cedula </option>
-                    <option value="ruc"> Ruc </option>
-                    <option value="pasaporte"> Pasaporte </option>
-                  </select>
-                </section>
-                <section class="form-group">
-                      <label>Documento</label>
-                      <div class="row">
-                        <div class="col-8">
-                          <input type="text" class="form-control" placeholder="Documento"
-                                 formControlName="documento">
-                        </div>
-                        <div class="col-2 text-right">
-                          <button class="btn btn-primary" (click)="searchPerson()"><i class="fa fa-search"></i></button>
-                        </div>
-                      </div>
-                    </section>
-                <!--<section class="form-group">-->
-                  <!--<label>Tipo de Documento</label>-->
-                  <!--<input type="text"-->
-                         <!--class="form-control"-->
-                         <!--[value]="cliente.tipo_documento"-->
-                         <!--disabled>-->
-                <!--</section>-->
-                <!--<section class="form-group">-->
-                  <!--<label for="documento">Documento</label>-->
-                  <!--<input type="text"-->
-                         <!--id="documento"-->
-                         <!--class="form-control"-->
-                         <!--[value]="cliente.documento"-->
-                         <!--disabled-->
-                         <!--name="documento">-->
-                <!--</section>-->
-                <section class="form-group">
-                  <label for="razon_social">Razón Social</label>
-                  <input type="text"
-                         id="razon_social"
-                         class="form-control"
-                         formControlName="razon_social"
-                         name="razon_social">
-                </section>
-                <section class="form-group">
-                  <label for="direccion">Dirección</label>
-                  <input type="text"
-                         id="direccion"
-                         class="form-control"
-                         formControlName="direccion"
-                         name="direccion">
-                </section>
-              </div>
-              <div class="col-6">
-                <section class="form-group">
-                  <label for="fecha_nacimiento">Fecha Nacimiento</label>
-                  <input type="date"
-                         formControlName="fecha_nacimiento"
-                         id="fecha_nacimiento"
-                         class="form-control"
-                         name="fecha_nacimiento">
-                </section>
-                <section class="form-group">
-                  <label for="celular">Celular</label>
-                  <input type="text"
-                         class="form-control"
-                         id="celular"
-                         formControlName="celular"
-                         name="celular">
-                </section>
-                <section class="form-group">
-                  <label>Genero</label> <br>
-                  <input type="radio"
-                         value="varon"
-                         formControlName="genero"
-                         name="genero"> Hombre
-                  <input type="radio"
-                         value="mujer"
-                         formControlName="genero"
-                         name="genero"> Mujer
-                </section>
-                <section class="form-group">
-                  <label for="valor">Valor</label>
-                  <input type="number"
-                         id="valor"
-                         step="0.01"
-                         class="form-control"
-                         formControlName="valor"
-                         name="Valor">
-                </section>
-              </div>
-              </div>
-
-
-              <section class="text-right">
-                <a class="btn-danger-link" (click)="asociado = false">Cancelar</a>
-                <button class="btn btn-primary" (click)="save()">Guardar Datos</button>
-              </section>
-            </form>
-          </div>
+        <hr>
+        <div class="admin-container-card">
+            <div class="admin-card" *ngFor="let radiografia of radiografias; let i = index">
+                <label class="container">
+                    <input type="checkbox"
+                           [checked]="radiografia.checked"
+                           [disabled]="imagen !== null && radiografia.checked === false"
+                           (change)="updateImagen(radiografia, i)">
+                    <span class="checkmark"></span>
+                </label>
+                <img class="img" src="{{img}}{{radiografia.data.nombre}}">
+                <div class="card-body text-right">
+                    <span class="timestamp">{{radiografia.data.created_at | date: 'dd/MM/y HH:mm:ss'}}</span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+    <div *ngIf="asociado" class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <img src="{{img}}{{imagen.nombre}}" class="img" style="height: 300px">
+            </div>
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form [formGroup]="consultaGroup" *ngIf="cliente !== null">
+                            <legend>Registrar Consulta</legend>
+                            <div class="row">
+                                <div class="col-6">
+                                    <section class="form-group">
+                                        <label>Número de Factura</label>
+                                        <input type="text" class="form-control" formControlName="numero_factura" name="numero_factura">
+                                    </section>
+                                    <section *ngIf="cliente !== null" class="form-group">
+                                        <label for="tipo_documento">Tipo Documento</label>
+                                        <select id="tipo_documento" formControlName="tipo_documento" name="tipo_documento" class="form-control">
+                                            <option value="cedula"> Cedula </option>
+                                            <option value="ruc"> Ruc </option>
+                                            <option value="pasaporte"> Pasaporte </option>
+                                        </select>
+                                    </section>
+                                    <section class="form-group">
+                                        <label>Documento</label>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" placeholder="Documento" formControlName="documento" onkeypress="return searchPerson(event)">
+                                            </div>
+                                            <div class="block">
+                                                <p class="circle">
+                                                    <span *ngIf="mostrar">
+                                                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                                                    <span class="sr-only">Loading...</span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="col-2 text-right">
+                                                <button class="btn btn-primary" (click)="searchPerson()"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="razon_social">Razón Social</label>
+                                        <input type="text" id="razon_social" class="form-control" formControlName="razon_social" name="razon_social">
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="direccion">Dirección</label>
+                                        <input type="text" id="direccion" class="form-control" formControlName="direccion" name="direccion">
+                                    </section>
+                                </div>
+                                <div class="col-6">
+                                    <section class="form-group">
+                                        <label for="fecha_nacimiento">Fecha Nacimiento</label>
+                                        <input type="date" formControlName="fecha_nacimiento" id="fecha_nacimiento" class="form-control" name="fecha_nacimiento">
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="celular">Celular</label>
+                                        <input type="text" class="form-control" id="celular" formControlName="celular" name="celular">
+                                    </section>
+                                    <section class="form-group">
+                                        <label>Genero</label> <br>
+                                        <input type="radio" value="varon" formControlName="genero" name="genero"> Hombre
+                                        <input type="radio" value="mujer" formControlName="genero" name="genero"> Mujer
+                                    </section>
+                                    <section class="form-group">
+                                        <label for="valor">Valor</label>
+                                        <input type="number" id="valor" step="0.01" class="form-control" formControlName="valor" name="Valor">
+                                    </section>
+                                </div>
+                            </div>
+                            <section class="text-right">
+                                <button class="btn btn-dark " (click)="asociado = false">Cancelar</button>
+                                <button class="btn btn-primary" [disabled]="consultaGroup.status === 'INVALID'" (click)="save()">Guardar Datos</button>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

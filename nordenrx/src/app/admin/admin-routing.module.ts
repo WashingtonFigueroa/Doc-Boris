@@ -8,6 +8,10 @@ import {ClienteEditComponent} from './cliente/cliente-edit/cliente-edit.componen
 import {AdminComponent} from './admin.component';
 import {ConsultaIndexComponent} from './consulta/consulta-index/consulta-index.component';
 import {ConsultaComponent} from './consulta/consulta.component';
+import {ReporteComponent} from "./reporte/reporte.component";
+import {ReporteIndexComponent} from "./reporte/reporte-index/reporte-index.component";
+import {ReporteCreateComponent} from "./reporte/reporte-create/reporte-create.component";
+import {ReporteUpdateComponent} from "./reporte/reporte-update/reporte-update.component";
 
 const routes: Routes = [
   {
@@ -56,6 +60,29 @@ const routes: Routes = [
           }
         ]
       },
+        {
+            path: 'reportes',
+            component: ReporteComponent,
+            children: [
+                {
+                    path: 'listar',
+                    component: ReporteIndexComponent
+                },
+                {
+                    path: 'crear',
+                    component: ReporteCreateComponent
+                },
+                {
+                    path: 'editar/:cliente_id',
+                    component: ReporteUpdateComponent
+                },
+                {
+                    path: '',
+                    redirectTo: 'listar',
+                    pathMatch: 'full'
+                }
+            ]
+        },
       {
         path: '',
         redirectTo: 'radiografias',
