@@ -29,12 +29,14 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->call(function () {
-            $servidor = 'http://localhost:8000/api/';
+            $servidor = 'http://nordentrx.com/public/api/';
             $files = [];
             foreach (Storage::disk('publico')->files('radiografias') as $filename) {
                 $name = explode('/', $filename)[1];
                 if(!Storage::exists('radiografias/' . $name)) {
                     Storage::putFileAs('radiografias', new File(public_path($filename)), $name);
+
+
                     $client = new Client();
                     $result = $client->post($servidor . 'upload', [
                         'multipart' => [
@@ -47,7 +49,7 @@ class Kernel extends ConsoleKernel
                     array_push($files, $filename);
                 }
             }
-            foreach (Storage::disk('publico')->files('tomografias') as $filename) {
+/*            foreach (Storage::disk('publico')->files('tomografias') as $filename) {
                 $name = explode('/', $filename)[1];
                 if(!Storage::exists('tomografias/' . $name)) {
                     Storage::putFileAs('tomografias', new File(public_path($filename)), $name);
@@ -63,8 +65,7 @@ class Kernel extends ConsoleKernel
                     ]);
                     array_push($files, $filename);
                 }
-            }
-
+            }*/
         })->everyMinute();
     }
 

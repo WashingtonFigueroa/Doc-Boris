@@ -28,7 +28,7 @@ class UsuarioController extends Controller
             return response()->json([
                 'error' => 'La confirmacion de password no coincide'
             ], 500);
-            $user->save();
+      //      $user->save();
         } else {
         $user = new User();
         $user->name = $request->input('name');
