@@ -1,1 +1,135 @@
-jhgjhgjgh
+<div class="container">
+    <h3 class="header-title">Consultas Sucursal Ibarra</h3>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <section class="form-group">
+                    <label>Fecha Inicio</label>
+                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_inicio" maxlength="10">
+                </section>
+            </div>
+            <div class="col-md-4">
+                <section class="form-group">
+                    <label>Fecha Inicio</label>
+                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_fin" maxlength="10">
+                </section>
+            </div>
+            <div class="col-md-4">
+                <br>
+                <button class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <h5 class="card-header">
+                                Imagenes en proceso
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Hoy: {{sumradiografias.valueOf()}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <h5 class="card-header">
+                                Imagenes Creadas
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Hoy: {{sumconsultas.valueOf()}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <h5 class="card-header">
+                                Imgenes Eliminadas
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Hoy: {{diferencia.valueOf()}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h3 class="header-title">Consultas Sucursal Otavalo</h3>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <section class="form-group">
+                    <label>Fecha Inicio</label>
+                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_inicio" maxlength="10">
+                </section>
+            </div>
+            <div class="col-md-4">
+                <section class="form-group">
+                    <label>Fecha Inicio</label>
+                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_fin" maxlength="10">
+                </section>
+            </div>
+            <div class="col-md-4">
+                <br>
+                <button class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <h5 class="card-header">
+                                Imagenes en proceso
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                   0
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <h5 class="card-header">
+                                Imagenes Creadas
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    0
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <h5 class="card-header">
+                                Imgenes Eliminadas
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                   0
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -31,6 +31,10 @@ Route::get('radiografia/{filename}',
 Route::post('send-file', 'UploadController@sendFile');
 //consultas
 Route::get('sri/{tipo_documento}', 'API\ClienteController@sri');
+Route::get('sumradiografias', 'API\ReportesController@sumradiografias');
+Route::get('sumrconsultas', 'API\ReportesController@sumrconsultas');
+Route::get('diferencia', 'API\ReportesController@diferencia');
+
 /*APIs de recursos*/
 Route::apiResources([
     'clientes' => 'API\ClienteController',

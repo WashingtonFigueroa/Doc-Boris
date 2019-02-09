@@ -2,14 +2,11 @@
     <br><br>
     <div *ngIf="!asociado" class="container">
         <div class="row">
-            <div class="col-4">
-                <button [disabled]="imagen === null" (click)="asociado = true" class="btn-create"><i class="fa fa-check"></i> Asociar a consulta</button>
-            </div>
-            <div class="col-4 text-center">
-                <button routerLink="/admin/consultas" class="btn-create"><i class="fa fa-search"></i> Consultas </button>
+            <div class="col-8">
+                <h3 class="header-title">*Seleccione una radiografia</h3>
             </div>
             <div class="col-4 text-right">
-                <span class="text-info">*Seleccione una radiografia</span>
+                <button [disabled]="imagen === null" (click)="asociado = true" class="btn-create"><i class="fa fa-check"></i> Asociar a consulta</button>
             </div>
         </div>
         <hr>

@@ -98,4 +98,5 @@ class ConsultaController extends Controller
         $consulta->delete();
         return response()->json($consulta, 200);
     }
+
 }
