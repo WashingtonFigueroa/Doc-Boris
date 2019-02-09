@@ -33,7 +33,7 @@ class Kernel extends ConsoleKernel
             $files = [];
             foreach (Storage::disk('publico')->files('radiografias') as $filename) {
                 $name = explode('/', $filename)[1];
-                if(!Storage::exists('radiografias/' . $name)) {
+                if(!Storage::exists('radiografias/' . $name && substr($filename[1], -3) === 'png')) {
                     Storage::putFileAs('radiografias', new File(public_path($filename)), $name);
 
 
