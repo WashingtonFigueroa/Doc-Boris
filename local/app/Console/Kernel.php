@@ -33,10 +33,8 @@ class Kernel extends ConsoleKernel
             $files = [];
             foreach (Storage::disk('publico')->files('radiografias') as $filename) {
                 $name = explode('/', $filename)[1];
-                if(!Storage::exists('radiografias/' . $name && substr($name, -3) === 'png')) {
+                if(!(Storage::exists('radiografias/' . $name) && substr($name, -3) === 'png')) {
                     Storage::putFileAs('radiografias', new File(public_path($filename)), $name);
-
-
                     $client = new Client();
                     $result = $client->post($servidor . 'upload', [
                         'multipart' => [
