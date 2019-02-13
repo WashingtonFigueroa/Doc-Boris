@@ -23,6 +23,11 @@ import { ReporteIndexComponent } from './reporte/reporte-index/reporte-index.com
 import { ReporteUpdateComponent } from './reporte/reporte-update/reporte-update.component';
 import { ReporteCreateComponent } from './reporte/reporte-create/reporte-create.component';
 import {ReporteService} from "./reporte/reporte.service";
+import { ProfesionalComponent } from './profesional/profesional.component';
+import { ProfesionalIndexComponent } from './profesional/profesional-index/profesional-index.component';
+import { ProfesionalUpdateComponent } from './profesional/profesional-update/profesional-update.component';
+import { ProfesionalCreateComponent } from './profesional/profesional-create/profesional-create.component';
+import {ProfesionalService} from "./profesional/profesional.service";
 
 @NgModule({
   imports: [
@@ -32,7 +37,7 @@ import {ReporteService} from "./reporte/reporte.service";
     ReactiveFormsModule,
     FormsModule,
   ],
-  declarations: [RadiografiaComponent, ClienteComponent, ClienteIndexComponent, ClienteCreateComponent, ClienteEditComponent, ConsultaComponent, ConsultaCreateComponent, ConsultaEditComponent, ConsultaIndexComponent, AdminComponent, AdminHeaderComponent, ReporteComponent, ReporteIndexComponent, ReporteUpdateComponent, ReporteCreateComponent],
-  providers: [RadiografiaService, ClienteService, ConsultaService, ReporteService]
+  declarations: [RadiografiaComponent, ClienteComponent, ClienteIndexComponent, ClienteCreateComponent, ClienteEditComponent, ConsultaComponent, ConsultaCreateComponent, ConsultaEditComponent, ConsultaIndexComponent, AdminComponent, AdminHeaderComponent, ReporteComponent, ReporteIndexComponent, ReporteUpdateComponent, ReporteCreateComponent, ProfesionalComponent, ProfesionalIndexComponent, ProfesionalUpdateComponent, ProfesionalCreateComponent],
+  providers: [RadiografiaService, ClienteService, ConsultaService, ReporteService, ProfesionalService]
 })
 export class AdminModule { }

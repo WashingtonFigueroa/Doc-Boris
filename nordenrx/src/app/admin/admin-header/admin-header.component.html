@@ -4,11 +4,18 @@
   </div>
   <span class="space"></span>
   <li class="nav-item">
+    <a routerLink="/admin/profesionales"
+       class="nav-link"
+       [class.active]="router.url === '/admin/profesionales' ||
+       router.url === '/admin/profesionales/listar' ||
+       router.url === '/admin/profesionales/crear'">Profesionales</a>
+  </li>
+  <li class="nav-item">
     <a routerLink="/admin/clientes"
        class="nav-link"
        [class.active]="router.url === '/admin/clientes' ||
        router.url === '/admin/clientes/listar' ||
-       router.url === '/admin/clientes/crear'">Clientes</a>
+       router.url === '/admin/clientes/crear'">Pacientes</a>
   </li>
   <li class="nav-item">
     <a routerLink="/admin/radiografias"

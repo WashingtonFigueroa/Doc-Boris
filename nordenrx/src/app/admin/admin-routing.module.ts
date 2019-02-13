@@ -12,6 +12,10 @@ import {ReporteComponent} from "./reporte/reporte.component";
 import {ReporteIndexComponent} from "./reporte/reporte-index/reporte-index.component";
 import {ReporteCreateComponent} from "./reporte/reporte-create/reporte-create.component";
 import {ReporteUpdateComponent} from "./reporte/reporte-update/reporte-update.component";
+import {ProfesionalComponent} from "./profesional/profesional.component";
+import {ProfesionalIndexComponent} from "./profesional/profesional-index/profesional-index.component";
+import {ProfesionalCreateComponent} from "./profesional/profesional-create/profesional-create.component";
+import {ProfesionalUpdateComponent} from "./profesional/profesional-update/profesional-update.component";
 
 const routes: Routes = [
   {
@@ -75,6 +79,29 @@ const routes: Routes = [
                 {
                     path: 'editar/:cliente_id',
                     component: ReporteUpdateComponent
+                },
+                {
+                    path: '',
+                    redirectTo: 'listar',
+                    pathMatch: 'full'
+                }
+            ]
+        },
+        {
+            path: 'profesionales',
+            component: ProfesionalComponent,
+            children: [
+                {
+                    path: 'listar',
+                    component: ProfesionalIndexComponent
+                },
+                {
+                    path: 'crear',
+                    component: ProfesionalCreateComponent
+                },
+                {
+                    path: 'editar/:cliente_id',
+                    component: ProfesionalUpdateComponent
                 },
                 {
                     path: '',

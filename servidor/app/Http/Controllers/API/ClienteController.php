@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\API;
 
 use App\Cliente;
-use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

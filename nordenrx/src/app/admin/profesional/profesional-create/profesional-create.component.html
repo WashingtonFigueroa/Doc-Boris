@@ -1,0 +1,66 @@
+<div class="container">
+  <h3 class="header-title">Registrar Profesional</h3>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="profesionalGroup" (submit)="store()">
+
+            <div class="row">
+              <div class="col-md-6">
+                <section class="form-group">
+                  <label>Documento</label>
+                  <div class="row">
+                    <div class="col-8">
+                      <input type="text" class="form-control" placeholder="Documento" formControlName="documento" onkeypress="return searchPerson(event)">
+                    </div>
+                    <div class="block">
+                      <p class="circle">
+                        <span *ngIf="mostrar">
+                        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="col-2 text-right">
+                      <button class="btn btn-primary" (click)="searchPerson()"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                </section>
+                <section class="form-group">
+                  <label for="razon_social">Razón Social</label>
+                  <input type="text" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
+                </section>
+                <section class="form-group">
+                  <label for="direccion">Dirección</label>
+                  <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
+                </section>
+              </div>
+              <div class="col-md-6">
+                <section class="form-group">
+                  <label for="especialidad">Especialidad</label>
+                  <input type="text" class="form-control" formControlName="especialidad" name="especialidad" id="especialidad">
+                </section>
+
+                <section class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" formControlName="email" name="email" id="email">
+                </section>
+                <section class="form-group">
+                  <label for="celular">Celular</label>
+                  <input type="number" class="form-control" formControlName="celular" name="celular" id="celular">
+                </section>
+                <section class="text-right">
+                  <a routerLink="/admin/clientes" class="btn-danger-link">Cancelar</a>
+                  <button
+                          [disabled]="profesionalGroup.status === 'INVALID'"
+                          class="btn btn-primary">Guardar</button>
+                </section>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

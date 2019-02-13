@@ -23,7 +23,7 @@ export class RadiografiaComponent implements OnInit {
     direccion : '',
     fecha_nacimiento : '',
     celular : '',
-    genero : 'varon',
+    genero : 'Hombre',
   };
   imagen: any = null;
   asociado = false;
@@ -54,7 +54,7 @@ export class RadiografiaComponent implements OnInit {
       direccion : '',
       fecha_nacimiento : '',
       celular : '',
-      genero : 'varon',
+      genero : 'Hombre',
     };
     this.consultaGroup.patchValue({
       'cliente_id' : 0,
@@ -132,7 +132,6 @@ export class RadiografiaComponent implements OnInit {
     this.mostrar =true;
     this.resetCliente();
     const documento = this.consultaGroup.value.documento;
-    console.log(this.cliente);
     this.radiografiaService
         .sri(documento)
         .subscribe((res: any) => {
