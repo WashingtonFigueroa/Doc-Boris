@@ -100,7 +100,7 @@ const routes: Routes = [
                     component: ProfesionalCreateComponent
                 },
                 {
-                    path: 'editar/:cliente_id',
+                    path: 'editar/:profesional_id',
                     component: ProfesionalUpdateComponent
                 },
                 {

@@ -9,10 +9,10 @@
             <div class="row">
               <div class="col-md-6">
                 <section class="form-group">
-                  <label>Documento</label>
+                  <label>Cedula</label>
                   <div class="row">
                     <div class="col-8">
-                      <input type="text" class="form-control" placeholder="Documento" formControlName="documento" onkeypress="return searchPerson(event)">
+                      <input type="text" class="form-control" formControlName="documento" name="documento" id="documento" maxlength="10" onkeypress="if(event.keyCode < 45 || event.keyCode > 57) event.returnValue=false">
                     </div>
                     <div class="block">
                       <p class="circle">

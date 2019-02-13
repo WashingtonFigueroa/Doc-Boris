@@ -29,6 +29,7 @@
     <div *ngIf="asociado" class="container-fluid">
         <div class="row">
             <div class="col-4">
+                <br>
                 <img src="{{img}}{{imagen.nombre}}" class="img" style="height: 300px">
             </div>
             <div class="col-8">
@@ -89,13 +90,24 @@
                                     </section>
                                     <section class="form-group">
                                         <label>Genero</label> <br>
-                                        <input type="radio" value="varon" formControlName="genero" name="genero"> Hombre
-                                        <input type="radio" value="mujer" formControlName="genero" name="genero"> Mujer
+                                        <input type="radio" value="Hombre" formControlName="genero" name="genero"> Hombre
+                                        <input type="radio" value="Mujer" formControlName="genero" name="genero"> Mujer
                                     </section>
                                     <section class="form-group">
                                         <label for="valor">Valor</label>
                                         <input type="number" id="valor" step="0.01" class="form-control" formControlName="valor" name="Valor">
                                     </section>
+                                    <div class="form-group">
+                                        <label for="exampleSelect1">Tipo Radiografía</label>
+                                        <select class="form-control" id="exampleSelect1">
+                                            <option>Seleccione</option>
+                                            <option>Panoramica</option>
+                                            <option>Cefálica</option>
+                                            <option>Carpal</option>
+                                            <option>Oclusal</option>
+                                            <option>ATM</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <section class="text-right">

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ClienteService} from '../cliente.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ToastrModule} from "ngx-toastr";
+import {ToastrModule, ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-cliente-edit',
@@ -17,7 +17,7 @@ export class ClienteEditComponent implements OnInit {
               private route: ActivatedRoute,
               private router: Router,
               private fb: FormBuilder,
-              private toastr: ToastrModule) {
+              private toastrService: ToastrService) {
     this.route.params.subscribe((param: any) => {
       this.cliente_id = param.cliente_id;
       this.clienteService.show(param.cliente_id)
@@ -44,7 +44,7 @@ export class ClienteEditComponent implements OnInit {
   update() {
     this.clienteService.update(this.cliente_id, this.clienteGroup.value)
       .subscribe((res: any) => {
-        alert('El cliente ' + this.clienteGroup.value.razon_social + ' fue actualizado exitosamente');
+        this.toastrService.success('El cliente ' + this.clienteGroup.value.razon_social + ' fue actualizado exitosamente');
         this.router.navigate(['/admin/clientes']);
       });
   }

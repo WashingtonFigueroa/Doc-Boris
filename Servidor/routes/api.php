@@ -34,3 +34,6 @@ Route::apiResources([
 /*Clientes*/
 Route::get('buscar-clientes/{valor?}', 'API\ClienteController@buscar');
 Route::get('listar-clientes', 'API\ClienteController@listar');
+/*Profesionales*/
+Route::get('buscar-profesionales/{valor?}', 'API\ProfesionalController@buscar');
+Route::get('listar-profesionales', 'API\ProfesionalController@listar');

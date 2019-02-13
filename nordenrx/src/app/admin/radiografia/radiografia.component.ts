@@ -140,6 +140,9 @@ export class RadiografiaComponent implements OnInit {
                   this.consultaGroup.patchValue({
                       'razon_social' : res.data.data.nombreCompleto,
                       'direccion' : res.data.data.residencia,
+                      'fecha_nacimiento' :new FormControl(res.data.data.fechaNacimiento),
+                      'genero' : new FormControl(res.data.data.genero),
+
                   });
           } else {
             this.consultaGroup.patchValue({
@@ -148,9 +151,9 @@ export class RadiografiaComponent implements OnInit {
               'tipo_documento' : res.data.tipo_documento,
               'documento' : res.data.documento,
               'direccion' : res.data.direccion,
-              'fecha_nacimiento' : res.data.fecha_nacimiento,
+                'fecha_nacimiento' :new FormControl(res.data.fechaNacimiento),
               'celular' : res.data.celular,
-              'genero' : res.data.genero
+              'genero' : new FormControl(res.data.genero),
             });
             this.cliente.razon_social = res.data.razon_social;
             this.cliente.tipo_documento = res.data.tipo_documento;
@@ -158,6 +161,7 @@ export class RadiografiaComponent implements OnInit {
             this.cliente.direccion = res.data.direccion;
             this.cliente.fecha_nacimiento = res.data.fecha_nacimiento;
             this.cliente.celular = res.data.celular;
+            this.cliente.genero = res.data.genero;
           }
         }, (error) =>
         {

@@ -1,3 +1,54 @@
-<p>
-  profesional-update works!
-</p>
+<div class="container">
+  <h3 class="header-title">Editar datos Profesional</h3>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <form *ngIf="profesional !== null"
+                [formGroup]="profesionalGroup"
+                (submit)="update()">
+            <div class="row">
+              <div class="col-md-6">
+                <section class="form-group">
+                  <label>Cedula</label>
+                  <input type="text" class="form-control" formControlName="documento" name="documento" id="documento" maxlength="10" onkeypress="if(event.keyCode < 45 || event.keyCode > 57) event.returnValue=false">
+                </section>
+                <section class="form-group">
+                  <label for="razon_social">Razón Social</label>
+                  <input type="text" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
+                </section>
+                <section class="form-group">
+                  <label for="direccion">Dirección</label>
+                  <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
+                </section>
+              </div>
+              <div class="col-md-6">
+                <section class="form-group">
+                  <label for="especialidad">Especialidad</label>
+                  <input type="text" class="form-control" formControlName="especialidad" name="especialidad" id="especialidad">
+                </section>
+
+                <section class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" formControlName="email" name="email" id="email">
+                </section>
+                <section class="form-group">
+                  <label for="celular">Celular</label>
+                  <input type="number" class="form-control" formControlName="celular" name="celular" id="celular">
+                </section>
+
+                <section class="text-right">
+                  <a routerLink="/admin/profesionales"
+                     class="btn-danger-link"> Cancelar</a>
+                  <button
+                          [disabled]="profesionalGroup.status === 'INVALID'"
+                          class="btn btn-primary">Actualizar</button>
+                </section>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

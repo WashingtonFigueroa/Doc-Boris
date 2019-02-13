@@ -29,7 +29,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->call(function () {
-            $servidor = 'http://nordentrx.com/public/api/';
+            //$servidor = 'http://nordentrx.com/public/api/';
+            $servidor = 'http://localhost:8000/api/';
             $files = [];
             foreach (Storage::disk('publico')->files('radiografias') as $filename) {
                 $name = explode('/', $filename)[1];

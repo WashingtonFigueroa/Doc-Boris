@@ -27,14 +27,13 @@ class ClienteController extends Controller
         if ($valor === null) {
             $clientes = Cliente::orderBy('razon_social')->paginate(10);
         } else {
-            $clientes = Cliente::where('tipo_documento', 'like', '%' . $valor . '%')
-                ->orWhere('documento', 'like', '%' . $valor . '%')
+            $clientes = Cliente::Where('documento', 'like', '%' . $valor . '%')
                 ->orWhere('razon_social', 'like', '%' . $valor . '%')
                 ->orWhere('direccion', 'like', '%' . $valor . '%')
                 ->orWhere('fecha_nacimiento', 'like', '%' . $valor . '%')
                 ->orWhere('celular', 'like', '%' . $valor . '%')
                 ->orWhere('genero', 'like', '%' . $valor . '%')
-                ->orderBy('razon_social')
+                ->orderBy('cliente_id','desc')
                 ->paginate(10);
         }
         return response()->json($clientes, 200);
@@ -122,7 +121,11 @@ class ClienteController extends Controller
                     'fechaNacimiento' => $ced['dob'],
                     'estadoCivil' => $ced['civilstate'],
                     'nacionalidad' => $ced['nationality'],
-                    'nombreCompletoConyuge' => null,'fechaDefuncion' => null,'numeroCedulaPadre' => null,'numeroCedulaMadre' => null,'residencia'=>$ced['residence'],
+                    'nombreCompletoConyuge' => null,
+                    'fechaDefuncion' => null,
+                    'numeroCedulaPadre' => null,
+                    'numeroCedulaMadre' => null,
+                    'residencia'=>$ced['residence'],
                     'domicilio'=>$ced['streets'],
                     'numeroDomicilio'=>$ced['homenumber']
                 );
