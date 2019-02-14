@@ -20,8 +20,14 @@ class CreateConsultasTable extends Migration
                     ->references('cliente_id')
                     ->on('clientes')
                     ->onDelete('cascade');
+            $table->integer('profesional_id')->unsigned();
+            $table->foreign('profesional_id')
+                ->references('profesional_id')
+                ->on('profesionales')
+                ->onDelete('cascade');
             $table->string('numero_factura');
             $table->string('imagen');
+            $table->string('tipo');
             $table->float('valor', 8, 2);
             $table->softDeletes();
             $table->timestamps();

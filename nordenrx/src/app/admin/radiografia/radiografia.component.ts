@@ -5,6 +5,8 @@ import {ClienteService} from '../cliente/cliente.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ConsultaService} from '../consulta/consulta.service';
 import {ToastrService} from "ngx-toastr";
+import { NgSelectModule } from '@ng-select/ng-select';
+import {ProfesionalService} from "../profesional/profesional.service";
 
 @Component({
   selector: 'app-radiografia',
@@ -27,23 +29,31 @@ export class RadiografiaComponent implements OnInit {
   };
   imagen: any = null;
   asociado = false;
+  profesionales: any = [];
   mostrar = false;
-
-    img = environment.servidor + 'radiografia/';
+  img = environment.servidor + 'radiografia/';
   consultaGroup: FormGroup;
 
   constructor(private radiografiaService: RadiografiaService,
               private consultaService: ConsultaService,
+              private profesionalService: ProfesionalService,
               private fb: FormBuilder,
               private clienteService: ClienteService,
-              private toastrService: ToastrService) {
+              private toastrService: ToastrService,
+              private config: NgSelectModule) {
+      this.profesionalService.listar()
+          .subscribe((res: any) => {
+              this.profesionales = res;
+          });
+    //carga datos select
+
+
     this.load();
     this.createForm();
   }
 
   ngOnInit() {
   }
-
 
   resetCliente() {
     this.cliente = {
@@ -122,8 +132,10 @@ export class RadiografiaComponent implements OnInit {
       'celular' : [''],
       'genero' : [''],
       'cliente_id' : [0],
+      'profesional_id' : [0],
       'numero_factura' : ['', [Validators.required]],
       'imagen' : [''],
+      'tipo' : [''],
       'valor' : ['', [Validators.required]]
     });
   }

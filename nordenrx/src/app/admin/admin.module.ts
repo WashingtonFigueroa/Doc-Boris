@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AdminRoutingModule } from './admin-routing.module';
 import { RadiografiaComponent } from './radiografia/radiografia.component';
 import {RadiografiaService} from './radiografia/radiografia.service';
@@ -35,7 +34,7 @@ import {ProfesionalService} from "./profesional/profesional.service";
     HttpClientModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
   ],
   declarations: [RadiografiaComponent, ClienteComponent, ClienteIndexComponent, ClienteCreateComponent, ClienteEditComponent, ConsultaComponent, ConsultaCreateComponent, ConsultaEditComponent, ConsultaIndexComponent, AdminComponent, AdminHeaderComponent, ReporteComponent, ReporteIndexComponent, ReporteUpdateComponent, ReporteCreateComponent, ProfesionalComponent, ProfesionalIndexComponent, ProfesionalUpdateComponent, ProfesionalCreateComponent],
   providers: [RadiografiaService, ClienteService, ConsultaService, ReporteService, ProfesionalService]

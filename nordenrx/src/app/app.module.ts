@@ -6,7 +6,7 @@ import {app_routing} from './app.routes';
 import { AppComponent } from './app.component';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+      NgSelectModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
     ToastrModule.forRoot()
