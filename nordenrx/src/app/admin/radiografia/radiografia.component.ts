@@ -4,9 +4,9 @@ import { environment } from '../../../environments/environment.prod';
 import {ClienteService} from '../cliente/cliente.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ConsultaService} from '../consulta/consulta.service';
-import {ToastrService} from "ngx-toastr";
+import {ToastrService} from 'ngx-toastr';
 import { NgSelectModule } from '@ng-select/ng-select';
-import {ProfesionalService} from "../profesional/profesional.service";
+import {ProfesionalService} from '../profesional/profesional.service';
 
 @Component({
   selector: 'app-radiografia',
@@ -31,6 +31,7 @@ export class RadiografiaComponent implements OnInit {
   asociado = false;
   profesionales: any = [];
   mostrar = false;
+  profesional_id: number = null;
   img = environment.servidor + 'radiografia/';
   consultaGroup: FormGroup;
 
@@ -45,9 +46,6 @@ export class RadiografiaComponent implements OnInit {
           .subscribe((res: any) => {
               this.profesionales = res;
           });
-    //carga datos select
-
-
     this.load();
     this.createForm();
   }
@@ -141,7 +139,7 @@ export class RadiografiaComponent implements OnInit {
   }
 
   searchPerson() {
-    this.mostrar =true;
+    this.mostrar = true;
     this.resetCliente();
     const documento = this.consultaGroup.value.documento;
     this.radiografiaService
@@ -149,12 +147,14 @@ export class RadiografiaComponent implements OnInit {
         .subscribe((res: any) => {
           this.mostrar = false;
           if (res.type === 'sri') {
+            let fecha_nac = res.data.data.fechaNacimiento;
+            fecha_nac = fecha_nac.split('/');
+            const fecha_nacimiento = fecha_nac[2] + '-' + fecha_nac[1] + '-' + fecha_nac[0];
                   this.consultaGroup.patchValue({
                       'razon_social' : res.data.data.nombreCompleto,
                       'direccion' : res.data.data.residencia,
-                      'fecha_nacimiento' :new FormControl(res.data.data.fechaNacimiento),
-                      'genero' : new FormControl(res.data.data.genero),
-
+                      'fecha_nacimiento' : fecha_nacimiento,
+                      'genero' : res.data.data.genero
                   });
           } else {
             this.consultaGroup.patchValue({
@@ -163,9 +163,9 @@ export class RadiografiaComponent implements OnInit {
               'tipo_documento' : res.data.tipo_documento,
               'documento' : res.data.documento,
               'direccion' : res.data.direccion,
-                'fecha_nacimiento' :new FormControl(res.data.fechaNacimiento),
+              'fecha_nacimiento' : res.data.fecha_nacimiento,
               'celular' : res.data.celular,
-              'genero' : new FormControl(res.data.genero),
+              'genero' : res.data.genero
             });
             this.cliente.razon_social = res.data.razon_social;
             this.cliente.tipo_documento = res.data.tipo_documento;
@@ -175,8 +175,7 @@ export class RadiografiaComponent implements OnInit {
             this.cliente.celular = res.data.celular;
             this.cliente.genero = res.data.genero;
           }
-        }, (error) =>
-        {
+        }, (error) => {
             this.mostrar = false;
             this.toastrService.error('Erronia', 'Cedula');
         });
