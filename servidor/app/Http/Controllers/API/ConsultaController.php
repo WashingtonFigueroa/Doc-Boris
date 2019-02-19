@@ -18,21 +18,25 @@ class ConsultaController extends Controller
     public function index()
     {
         $consultas = Consulta::join('clientes', 'clientes.cliente_id', '=', 'consultas.cliente_id')
-                                ->orderBy('numero_factura', 'desc')
+                                ->orderBy('consulta_id', 'desc')
                                 ->paginate(10);
         return response()->json($consultas, 200);
     }
 
-/*    public function buscar($valor = null) {
+    public function buscar($valor = null) {
         if ($valor === null) {
-            $consultas = Cliente::orderBy('numero_factura')->paginate(10);
+            $consultas = Consulta::join('clientes', 'clientes.cliente_id', '=', 'consultas.cliente_id')
+                                    ->orderBy('consulta_id', 'desc')
+                                    ->paginate(10);
         } else {
-            $consultas = Cliente::where('numero_factura', 'like', '%' . $valor . '%')
-                ->orderBy('numero_factura')
+            $consultas = Consulta::where('numero_factura', 'like', '%' . $valor . '%')
+                ->orwhere('tipo', 'like', '%' . $valor . '%')
+                ->orderBy('consulta_id','desc')
                 ->paginate(10);
         }
         return response()->json($consultas, 200);
-    }*/
+    }
+
     /**
      * Store a newly created resource in storage.
      *

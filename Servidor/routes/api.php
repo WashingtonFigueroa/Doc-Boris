@@ -20,9 +20,11 @@ Route::get('radiografia/{filename}',
 Route::post('send-file', 'UploadController@sendFile');
 //consultas
 Route::get('sri/{tipo_documento}', 'API\ClienteController@sri');
+Route::get('buscar-consultas/{valor?}', 'API\ConsultaController@buscar');
 Route::get('sumradiografias', 'API\ReportesController@sumradiografias');
 Route::get('sumrconsultas', 'API\ReportesController@sumrconsultas');
 Route::get('diferencia', 'API\ReportesController@diferencia');
+Route::get('valor', 'API\ReportesController@valor');
 
 /*APIs de recursos*/
 Route::apiResources([

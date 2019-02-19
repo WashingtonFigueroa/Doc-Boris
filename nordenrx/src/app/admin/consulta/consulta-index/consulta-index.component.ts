@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ConsultaService} from '../consulta.service';
 import {environment} from '../../../../environments/environment.prod';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {ProfesionalService} from "../../profesional/profesional.service";
 
 @Component({
   selector: 'app-consulta-index',
@@ -9,25 +10,54 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./consulta-index.component.scss']
 })
 export class ConsultaIndexComponent implements OnInit {
+    base = environment.servidor;
+    consultas: any = null;
+    pages: any = [];
+    consultaGroup: FormGroup;
+    constructor(private consultaService: ConsultaService,
+                private fb: FormBuilder) {
+        this.createForm();
+        this.consultaService.index()
+            .subscribe((res: any) => {
+                this.consultas = res;
+                this.loadPages();
+            });
+    }
 
-  consultas: any = null;
-  buscarGroup: FormGroup;
-  base = environment.servidor;
-  constructor(private consultaService: ConsultaService,
-              private fb: FormBuilder) {
-    this.consultaService.index()
-      .subscribe((res: any) => {
-        this.consultas = res;
-      });
-    this.createForm();
-  }
+    ngOnInit() {
+    }
 
-  ngOnInit() {
-  }
+    createForm() {
+        this.consultaGroup = this.fb.group({
+            'valor' : new FormControl()
+        });
+    }
 
-  createForm() {
-    this.buscarGroup = this.fb.group({
-      'valor': ['']
-    });
-  }
+    loadPages() {
+        this.pages = [];
+        for (let i = 1; i <= this.consultas.last_page; i++) {
+            this.pages.push({
+                page: i,
+                url: this.base + 'profesionales?page=' + i
+            });
+        }
+    }
+
+    go(url) {
+        this.consultaService.go(url)
+            .subscribe((res: any) => {
+                this.consultas = res;
+                this.loadPages();
+            });
+    }
+
+    buscar() {
+        const valor = this.consultaGroup.value.valor;
+        this.consultaService.buscar(valor)
+            .subscribe((res: any) => {
+                this.consultas = res;
+                this.loadPages();
+            });
+    }
+
 }

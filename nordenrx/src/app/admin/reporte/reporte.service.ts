@@ -18,4 +18,7 @@ export class ReporteService {
     diferencia() {
         return this.http.get(this.base + 'diferencia');
     }
+    valorconsulta() {
+        return this.http.get(this.base + 'valor');
+    }
 }

@@ -3,19 +3,19 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <section class="form-group">
                     <label>Fecha Inicio</label>
-                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_inicio" maxlength="10">
+                    <input type="date" class="form-control" formControlName="start" name="start" value="{{CurrentDate | date:'yyyy-MM-dd'}}">
                 </section>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <section class="form-group">
                     <label>Fecha Inicio</label>
-                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_fin" maxlength="10">
+                    <input type="date" class="form-control" formControlName="end" name="end" value="{{CurrentDate | date:'yyyy-MM-dd'}}">
                 </section>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <br>
                 <button class="btn btn-primary">Buscar</button>
             </div>
@@ -23,38 +23,50 @@
         <div class="row">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <h5 class="card-header">
                                 Imagenes en proceso
                             </h5>
                             <div class="card-body">
                                 <p class="card-text">
-                                    Hoy: {{sumradiografias.valueOf()}}
+                                    {{sumradiografias}}
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <h5 class="card-header">
                                 Imagenes Creadas
                             </h5>
                             <div class="card-body">
                                 <p class="card-text">
-                                    Hoy: {{sumconsultas.valueOf()}}
+                                    {{sumconsultas}}
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <h5 class="card-header">
                                 Imgenes Eliminadas
                             </h5>
                             <div class="card-body">
                                 <p class="card-text">
-                                    Hoy: {{diferencia.valueOf()}}
+                                    {{diferencia}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <h5 class="card-header">
+                                Valor Facturado
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    {{valor | currency : 'USD' : 'symbol' : '1.2'}}
                                 </p>
                             </div>
                         </div>
@@ -71,19 +83,19 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <section class="form-group">
                     <label>Fecha Inicio</label>
-                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_inicio" maxlength="10">
+                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_inicio" value="{{CurrentDate | date:'yyyy-MM-dd'}}">
                 </section>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <section class="form-group">
                     <label>Fecha Inicio</label>
-                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_fin" maxlength="10">
+                    <input type="date" class="form-control" formControlName="fecha_fin" name="fecha_fin" value="{{CurrentDate | date:'yyyy-MM-dd'}}">
                 </section>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <br>
                 <button class="btn btn-primary">Buscar</button>
             </div>
@@ -91,7 +103,7 @@
         <div class="row">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <h5 class="card-header">
                                 Imagenes en proceso
@@ -103,7 +115,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <h5 class="card-header">
                                 Imagenes Creadas
@@ -115,7 +127,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <h5 class="card-header">
                                 Imgenes Eliminadas
@@ -123,6 +135,18 @@
                             <div class="card-body">
                                 <p class="card-text">
                                    0
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <h5 class="card-header">
+                                Valor Facturado
+                            </h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    0
                                 </p>
                             </div>
                         </div>

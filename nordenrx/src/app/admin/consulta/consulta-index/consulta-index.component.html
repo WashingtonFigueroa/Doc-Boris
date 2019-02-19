@@ -8,15 +8,16 @@
     </div>
     <div class="col-8">
       <form
-        [formGroup]="buscarGroup"
-        class="form-inline form-right">
+              (submit)="buscar()"
+              [formGroup]="consultaGroup"
+              class="form-inline form-right">
         <div class="form-group">
           <label for=""></label>
           <input
-            type="search"
-            name="valor" id=""
-            formControlName="valor"
-            class="form-control" placeholder="Buscar..." aria-describedby="helpId">
+                  type="search"
+                  name="valor" id=""
+                  formControlName="valor"
+                  class="form-control" placeholder="Buscar..." aria-describedby="helpId">
         </div>
         <button class="btn btn-primary">Buscar</button>
       </form>
@@ -32,8 +33,9 @@
             <th>N. de Factura</th>
             <th>Documento</th>
             <th>Razon Social</th>
+            <th>Tipo Radiografía</th>
             <th>Valor</th>
-            <th>Radiografía</th>
+            <th>Imagen</th>
             <th>Enviar</th>
           </tr>
           </thead>
@@ -42,7 +44,8 @@
             <td>{{ consulta.numero_factura }}</td>
             <td>{{ consulta.documento }}</td>
             <td>{{ consulta.razon_social }}</td>
-            <td>{{ consulta.valor }}</td>
+            <td>{{ consulta.tipo }}</td>
+            <td>{{ consulta.valor | currency : 'USD' : 'symbol' : '1.2' }}</td>
             <td><img src="{{base}}radiografia/{{consulta.imagen.split('/')[1]}}" class="img-radiografia"></td>
             <td>
               <button routerLink="/consultas/" type="button" class="btn-ctrl">

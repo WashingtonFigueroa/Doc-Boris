@@ -2,8 +2,11 @@
     <br><br>
     <div *ngIf="!asociado" class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-4">
                 <h3 class="header-title">*Seleccione una radiografia</h3>
+            </div>
+            <div class="col-4 text-right">
+                <button (click)="asociado = true" class="btn-create"><i class="fa fa-check"></i> Asociar Img Analógica</button>
             </div>
             <div class="col-4 text-right">
                 <button [disabled]="imagen === null" (click)="asociado = true" class="btn-create"><i class="fa fa-check"></i> Asociar a consulta</button>
@@ -55,7 +58,7 @@
                                         <label>Documento</label>
                                         <div class="row">
                                             <div class="col-8">
-                                                <input type="text" class="form-control" placeholder="Documento" formControlName="documento" onkeypress="return searchPerson(event)">
+                                                <input type="text" class="form-control" placeholder="Documento" formControlName="documento">
                                             </div>
                                             <div class="block">
                                                 <p class="circle">
