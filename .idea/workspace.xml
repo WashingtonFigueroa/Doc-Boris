@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595c7e26-8189-4e83-8430-2045099d99a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/local/compress.vbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,21 +30,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servidor/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/local/compress.vbs">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/local/compress.vbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/local/zip.vbs">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -167,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/servidor/database/migrations/2019_01_06_122013_create_consultas_table.php" />
         <option value="$PROJECT_DIR$/servidor/app/Consulta.php" />
         <option value="$PROJECT_DIR$/servidor/database/migrations/2019_01_21_083758_create_tomografias_table.php" />
         <option value="$PROJECT_DIR$/servidor/app/Tomografia.php" />
@@ -218,6 +209,7 @@
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html" />
         <option value="$PROJECT_DIR$/local/compress.bat" />
+        <option value="$PROJECT_DIR$/local/zip.vbs" />
       </list>
     </option>
   </component>
@@ -316,7 +308,7 @@
       <path value="$PROJECT_DIR$/servidor/vendor/nexmo/client" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -426,12 +418,12 @@
       <workItem from="1550118338466" duration="4217000" />
       <workItem from="1550325466790" duration="275000" />
       <workItem from="1550588246653" duration="688000" />
-      <workItem from="1550589876222" duration="2595000" />
+      <workItem from="1550589876222" duration="3892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172371000" />
+    <option name="totallyTimeSpent" value="173668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,7 +436,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28366113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -462,7 +453,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.89511496" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.89511496" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.4882698" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -503,7 +494,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://f53babd9-e71e-4488-9639-2da222955a4c/schema/boris/table/password_resets" />
     <entry file="das://f53babd9-e71e-4488-9639-2da222955a4c/schema/boris/table/migrations" />
     <entry file="file://$PROJECT_DIR$/local/app/Providers/AppServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -793,11 +783,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/compress.vbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/zip.vbs">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
