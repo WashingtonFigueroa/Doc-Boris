@@ -28,13 +28,10 @@ class ReportesController extends Controller
         $diferencia = $sumradiografias - $sumconsulta;
         return response()->json($diferencia, 200);
     }
-    public function valor ()
+    public function valor ($start, $end)
     {
-
-//        $valor = Reservation::whereBetween('created_at', [$from_from, $to_from])
-//            ->sum('valor');
-
-        $valor = Consulta::sum('valor');
+       $valor = Consulta::whereBetween('created_at', [$start, $end])
+           ->sum('valor');
         return response()->json($valor, 200);
     }
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {environment} from "../../../environments/environment.prod";
-import {HttpClient} from "../../../../node_modules/@angular/common/http";
+import {environment} from '../../../environments/environment.prod';
+import {HttpClient} from '../../../../node_modules/@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class ReporteService {
     diferencia() {
         return this.http.get(this.base + 'diferencia');
     }
-    valorconsulta() {
-        return this.http.get(this.base + 'valor');
+    valorconsulta(start, end) {
+        return this.http.get(this.base + 'valor/' + start + '/' + end);
     }
 }

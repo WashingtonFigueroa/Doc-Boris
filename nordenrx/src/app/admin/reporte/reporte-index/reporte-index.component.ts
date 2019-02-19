@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ReporteService} from "../reporte.service";
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {formatDate} from "@angular/common";
+import {ReporteService} from '../reporte.service';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-reporte-index',
@@ -30,24 +29,30 @@ export class ReporteIndexComponent implements OnInit {
             .subscribe((res: any) => {
                 this.diferencia = res;
             });
-        this.reporteService.valorconsulta()
-            .subscribe((res: any) => {
-                this.valor = res;
-            });
+        this.createForm();
+        // this.reporteService.valorconsulta(start, end)
+        //     .subscribe((res: any) => {
+        //         this.valor = res;
+        //     });
     }
 
   ngOnInit() {
 
   }
+    createForm() {
+        this.buscarGroup = this.fb.group({
+            'start' : new FormControl(null, [Validators.required]),
+            'end' : new FormControl(null, [Validators.required])
+        });
+    }
 
-    // totalfactura() {
-    //
-    //     const start = this.buscarGroup.value.valor;
-    //     const end = this.buscarGroup.value.valor;
-    //     this.reporteService.valorconsulta(start,end)
-    //         .subscribe((res: any) => {
-    //             this.valor = res;
-    //         });
-    // }
+    totalfactura() {
+        const start = this.buscarGroup.value.start;
+        const end = this.buscarGroup.value.end;
+        this.reporteService.valorconsulta(start, end)
+            .subscribe((res: any) => {
+                this.valor = res;
+            });
+    }
 
 }

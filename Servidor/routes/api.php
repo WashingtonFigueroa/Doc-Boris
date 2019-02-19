@@ -24,7 +24,7 @@ Route::get('buscar-consultas/{valor?}', 'API\ConsultaController@buscar');
 Route::get('sumradiografias', 'API\ReportesController@sumradiografias');
 Route::get('sumrconsultas', 'API\ReportesController@sumrconsultas');
 Route::get('diferencia', 'API\ReportesController@diferencia');
-Route::get('valor', 'API\ReportesController@valor');
+Route::get('valor/{start}/{end}', 'API\ReportesController@valor');
 
 /*APIs de recursos*/
 Route::apiResources([
