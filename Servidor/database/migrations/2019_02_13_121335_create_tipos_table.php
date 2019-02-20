@@ -17,6 +17,7 @@ class CreateTiposTable extends Migration
             $table->increments('tipo_id');
             $table->string('tipo');
             $table->softDeletes();
+            $table->timestamps();
         });
     }
 

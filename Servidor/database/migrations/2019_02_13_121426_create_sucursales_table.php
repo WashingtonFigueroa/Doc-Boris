@@ -19,6 +19,7 @@ class CreateSucursalesTable extends Migration
             $table->string('direccion');
             $table->string('telefono')->nullable();
             $table->softDeletes();
+            $table->timestamps();
         });
     }
 
