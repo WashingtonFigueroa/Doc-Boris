@@ -32,10 +32,18 @@ Route::apiResources([
     'profesionales' => 'API\ProfesionalController',
     'consultas' => 'API\ConsultaController',
     'consultas_tomografias' => 'API\ConsultaTomografiaController',
+    'tipos' => 'API\TipoController',
+    'sucursales' => 'API\SucursalesController',
 ]);
 /*Clientes*/
 Route::get('buscar-clientes/{valor?}', 'API\ClienteController@buscar');
 Route::get('listar-clientes', 'API\ClienteController@listar');
+/*tipo*/
+Route::get('buscar-tipos/{valor?}', 'API\TipoController@buscar');
+Route::get('listar-tipos', 'API\TipoController@listar');
+/*sucrursales*/
+Route::get('buscar-sucursales/{valor?}', 'API\SucursalesController@buscar');
+Route::get('listar-sucursales', 'API\SucursalesController@listar');
 /*Profesionales*/
 Route::get('buscar-profesionales/{valor?}', 'API\ProfesionalController@buscar');
 Route::get('listar-profesionales', 'API\ProfesionalController@listar');

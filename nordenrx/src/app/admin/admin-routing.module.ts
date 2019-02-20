@@ -8,14 +8,22 @@ import {ClienteEditComponent} from './cliente/cliente-edit/cliente-edit.componen
 import {AdminComponent} from './admin.component';
 import {ConsultaIndexComponent} from './consulta/consulta-index/consulta-index.component';
 import {ConsultaComponent} from './consulta/consulta.component';
-import {ReporteComponent} from "./reporte/reporte.component";
-import {ReporteIndexComponent} from "./reporte/reporte-index/reporte-index.component";
-import {ReporteCreateComponent} from "./reporte/reporte-create/reporte-create.component";
-import {ReporteUpdateComponent} from "./reporte/reporte-update/reporte-update.component";
-import {ProfesionalComponent} from "./profesional/profesional.component";
-import {ProfesionalIndexComponent} from "./profesional/profesional-index/profesional-index.component";
-import {ProfesionalCreateComponent} from "./profesional/profesional-create/profesional-create.component";
-import {ProfesionalUpdateComponent} from "./profesional/profesional-update/profesional-update.component";
+import {ReporteComponent} from './reporte/reporte.component';
+import {ReporteIndexComponent} from './reporte/reporte-index/reporte-index.component';
+import {ReporteCreateComponent} from './reporte/reporte-create/reporte-create.component';
+import {ReporteUpdateComponent} from './reporte/reporte-update/reporte-update.component';
+import {ProfesionalComponent} from './profesional/profesional.component';
+import {ProfesionalIndexComponent} from './profesional/profesional-index/profesional-index.component';
+import {ProfesionalCreateComponent} from './profesional/profesional-create/profesional-create.component';
+import {ProfesionalUpdateComponent} from './profesional/profesional-update/profesional-update.component';
+import {TipoComponent} from './tipo/tipo.component';
+import {TipoIndexComponent} from './tipo/tipo-index/tipo-index.component';
+import {TipoCreateComponent} from './tipo/tipo-create/tipo-create.component';
+import {TipoUpdateComponent} from './tipo/tipo-update/tipo-update.component';
+import {SucursalesComponent} from './sucursales/sucursales.component';
+import {SucursalesIndexComponent} from './sucursales/sucursales-index/sucursales-index.component';
+import {SucursalesCreateComponent} from './sucursales/sucursales-create/sucursales-create.component';
+import {SucursalesUpdateComponent} from './sucursales/sucursales-update/sucursales-update.component';
 
 const routes: Routes = [
   {
@@ -102,6 +110,52 @@ const routes: Routes = [
                 {
                     path: 'editar/:profesional_id',
                     component: ProfesionalUpdateComponent
+                },
+                {
+                    path: '',
+                    redirectTo: 'listar',
+                    pathMatch: 'full'
+                }
+            ]
+        },
+        {
+            path: 'tipos',
+            component: TipoComponent,
+            children: [
+                {
+                    path: 'listar',
+                    component: TipoIndexComponent
+                },
+                {
+                    path: 'crear',
+                    component: TipoCreateComponent
+                },
+                {
+                    path: 'editar/:tipo_id',
+                    component: TipoUpdateComponent
+                },
+                {
+                    path: '',
+                    redirectTo: 'listar',
+                    pathMatch: 'full'
+                }
+            ]
+        },
+        {
+            path: 'sucursales',
+            component: SucursalesComponent,
+            children: [
+                {
+                    path: 'listar',
+                    component: SucursalesIndexComponent
+                },
+                {
+                    path: 'crear',
+                    component: SucursalesCreateComponent
+                },
+                {
+                    path: 'editar/:sucursal_id',
+                    component: SucursalesUpdateComponent
                 },
                 {
                     path: '',

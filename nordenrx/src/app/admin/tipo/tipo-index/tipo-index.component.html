@@ -1,0 +1,64 @@
+<div class="container">
+    <h3 class="header-title">Lista Tipos Rx</h3>
+    <div class="row">
+        <div class="col-4">
+            <a
+                    routerLink="/admin/tipos/crear"
+                    class="btn-create"><i class="fa fa-check"></i> Crear Tipo RX</a>
+        </div>
+        <div class="col-8">
+            <form (submit)="buscar()" [formGroup]="tipoGroup" class="form-inline form-right">
+                <div class="form-group">
+                    <label for=""></label>
+                    <input
+                            type="search"
+                            name="valor" id=""
+                            formControlName="valor"
+                            class="form-control" placeholder="Buscar..." aria-describedby="helpId">
+                </div>
+                <button class="btn btn-primary">Buscar</button>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive" *ngIf="paginacion !== null">
+                <table class="table table-hover">
+                    <thead style="background-color: #0f192a">
+                    <tr>
+                        <th>N.</th>
+                        <th>tipo</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let tipo of paginacion.data; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ tipo.tipo }}</td>
+                        <td>
+                            <button routerLink="/admin/tipos/editar/{{tipo.tipo_id}}"
+                                    class="btn btn-xs btn-info">
+                                <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button (click)="destroy(tipo, i)"
+                                    class="btn btn-xs btn-danger">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div *ngIf="paginacion !== null && paginacion.last_page > 1">
+                <button class="btn-pagination" [disabled]="paginacion.first_page_url === null" (click)="go(paginacion.first_page_url)">Primero</button>
+                <button class="btn-pagination" [disabled]="paginacion.prev_page_url === null" (click)="go(paginacion.prev_page_url)">&laquo;</button>
+                <button class="btn-pagination"
+                        (click)="go(page.url)"
+                        *ngFor="let page of pages">{{ page.page }}</button>
+                <button class="btn-pagination" [disabled]="paginacion.next_page_url === null" (click)="go(paginacion.next_page_url)">&raquo;</button>
+                <button class="btn-pagination" [disabled]="paginacion.last_page_url === null" (click)="go(paginacion.last_page_url)">Último</button>
+            </div>
+        </div>
+    </div>
+</div>

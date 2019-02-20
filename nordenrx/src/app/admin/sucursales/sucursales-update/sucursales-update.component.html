@@ -1,0 +1,38 @@
+<div class="container">
+  <h3 class="header-title">Editar datos Sucursal</h3>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <form *ngIf="sucursal !== null" [formGroup]="sucursalGroup" (submit)="update()">
+
+
+              <section class="form-group">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" class="form-control" formControlName="ciudad" name="ciudad" id="ciudad" >
+              </section>
+              <section class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
+              </section>
+              <section class="form-group">
+                <label for="telefono">Telefono</label>
+                <input type="text" class="form-control" formControlName="telefono" name="telefono" id="telefono">
+              </section>
+              <section class="text-right">
+                <a routerLink="/admin/sucursales"
+                   class="btn-danger-link"> Cancelar</a>
+                <button
+                        [disabled]="sucursalGroup.status === 'INVALID'"
+                        class="btn btn-primary">Actualizar</button>
+              </section>
+
+
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

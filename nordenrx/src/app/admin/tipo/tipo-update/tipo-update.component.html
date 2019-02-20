@@ -1,0 +1,24 @@
+<div class="container">
+  <h3 class="header-title">Editar datos Tipo Rx</h3>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <form *ngIf="tipo !== null" [formGroup]="tipoGroup" (submit)="update()">
+            <section class="form-group">
+              <label for="tipo">Tipo Radiografía</label>
+              <input type="text" class="form-control" formControlName="tipo" name="tipo" id="tipo">
+            </section>
+            <section class="text-right">
+              <a routerLink="/admin/tipos"
+                 class="btn-danger-link"> Cancelar</a>
+              <button
+                      [disabled]="tipoGroup.status === 'INVALID'"
+                      class="btn btn-primary">Actualizar</button>
+            </section>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

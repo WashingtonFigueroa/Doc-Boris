@@ -34,9 +34,7 @@ export class ClienteService {
   buscar(valor: string) {
     return this.http.get(this.base + 'buscar-clientes/' + valor);
   }
-
   sri(documento: string) {
       return this.http.get(`${this.base}sri/${documento}`);
   }
-
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ReporteService} from '../reporte.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-reporte-index',
@@ -13,10 +14,11 @@ export class ReporteIndexComponent implements OnInit {
     diferencia: any = null;
     valor: any = null;
     buscarGroup: FormGroup;
-    CurrentDate = new Date();
+    myDate = new Date();
 
     constructor(private reporteService: ReporteService,
-                private fb: FormBuilder) {
+                private fb: FormBuilder,
+                private toastrService: ToastrService) {
         this.reporteService.sumradiografias()
             .subscribe((res: any) => {
                 this.sumradiografias = res;
@@ -30,10 +32,6 @@ export class ReporteIndexComponent implements OnInit {
                 this.diferencia = res;
             });
         this.createForm();
-        // this.reporteService.valorconsulta(start, end)
-        //     .subscribe((res: any) => {
-        //         this.valor = res;
-        //     });
     }
 
   ngOnInit() {
@@ -41,18 +39,22 @@ export class ReporteIndexComponent implements OnInit {
   }
     createForm() {
         this.buscarGroup = this.fb.group({
-            'start' : new FormControl(null, [Validators.required]),
-            'end' : new FormControl(null, [Validators.required])
+            'start' : new FormControl('', [Validators.required]),
+            'end' : new FormControl('', [Validators.required])
         });
     }
 
     totalfactura() {
         const start = this.buscarGroup.value.start;
         const end = this.buscarGroup.value.end;
-        this.reporteService.valorconsulta(start, end)
-            .subscribe((res: any) => {
-                this.valor = res;
-            });
+        if (start !== end) {
+            this.reporteService.valorconsulta(start, end)
+                .subscribe((res: any) => {
+                    this.valor = res;
+                });
+        } else {
+            this.toastrService.info('Seleccione un arango de fechas','Consulta');
+        }
     }
 
 }

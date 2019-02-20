@@ -12,7 +12,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\User::create([
-            'name' => 'SuperAdmin', 'email' => 'info@dt.com', 'password' => bcrypt('123456'),
+            'name' => 'SuperAdmin', 'email' => 'info@dt.com', 'password' => bcrypt('123456')
+        ]);
+        \App\sucusales::create([
+            'ciudad' => 'Ibarra', 'direccion' => 'Calle Bolivar y ', 'telefono' => '123456'
+        ]);
+        \App\sucusales::create([
+            'ciudad' => 'Otavalo', 'direccion' => 'Calle Bolivar y ', 'telefono' => '123456'
         ]);
         // $this->call(UsersTableSeeder::class);
     }

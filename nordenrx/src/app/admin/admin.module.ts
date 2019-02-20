@@ -28,6 +28,16 @@ import { ProfesionalUpdateComponent } from './profesional/profesional-update/pro
 import { ProfesionalCreateComponent } from './profesional/profesional-create/profesional-create.component';
 import {ProfesionalService} from './profesional/profesional.service';
 import {NgSelectModule} from '@ng-select/ng-select';
+import { TipoComponent } from './tipo/tipo.component';
+import { TipoIndexComponent } from './tipo/tipo-index/tipo-index.component';
+import { TipoUpdateComponent } from './tipo/tipo-update/tipo-update.component';
+import { TipoCreateComponent } from './tipo/tipo-create/tipo-create.component';
+import { SucursalesComponent } from './sucursales/sucursales.component';
+import { SucursalesIndexComponent } from './sucursales/sucursales-index/sucursales-index.component';
+import { SucursalesUpdateComponent } from './sucursales/sucursales-update/sucursales-update.component';
+import { SucursalesCreateComponent } from './sucursales/sucursales-create/sucursales-create.component';
+import {TipoService} from "./tipo/tipo.service";
+import {SucursalesService} from "./sucursales/sucursales.service";
 
 @NgModule({
   imports: [
@@ -56,7 +66,22 @@ import {NgSelectModule} from '@ng-select/ng-select';
     ProfesionalComponent,
     ProfesionalIndexComponent,
     ProfesionalUpdateComponent,
-    ProfesionalCreateComponent],
-  providers: [RadiografiaService, ClienteService, ConsultaService, ReporteService, ProfesionalService]
+    ProfesionalCreateComponent,
+    TipoComponent,
+    TipoIndexComponent,
+    TipoUpdateComponent,
+    TipoCreateComponent,
+    SucursalesComponent,
+    SucursalesIndexComponent,
+    SucursalesUpdateComponent,
+    SucursalesCreateComponent],
+  providers: [RadiografiaService,
+      ClienteService,
+      ConsultaService,
+      ReporteService,
+      ProfesionalService,
+      TipoService,
+      SucursalesService
+  ]
 })
 export class AdminModule { }
