@@ -13,9 +13,10 @@ class Consulta extends Model
     protected $fillable = [
         'profesional_id',
         'cliente_id',
+        'tipo_id',
         'numero_factura',
         'imagen',
-        'tipo',
+        'categoria',
         'valor'
     ];
 }

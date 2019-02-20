@@ -15,8 +15,13 @@ Route::resource('listaUsuarios', 'UsuarioController@listaUsers');
 Route::post('upload', 'UploadController@upload');
 Route::post('upload-tomografia', 'UploadController@uploadTomografia');
 Route::get('radiografias-no-asignadas', 'RadiografiaController@noAsignadas');
+Route::get('tomografias-no-asignadas', 'RadiografiaController@tomografiasNoAsignadas');
+
 Route::get('radiografia/{filename}',
             'RadiografiaController@radiografia');
+Route::get('tomografia/{filename}',
+            'RadiografiaController@tomografia');
+
 Route::post('send-file', 'UploadController@sendFile');
 //consultas
 Route::get('sri/{tipo_documento}', 'API\ClienteController@sri');

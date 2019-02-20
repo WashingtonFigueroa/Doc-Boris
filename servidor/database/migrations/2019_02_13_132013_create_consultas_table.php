@@ -27,7 +27,12 @@ class CreateConsultasTable extends Migration
                 ->onDelete('cascade');
             $table->string('numero_factura');
             $table->string('imagen');
-            $table->string('tipo');
+            $table->enum('categoria', ['radiografia', 'tomografia']);
+            $table->integer('tipo_id')->unsigned();
+            $table->foreign('tipo_id')
+                    ->references('tipo_id')
+                    ->on('tipos')
+                    ->onDelete('cascade');
             $table->float('valor', 8, 2);
             $table->softDeletes();
             $table->timestamps();

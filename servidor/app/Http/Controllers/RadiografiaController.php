@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Radiografia;
+use App\RadiografiaTomografia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -86,10 +86,19 @@ class RadiografiaController extends Controller
 
 
     public function noAsignadas() {
-        $radiografias = Radiografia::where('asignado', false)
+        $radiografias = RadiografiaTomografia::where('asignado', false)
+                                    ->where('categoria', '=', 'radiografia')
                                     ->orderBy('created_at', 'desc')
                                     ->get();
         return response()->json($radiografias, 200);
+    }
+
+    public function tomografiasNoAsignadas() {
+        $tomografias = RadiografiaTomografia::where('asignado', false)
+                                    ->where('categoria', '=', 'tomografia')
+                                    ->orderBy('created_at', 'desc')
+                                    ->get();
+        return response()->json($tomografias, 200);
     }
 
 
@@ -99,6 +108,13 @@ class RadiografiaController extends Controller
             'storage_path' => storage_path('app\\radiografias\\' . $filename)
         ], 200);*/
         return response()->file(storage_path('app/radiografias/' . $filename));
+    }
+    public function tomografia($filename) {
+/*        return response()->json([
+            'response' => $filename,
+            'storage_path' => storage_path('app\\radiografias\\' . $filename)
+        ], 200);*/
+        return response()->file(storage_path('app/tomografias/' . $filename));
     }
 
 }

@@ -14,10 +14,10 @@ class DatabaseSeeder extends Seeder
         \App\User::create([
             'name' => 'SuperAdmin', 'email' => 'info@dt.com', 'password' => bcrypt('123456')
         ]);
-        \App\sucusales::create([
+        \App\sucursales::create([
             'ciudad' => 'Ibarra', 'direccion' => 'Calle Bolivar y ', 'telefono' => '123456'
         ]);
-        \App\sucusales::create([
+        \App\sucursales::create([
             'ciudad' => 'Otavalo', 'direccion' => 'Calle Bolivar y ', 'telefono' => '123456'
         ]);
         // $this->call(UsersTableSeeder::class);

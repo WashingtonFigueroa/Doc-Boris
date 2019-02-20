@@ -12,6 +12,7 @@ class tipo extends Model
     protected $primaryKey = 'tipo_id';
     protected $fillable = [
         'tipo',
+        'categoria'
     ];
     protected $dates = ['deleted_at'];
 }

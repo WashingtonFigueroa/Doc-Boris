@@ -13,12 +13,13 @@ class CreateRadiografiasTable extends Migration
      */
     public function up()
     {
-        Schema::create('radiografias', function (Blueprint $table) {
+        Schema::create('radiografias_tomografias', function (Blueprint $table) {
             $table->increments('radiografia_id');
             $table->string('archivo');
             $table->string('nombre');
             $table->boolean('asignado')->default(false);
             $table->integer('consulta_id')->unsigned()->nullable();
+            $table->integer('sucursal_id')->unsigned()->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -31,6 +32,6 @@ class CreateRadiografiasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('radiografias');
+        Schema::dropIfExists('radiografias_tomografias');
     }
 }

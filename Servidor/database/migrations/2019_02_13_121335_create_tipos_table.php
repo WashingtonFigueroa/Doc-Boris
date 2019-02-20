@@ -16,6 +16,7 @@ class CreateTiposTable extends Migration
         Schema::create('tipos', function (Blueprint $table) {
             $table->increments('tipo_id');
             $table->string('tipo');
+            $table->enum('categoria', ['radiografia', 'tomografia']);
             $table->softDeletes();
             $table->timestamps();
         });

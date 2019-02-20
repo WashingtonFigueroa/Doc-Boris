@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Radiografia extends Model
+class RadiografiaTomografia extends Model
 {
     protected $table = 'radiografias';
     protected $primaryKey = 'radiografia_id';
@@ -13,6 +13,7 @@ class Radiografia extends Model
         'nombre',
         'asignado',
         'consulta_id',
+        'sucursal_id',
     ];
     protected $guarded = ['created_at'];
 
