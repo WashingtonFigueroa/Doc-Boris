@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class RadiografiaTomografia extends Model
 {
-    protected $table = 'radiografias';
-    protected $primaryKey = 'radiografia_id';
+    protected $table = 'radiografias_tomografias';
+    protected $primaryKey = 'radiografia_tomografia_id';
     protected $fillable = [
         'archivo',
         'nombre',

@@ -14,7 +14,7 @@ class CreateRadiografiasTable extends Migration
     public function up()
     {
         Schema::create('radiografias_tomografias', function (Blueprint $table) {
-            $table->increments('radiografia_id');
+            $table->increments('radiografia_tomografia_id');
             $table->string('archivo');
             $table->string('nombre');
             $table->boolean('asignado')->default(false);

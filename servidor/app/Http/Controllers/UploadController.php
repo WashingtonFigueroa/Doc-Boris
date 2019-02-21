@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\RadiografiaMail;
-use App\Radiografia;
-use App\Tomografia;
+use App\RadiografiaTomografia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -15,9 +14,9 @@ class UploadController extends Controller
             $filename = request()->file('archivo')->storeAs('radiografias',
                 request()->file('archivo')->getClientOriginalName()
                 );
-            $radiografias = Radiografia::where('archivo', $filename)->count();
+            $radiografias = RadiografiaTomografia::where('archivo', $filename)->count();
             if ($radiografias === 0) {
-                $radiografia = Radiografia::create([
+                $radiografia = RadiografiaTomografia::create([
                     'archivo' => $filename,
                     'nombre' => explode('/', $filename)[1]
                 ]);
@@ -35,17 +34,15 @@ class UploadController extends Controller
             $filename = request()->file('archivo')->storeAs('public/tomografias',
                 request()->file('archivo')->getClientOriginalName()
                 );
-            $tomografias = Tomografia::where('archivo', $filename)->count();
+            $tomografias = RadiografiaTomografia::where('archivo', $filename)->count();
             if ($tomografias === 0) {
-                Tomografia::create([
+                $tomografia = RadiografiaTomografia::create([
                     'archivo' => $filename,
                     'nombre' => explode('/', $filename)[1]
                 ]);
             }
         }
-        return response()->json([
-            'message' => 'file uploaded!'
-        ], 200);
+        return response()->json($tomografia, 200);
     }
 
     public function sendFile() {
