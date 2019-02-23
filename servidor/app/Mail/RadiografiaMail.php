@@ -29,7 +29,6 @@ class RadiografiaMail extends Mailable
      */
     public function build()
     {
-        /*example*/
         return $this->view('radiografia', $this->envio)
             ->from('info@nordentrx.com', 'Nordent RX')
             ->to('info@nordentrx.com', 'Doc. Boris')

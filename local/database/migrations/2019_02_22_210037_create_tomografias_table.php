@@ -18,9 +18,6 @@ class CreateTomografiasTable extends Migration
             $table->string('carpeta')->nullable();
             $table->string('zip')->nullable();
             $table->boolean('subido')->default(false);
-/*            $table->string('nombre');
-            $table->boolean('asignado')->default(false);
-            $table->integer('consulta_tomografia_id')->unsigned()->nullable();*/
             $table->softDeletes();
             $table->timestamps();
         });

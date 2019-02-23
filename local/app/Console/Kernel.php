@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Http\Controllers\ConsultasController;
+use GuzzleHttp\RequestOptions;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use Illuminate\Http\File;
@@ -31,6 +32,7 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
             //$servidor = 'http://nordentrx.com/public/api/';
             $servidor = 'http://localhost:8000/api/';
+            $local = 'http://localhost:8080/api/';
             $files = [];
             foreach (Storage::disk('publico')->files('radiografias') as $filename) {
                 $name = explode('/', $filename)[1];
@@ -47,6 +49,15 @@ class Kernel extends ConsoleKernel
                     ]]);
                     array_push($files, $filename);
                 }
+            }
+            $directories = Storage::disk('publico')->directories('tomografias');
+//            unset($directories[0], $directories[1]);
+            foreach ($directories as $directory) {
+                $cliente = new Client();
+                $params['form_params'] = [
+                    'carpeta' => $directory
+                ];
+                $response = $cliente->post($local . 'tomografias', $params);
             }
 /*            foreach (Storage::disk('publico')->files('tomografias') as $filename) {
                 $name = explode('/', $filename)[1];

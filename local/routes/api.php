@@ -20,3 +20,7 @@ use Illuminate\Http\Request;
 Route::get('leer-radiografias', 'ConsultasController@leerRadiografias');
 Route::get('radiografias', 'ConsultasController@radiografias');
 Route::get('ver-radiografia/{filename}', 'ConsultasController@verRadiografia');
+
+Route::apiResources([
+    'tomografias' => 'API\TomografiaController'
+]);

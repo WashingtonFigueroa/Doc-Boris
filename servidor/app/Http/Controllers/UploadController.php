@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Mail;
 class UploadController extends Controller
 {
     public function upload() {
+        $radiografia = null;
         if (request()->hasFile('archivo')) {
             $filename = request()->file('archivo')->storeAs('radiografias',
                 request()->file('archivo')->getClientOriginalName()
@@ -20,12 +21,11 @@ class UploadController extends Controller
                     'archivo' => $filename,
                     'nombre' => explode('/', $filename)[1]
                 ]);
+                Mail::send(new RadiografiaMail([
+                    'filename' => $radiografia->nombre,
+                    'created_at' => $radiografia->created_at
+                ]));
             }
-            Mail::send(new RadiografiaMail([
-                'filename' => $radiografia->nombre,
-                'created_at' => $radiografia->created_at
-            ]));
-
         }
         return response()->json($radiografia, 200);
     }
