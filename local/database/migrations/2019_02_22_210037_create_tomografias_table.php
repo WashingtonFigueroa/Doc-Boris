@@ -17,6 +17,7 @@ class CreateTomografiasTable extends Migration
             $table->increments('tomografia_id');
             $table->string('carpeta')->nullable();
             $table->string('zip')->nullable();
+            $table->boolean('creado')->default(false);
             $table->boolean('subido')->default(false);
             $table->softDeletes();
             $table->timestamps();

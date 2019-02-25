@@ -66,4 +66,11 @@ class TomografiaController extends Controller
     {
         //
     }
+
+    public function zipNoCreados() {
+        $zip_no_creados = Tomografia::where('creado', '=', false)
+                                    ->selectRaw('zip, carpeta')
+                                    ->get();
+        return response()->json($zip_no_creados, 200);
+    }
 }

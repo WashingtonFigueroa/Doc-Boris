@@ -13,6 +13,7 @@ class Tomografia extends Model
     protected $fillable = [
         'carpeta',
         'zip',
+        'creado',
         'subido',
     ];
     protected $dates = ['dates'];

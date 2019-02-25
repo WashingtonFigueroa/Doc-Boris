@@ -51,32 +51,35 @@ class Kernel extends ConsoleKernel
                 }
             }
             $directories = Storage::disk('publico')->directories('tomografias');
-//            unset($directories[0], $directories[1]);
             foreach ($directories as $directory) {
                 $cliente = new Client();
+                $zip = explode("/", $directory)[1] . '-' . date('dmYHis') . '.zip';
                 $params['form_params'] = [
-                    'carpeta' => $directory
+                    'carpeta' => $directory,
+                    'zip' => $zip
                 ];
                 $response = $cliente->post($local . 'tomografias', $params);
             }
-/*            foreach (Storage::disk('publico')->files('tomografias') as $filename) {
-                $name = explode('/', $filename)[1];
-                if(!Storage::exists('tomografias/' . $name)) {
-                    Storage::putFileAs('tomografias', new File(public_path($filename)), $name);
-                    $client = new Client();
-                    $result = $client->post($servidor . 'upload-tomografia', [
-                        'multipart' => [
-                            [
-                                'name' => 'archivo',
-                                'contents' => fopen(public_path($filename), 'r'),
-                                'filename' => $name
-                            ]
-                        ]
-                    ]);
-                    array_push($files, $filename);
-                }
-            }*/
+
         })->everyMinute();
+
+        $servidor = 'http://localhost:8000/api/';
+        $local = 'http://localhost:8080/api/';
+        $cliente = new Client();
+        $response = $cliente->get($local . 'zip-no-creados');
+
+        $tomografias = $response->getBody();
+        //carpeta public donde se encuentras las carpetas de
+        //tomografias y radiografias
+        $public = public_path() ;
+        foreach ($tomografias as $tomografia) {
+            $carpeta = $public . $tomografia->carpeta;
+            $zip = $public . 'tomografias/' .$tomografia->zip;
+            $command = 'CScript zip.vbs {$carpeta} {$zip}';
+            exec($command);
+        }
+
+
     }
 
     /**
