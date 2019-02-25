@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595c7e26-8189-4e83-8430-2045099d99a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/local/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="70" column="46" lean-forward="true" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+            <state relative-caret-position="478">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
               <folding>
                 <element signature="e#31#76#0#PHP" expanded="true" />
               </folding>
@@ -85,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="566">
+              <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -572,12 +570,12 @@
       <workItem from="1550879711665" duration="7502000" />
       <workItem from="1550888428793" duration="4517000" />
       <workItem from="1550926183899" duration="9510000" />
-      <workItem from="1551125456428" duration="31000" />
+      <workItem from="1551125456428" duration="217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201619000" />
+    <option name="totallyTimeSpent" value="201805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1089,15 +1087,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        <state relative-caret-position="566">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="70" column="46" lean-forward="true" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+        <state relative-caret-position="478">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
           <folding>
             <element signature="e#31#76#0#PHP" expanded="true" />
           </folding>
