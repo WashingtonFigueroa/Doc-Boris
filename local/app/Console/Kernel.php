@@ -63,21 +63,21 @@ class Kernel extends ConsoleKernel
 
         })->everyMinute();
 
-        $servidor = 'http://localhost:8000/api/';
+/*        $servidor = 'http://localhost:8000/api/';
         $local = 'http://localhost:8080/api/';
         $cliente = new Client();
         $response = $cliente->get($local . 'zip-no-creados');
 
-        $tomografias = $response->getBody();
+        $tomografias = $response->getBody();*/
         //carpeta public donde se encuentras las carpetas de
         //tomografias y radiografias
-        $public = public_path() ;
+      /*  $public = public_path() ;
         foreach ($tomografias as $tomografia) {
             $carpeta = $public . $tomografia->carpeta;
             $zip = $public . 'tomografias/' .$tomografia->zip;
             $command = 'CScript zip.vbs {$carpeta} {$zip}';
             exec($command);
-        }
+        }*/
 
 
     }
