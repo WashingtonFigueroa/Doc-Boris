@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Http\Controllers\ConsultasController;
+use App\Tomografia;
 use GuzzleHttp\RequestOptions;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -10,6 +11,8 @@ use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process;
 
 class Kernel extends ConsoleKernel
 {
@@ -31,8 +34,18 @@ class Kernel extends ConsoleKernel
     {
         $schedule->call(function () {
             //$servidor = 'http://nordentrx.com/public/api/';
+            /*
+             * 1 Ibarra
+             * 2 Otavalo
+             * 3 Otra
+             * 4 Otro
+             * 5 Quien sabe
+             * 6 mmmm :O
+             * */
             $servidor = 'http://localhost:8000/api/';
             $local = 'http://localhost:8080/api/';
+
+            $sucursal_id = 1;
             $files = [];
             foreach (Storage::disk('publico')->files('radiografias') as $filename) {
                 $name = explode('/', $filename)[1];
@@ -45,9 +58,35 @@ class Kernel extends ConsoleKernel
                                 'name' => 'archivo',
                                 'contents' => fopen(public_path($filename), 'r'),
                                 'filename' => $name
+                            ],
+                            [
+                                'name' => 'sucursal_id',
+                                'contents' => $sucursal_id
                             ]
                     ]]);
                     array_push($files, $filename);
+                }
+            }
+            foreach(Storage::disk('publico')->files('tomografias') as $tomografia) {
+                $zip = explode('/', $tomografia)[1];
+                if(!(Storage::exists('tomografias/' . $zip) && substr($zip, -3) === 'zip')) {
+                    Storage::putFileAs('tomografias', new File(public_path($tomografia)), $zip);
+                    $client = new Client();
+                    $result = $client->post($servidor . 'upload-tomografia', [
+                        'multipart' => [
+                            [
+                                'name' => 'archivo',
+                                'contents' => fopen(public_path($tomografia), 'r'),
+                                'filename' => $zip
+                            ],
+                            [
+                                'name' => 'sucursal_id',
+                                'contents' => $sucursal_id
+                            ]
+                        ]]);
+                    $tomografia_no_subida = Tomografia::where('zip', '=', $zip)->first();
+                    $tomografia_no_subida->subido = true;
+                    $tomografia_no_subida->save();
                 }
             }
             $directories = Storage::disk('publico')->directories('tomografias');
@@ -61,25 +100,29 @@ class Kernel extends ConsoleKernel
                 $response = $cliente->post($local . 'tomografias', $params);
             }
 
+            $tomografias = Tomografia::where('creado', '=', false)
+                ->selectRaw('zip, carpeta')
+                ->get();
+/*            $data = \GuzzleHttp\json_decode( $result->getBody() );*/
+            $public = public_path() ;
+            foreach ($tomografias as $tomografia) {
+                $carpeta = $public .'\\tomografias\\'. explode("/", $tomografia->carpeta)[1];
+                $zip = $public . '\\tomografias\\' .$tomografia->zip;
+                $script = base_path() . '\zip.vbs';
+                $command = 'CScript "' . $script .'" "'. $carpeta .'" "'. $zip .'"';
+
+/*                $process = new Process('CScript "C:\Users\HP User\Documents\trabajos\washington\Doc-Boris\local\zip.vbs" "C:\Users\HP User\Desktop\prueba" "C:\Users\HP User\Desktop\prueba.zip"');*/
+                $process = new Process($command);
+                $process->run();
+                if (!$process->isSuccessful()){
+                    throw new ProcessFailedException($process);
+                }
+                echo $process->getOutput();
+                $tomografia_no_creada = Tomografia::where('zip', '=', $tomografia->zip)->first();
+                $tomografia_no_creada->creado = true;
+                $tomografia_no_creada->save();
+            }
         })->everyMinute();
-
-        $servidor = 'http://localhost:8000/api/';
-        $local = 'http://localhost:8080/api/';
-        $cliente = new Client();
-        $response = $cliente->get($local . 'zip-no-creados');
-
-        $tomografias = $response->getBody();
-        //carpeta public donde se encuentras las carpetas de
-        //tomografias y radiografias
-        $public = public_path() ;
-        foreach ($tomografias as $tomografia) {
-            $carpeta = $public . $tomografia->carpeta;
-            $zip = $public . 'tomografias/' .$tomografia->zip;
-            $command = 'CScript zip.vbs {$carpeta} {$zip}';
-            exec($command);
-        }
-
-
     }
 
     /**

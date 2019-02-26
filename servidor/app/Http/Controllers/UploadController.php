@@ -19,7 +19,8 @@ class UploadController extends Controller
             if ($radiografias === 0) {
                 $radiografia = RadiografiaTomografia::create([
                     'archivo' => $filename,
-                    'nombre' => explode('/', $filename)[1]
+                    'nombre' => explode('/', $filename)[1],
+                    'sucursal_id' => \request()->input('sucursal_id')
                 ]);
                 Mail::send(new RadiografiaMail([
                     'filename' => $radiografia->nombre,
@@ -30,15 +31,17 @@ class UploadController extends Controller
         return response()->json($radiografia, 200);
     }
     public function uploadTomografia() {
+        $tomografia = null;
         if (request()->hasFile('archivo')) {
-            $filename = request()->file('archivo')->storeAs('public/tomografias',
+            $filename = request()->file('archivo')->storeAs('tomografias',
                 request()->file('archivo')->getClientOriginalName()
                 );
             $tomografias = RadiografiaTomografia::where('archivo', $filename)->count();
             if ($tomografias === 0) {
                 $tomografia = RadiografiaTomografia::create([
                     'archivo' => $filename,
-                    'nombre' => explode('/', $filename)[1]
+                    'nombre' => explode('/', $filename)[1],
+                    'sucursal_id' => \request()->input('sucursal_id')
                 ]);
             }
         }
