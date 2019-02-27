@@ -129,20 +129,22 @@ export class RadiografiaComponent implements OnInit {
 
   createForm() {
     this.consultaGroup = this.fb.group({
-      'radiografia_id' : [0],
+      'cliente_id' : [0],
+      'profesional_id' : [0],
+      'numero_factura' : ['', [Validators.required]],
+      'imagen' : [''],
+      'categoria' : [this.categoria],
       'tipo_documento' : ['cedula'],
+      'tipo_id' : [0],
+      'valor' : ['', [Validators.required]],
+      'radiografia_tomografia_id' : [0],
+
       'documento' : ['', [Validators.required]],
       'razon_social' : ['', [Validators.required]],
       'direccion' : [''],
       'fecha_nacimiento' : ['', [Validators.required]],
       'celular' : [''],
       'genero' : [''],
-      'cliente_id' : [0],
-      'profesional_id' : [0],
-      'numero_factura' : ['', [Validators.required]],
-      'imagen' : [''],
-      'tipo' : [''],
-      'valor' : ['', [Validators.required]]
     });
   }
 
@@ -206,11 +208,22 @@ export class RadiografiaComponent implements OnInit {
   }
 
   save() {
-    this.consultaGroup.patchValue({
-      'radiografia_id' : +this.imagen.radiografia_id,
-      'cliente_id' : +this.consultaGroup.value.cliente_id,
-      'imagen' : this.imagen.archivo
-    });
+    switch (this.categoria) {
+      case 'radiografia' :
+        this.consultaGroup.patchValue({
+          'radiografia_tomografia_id' : +this.imagen.radiografia_tomografia_id,
+          'cliente_id' : +this.consultaGroup.value.cliente_id,
+          'imagen' : this.imagen.archivo
+        });
+        break;
+      case 'tomografia' :
+        this.consultaGroup.patchValue({
+          'radiografia_tomografia_id' : +this.consultaGroup.value.radiografia_tomografia_id,
+          'cliente_id' : +this.consultaGroup.value.cliente_id,
+          'imagen' : '../../assets/img/tomografia.jpg'
+        });
+        break;
+    }
     const question  = '¿Esta seguro que desea registrar la consulta con número de factura: ';
     if (confirm(`${question} ${this.consultaGroup.value.numero_factura}?`)) {
       this.consultaService.store(this.consultaGroup.value)

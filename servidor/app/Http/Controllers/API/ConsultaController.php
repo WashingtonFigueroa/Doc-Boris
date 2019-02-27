@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Cliente;
 use App\Consulta;
 use App\Radiografia;
+use App\RadiografiaTomografia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -45,7 +46,7 @@ class ConsultaController extends Controller
      */
     public function store(Request $request)
     {
-        $radiografia_id = $request->input('radiografia_id');
+        $radiografia_tomografia_id = $request->input('radiografia_tomografia_id');
         $consulta = null;
         if ($request->input('cliente_id') === 0) {
             $cliente_id = Cliente::create($request->all())->cliente_id;
@@ -57,7 +58,7 @@ class ConsultaController extends Controller
             $consulta = Consulta::create($request->all());
         }
         if ($consulta !== null) {
-            $radiografia = Radiografia::find($radiografia_id);
+            $radiografia = RadiografiaTomografia::find($radiografia_tomografia_id);
             $radiografia->asignado = true;
             $radiografia->consulta_id = $consulta->consulta_id;
             $radiografia->save();
