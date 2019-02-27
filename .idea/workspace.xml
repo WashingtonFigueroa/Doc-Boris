@@ -55,6 +55,20 @@
         <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="servidor: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="clientes: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="servidor: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="profesionales: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="servidor: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tipos: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
@@ -81,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/API/ConsultaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="240">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -91,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="452">
-              <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+              <caret line="223" selection-start-line="223" selection-end-line="223" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
                 <element signature="n#!!block;n#ngOnInit#0;n#RadiografiaComponent#0" />
@@ -215,7 +229,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>radiografi</find>
       <find>reques</find>
       <find>api</find>
       <find>process</find>
@@ -245,6 +258,7 @@
       <find>ngif</find>
       <find>assets</find>
       <find>asociar</find>
+      <find>radiografia_tomo</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\DTE\Doc-Boris\nordenrx</dir>
@@ -645,12 +659,12 @@
       <workItem from="1551125456428" duration="297000" />
       <workItem from="1551185227438" duration="12477000" />
       <workItem from="1551266180006" duration="5664000" />
-      <workItem from="1551273601148" duration="6196000" />
+      <workItem from="1551273601148" duration="6402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226222000" />
+    <option name="totallyTimeSpent" value="226428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1149,13 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/API/ConsultaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -1167,10 +1174,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/API/ConsultaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
-          <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
           <folding>
             <element signature="e#0#73#0" expanded="true" />
             <element signature="n#!!block;n#ngOnInit#0;n#RadiografiaComponent#0" />
