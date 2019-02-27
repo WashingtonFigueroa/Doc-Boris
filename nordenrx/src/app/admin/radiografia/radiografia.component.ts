@@ -200,6 +200,7 @@ export class RadiografiaComponent implements OnInit {
                 this.tipos = res;
             });
     }  else {
+      this.imagen = null;
         this.radiografiaService.tipoTomografias()
             .subscribe((res: any) => {
                 this.tipos = res;
