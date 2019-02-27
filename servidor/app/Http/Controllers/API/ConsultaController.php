@@ -4,10 +4,13 @@ namespace App\Http\Controllers\API;
 
 use App\Cliente;
 use App\Consulta;
+use App\Mail\TomografiaMail;
+use App\Profesional;
 use App\Radiografia;
 use App\RadiografiaTomografia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class ConsultaController extends Controller
 {
@@ -63,6 +66,16 @@ class ConsultaController extends Controller
             $radiografia->consulta_id = $consulta->consulta_id;
             $radiografia->save();
         }
+
+        $profesional = Profesional::find($request->input('profesional_id'));
+        Mail::send(new TomografiaMail([
+            'filename' => $radiografia->nombre,
+            'email' => $profesional->email,
+            'razon_social' => $profesional->razon_social,
+            'created_at' => $radiografia->created_at
+        ]));
+
+
         return response()->json($consulta, 201);
     }
 
