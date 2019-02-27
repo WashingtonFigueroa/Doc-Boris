@@ -200,6 +200,7 @@ export class RadiografiaComponent implements OnInit {
                 this.tipos = res;
             });
     }  else {
+      this.imagen = null;
         this.radiografiaService.tipoTomografias()
             .subscribe((res: any) => {
                 this.tipos = res;
@@ -219,8 +220,9 @@ export class RadiografiaComponent implements OnInit {
         break;
       case 'tomografia' :
         this.consultaGroup.patchValue({
+          'radiografia_tomografia_id' : +this.consultaGroup.value.radiografia_tomografia_id,
           'cliente_id' : +this.consultaGroup.value.cliente_id,
-          'imagen' : '../../assets/img/tomografia.jpg',
+          'imagen' : '../../../assets/img/tomografia.jpg',
           'categoria' : this.categoria
         });
         break;
