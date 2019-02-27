@@ -1,12 +1,21 @@
 <div class="container">
-  <h3 class="header-title">Registrar Tipo Rx</h3>
+  <h3 class="header-title">Registrar Tipo de Radiografía o Tomografía</h3>
   <div class="row">
     <div class="col-md-6">
       <div class="card">
         <div class="card-body">
           <form [formGroup]="tipoGroup" (submit)="store()">
                 <section class="form-group">
-                  <label for="tipo">Tipo Radiografía</label>
+                  <label for="categoria">Categoria</label>
+                  <select name="categoria" id="categoria"
+                          formControlName="categoria"
+                          class="form-control">
+                      <option value="radiografia">Radiografía</option>
+                      <option value="tomografia">Tomografía</option>
+                  </select>
+                </section>
+                <section class="form-group">
+                  <label for="tipo">Tipo {{ tipoGroup.value.categoria }}</label>
                   <input type="text" class="form-control" formControlName="tipo" name="tipo" id="tipo">
                 </section>
                 <section class="text-right">

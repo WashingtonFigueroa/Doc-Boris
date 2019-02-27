@@ -13,6 +13,7 @@ class RadiografiaTomografia extends Model
     protected $fillable = [
         'archivo',
         'nombre',
+        'categoria',
         'asignado',
         'consulta_id',
         'sucursal_id',

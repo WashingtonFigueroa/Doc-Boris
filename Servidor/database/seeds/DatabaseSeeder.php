@@ -20,6 +20,28 @@ class DatabaseSeeder extends Seeder
         \App\sucursales::create([
             'ciudad' => 'Otavalo', 'direccion' => 'Calle Bolivar y ', 'telefono' => '123456'
         ]);
+
+        \App\tipo::create([
+            'categoria' => 'radiografia',
+            'tipo' => 'Panorámica'
+        ]);
+        \App\tipo::create([
+            'categoria' => 'radiografia',
+            'tipo' => 'Cefálica'
+        ]);
+        \App\tipo::create([
+            'categoria' => 'radiografia',
+            'tipo' => 'Carpal'
+        ]);
+        \App\tipo::create([
+            'categoria' => 'radiografia',
+            'tipo' => 'Oclusal'
+        ]);
+        \App\tipo::create([
+            'categoria' => 'radiografia',
+            'tipo' => 'ATM'
+        ]);
+
         // $this->call(UsersTableSeeder::class);
     }
 }

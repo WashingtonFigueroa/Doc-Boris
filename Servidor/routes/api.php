@@ -17,6 +17,9 @@ Route::post('upload-tomografia', 'UploadController@uploadTomografia');
 Route::get('radiografias-no-asignadas', 'RadiografiaController@noAsignadas');
 Route::get('tomografias-no-asignadas', 'RadiografiaController@tomografiasNoAsignadas');
 
+Route::get('tipo-tomografias', 'API\TipoController@tomografias');
+Route::get('tipo-radiografias', 'API\TipoController@radiografias');
+
 Route::get('radiografia/{filename}',
             'RadiografiaController@radiografia');
 Route::get('tomografia/{filename}',

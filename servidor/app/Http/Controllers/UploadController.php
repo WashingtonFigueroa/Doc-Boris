@@ -20,6 +20,7 @@ class UploadController extends Controller
                 $radiografia = RadiografiaTomografia::create([
                     'archivo' => $filename,
                     'nombre' => explode('/', $filename)[1],
+                    'categoria' => 'radiografia',
                     'sucursal_id' => \request()->input('sucursal_id')
                 ]);
                 Mail::send(new RadiografiaMail([
@@ -41,6 +42,7 @@ class UploadController extends Controller
                 $tomografia = RadiografiaTomografia::create([
                     'archivo' => $filename,
                     'nombre' => explode('/', $filename)[1],
+                    'categoria' => 'tomografia',
                     'sucursal_id' => \request()->input('sucursal_id')
                 ]);
             }

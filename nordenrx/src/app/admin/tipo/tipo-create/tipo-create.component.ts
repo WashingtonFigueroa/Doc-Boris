@@ -24,6 +24,7 @@ export class TipoCreateComponent implements OnInit {
 
     createForm() {
         this.tipoGroup = this.fb.group({
+            'categoria' : new FormControl('', [Validators.required]),
             'tipo' : new FormControl('', [Validators.required])
         });
     }

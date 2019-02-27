@@ -6,10 +6,10 @@
                 <h3 class="header-title">*Seleccione una radiografia</h3>
             </div>
             <div class="col-4 text-right">
-                <button (click)="asociado = true" class="btn-create"><i class="fa fa-check"></i> Asociar Img Analógica</button>
+                <button (click)="asociar('tomografia')" class="btn-create"><i class="fa fa-check"></i> Tomografías</button>
             </div>
             <div class="col-4 text-right">
-                <button [disabled]="imagen === null" (click)="asociado = true" class="btn-create"><i class="fa fa-check"></i> Asociar a consulta</button>
+                <button [disabled]="imagen === null" (click)="asociar('radiografia')" class="btn-create"><i class="fa fa-check"></i> Asociar a consulta</button>
             </div>
         </div>
         <hr>
@@ -31,7 +31,7 @@
     </div>
     <div *ngIf="asociado" class="container-fluid">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4" *ngIf="imagen !== null">
                 <br>
                 <img src="{{img}}{{imagen.nombre}}" class="img" style="height: 300px">
             </div>
@@ -42,6 +42,14 @@
                             <legend>Registrar Consulta</legend>
                             <div class="row">
                                 <div class="col-6">
+                                    <section class="form-group" *ngIf="categoria === 'tomografia'">
+                                        <label for="tomografia">Tomografia</label>
+                                        <select name="radiografia_tomografia_id"
+                                                class="form-control"
+                                                id="tomografia">
+                                            <option [value]="record.radiografia_tomografia_id" *ngFor="let record of tomografias">{{ record.nombre }}</option>
+                                        </select>
+                                    </section>
                                     <section class="form-group">
                                         <label>Número de Factura</label>
                                         <input type="text" class="form-control" formControlName="numero_factura" name="numero_factura">
@@ -108,14 +116,9 @@
                                                formControlName="profesional_id">
                                     </ng-select>
                                     <div class="form-group">
-                                        <label for="exampleSelect1">Tipo Radiografía</label>
-                                        <select class="form-control" formControlName="tipo" name="tipo" id="exampleSelect1">
-                                            <option>Seleccione</option>
-                                            <option value="Panoramica">Panoramica</option>
-                                            <option value="Cefálica">Cefálica</option>
-                                            <option value="Carpal">Carpal</option>
-                                            <option value="Oclusal">Oclusal</option>
-                                            <option value="ATM">ATM</option>
+                                        <label for="exampleSelect1">Tipo {{ categoria }}</label>
+                                        <select class="form-control" formControlName="tipo_id" name="tipo" id="exampleSelect1">
+                                            <option [value]="tipo_id" *ngFor="let tipo of tipos">{{ tipo.tipo }}</option>
                                         </select>
                                     </div>
 
@@ -127,7 +130,8 @@
                                 <button class="btn btn-primary" [disabled]="consultaGroup.status === 'INVALID'" (click)="save()">Guardar Datos</button>
                             </section>
                         </form>
-                    </div>                </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

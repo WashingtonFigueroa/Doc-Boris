@@ -14,6 +14,15 @@ class TipoController extends Controller
         return response()->json($tipo, 200);
     }
 
+    public function radiografias() {
+        $tipos = tipo::where('categoria', '=', 'radiografia')->orderBy('tipo', 'asc')->get();
+        return response()->json($tipos);
+    }
+    public function tomografias() {
+        $tipos = tipo::where('categoria', '=', 'tomografia')->orderBy('tipo', 'asc')->get();
+        return response()->json($tipos);
+    }
+
     public function listar() {
         return response()->json(tipo::orderBy('tipo_id','desc')->get(), 200);
     }

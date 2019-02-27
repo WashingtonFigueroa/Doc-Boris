@@ -17,6 +17,7 @@ class CreateRadiografiasTable extends Migration
             $table->increments('radiografia_tomografia_id');
             $table->string('archivo');
             $table->string('nombre');
+            $table->enum('categoria', ['radiografia', 'tomografia']);
             $table->boolean('asignado')->default(false);
             $table->integer('consulta_id')->unsigned()->nullable();
             $table->integer('sucursal_id')->unsigned()->nullable();

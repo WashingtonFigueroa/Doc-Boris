@@ -1,10 +1,10 @@
 <div class="container">
-    <h3 class="header-title">Lista Tipos Rx</h3>
+    <h3 class="header-title">Lista de tipos de radiografías y tomografías</h3>
     <div class="row">
         <div class="col-4">
             <a
                     routerLink="/admin/tipos/crear"
-                    class="btn-create"><i class="fa fa-check"></i> Crear Tipo RX</a>
+                    class="btn-create"><i class="fa fa-check"></i> Crear tipo</a>
         </div>
         <div class="col-8">
             <form (submit)="buscar()" [formGroup]="tipoGroup" class="form-inline form-right">
@@ -28,13 +28,15 @@
                     <thead style="background-color: #0f192a">
                     <tr>
                         <th>N.</th>
-                        <th>tipo</th>
+                        <th>Categoría</th>
+                        <th>Tipo</th>
                         <th>Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr *ngFor="let tipo of paginacion.data; let i = index">
                         <td>{{ i + 1 }}</td>
+                        <td>{{ tipo.categoria }}</td>
                         <td>{{ tipo.tipo }}</td>
                         <td>
                             <button routerLink="/admin/tipos/editar/{{tipo.tipo_id}}"

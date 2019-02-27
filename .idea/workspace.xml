@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595c7e26-8189-4e83-8430-2045099d99a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a8e380b-7710-431d-846e-3814395d9bdd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a8e380b-7710-431d-846e-3814395d9bdd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b011d04a-7657-45f5-b2d7-db58f503141f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b011d04a-7657-45f5-b2d7-db58f503141f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/local/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/local/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/TipoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/TipoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/admin-header/admin-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/admin-header/admin-header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor/app/RadiografiaTomografia.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/app/RadiografiaTomografia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,19 +49,6 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="boris@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="boris: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="boris@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="boris: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tomografias: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
@@ -73,14 +67,14 @@
         <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="servidor: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="radiografias_tomografias: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="tipos: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="servidor@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="servidor: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="sucursales: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -88,96 +82,98 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/app/Console/Kernel.php">
+        <entry file="file://$PROJECT_DIR$/servidor/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
-              <folding>
-                <element signature="e#31#76#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="314">
+              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://b011d04a-7657-45f5-b2d7-db58f503141f/schema/servidor/table/radiografias_tomografias">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://8a8e380b-7710-431d-846e-3814395d9bdd/schema/boris/table/tomografias">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://b011d04a-7657-45f5-b2d7-db58f503141f/schema/servidor/table/sucursales">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/RadiografiaController.php">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+            <state relative-caret-position="456">
+              <caret line="222" column="5" lean-forward="true" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
               <folding>
-                <element signature="e#40#70#0#PHP" expanded="true" />
+                <element signature="e#0#73#0" expanded="true" />
+                <element signature="n#!!block;n#ngOnInit#0;n#RadiografiaComponent#0" />
+                <element signature="n#!!block;n#resetCliente#0;n#RadiografiaComponent#0" />
+                <element signature="n#!!block;n#resetValues#0;n#RadiografiaComponent#0" />
+                <element signature="n#!!block;n#loadCliente#0;n#RadiografiaComponent#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servidor/routes/api.php">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="177">
+              <caret line="13" column="68" selection-start-line="13" selection-start-column="68" selection-end-line="13" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/admin-header/admin-header.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
-              <folding>
-                <element signature="e#40#69#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="304">
+              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/serve.bat">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/aplicacion.vbs">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+            <state relative-caret-position="102">
+              <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local/run.bat">
+        <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/API/TipoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            <state relative-caret-position="340">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="119" column="93" selection-start-line="119" selection-start-column="93" selection-end-line="119" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -186,15 +182,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>documento</find>
-      <find>sri</find>
-      <find>store</find>
-      <find>resetCli</find>
-      <find>razon_</find>
       <find>direccion</find>
       <find>razon</find>
       <find>login</find>
-      <find>radiografias</find>
       <find>hombre</find>
       <find>new</find>
       <find>searchPEr</find>
@@ -206,7 +196,6 @@
       <find>ng-sele</find>
       <find>form</find>
       <find>create</find>
-      <find>tipo</find>
       <find>radiografi</find>
       <find>reques</find>
       <find>api</find>
@@ -216,6 +205,13 @@
       <find>upload</find>
       <find>upload-</find>
       <find>creado</find>
+      <find>store</find>
+      <find>radiografias</find>
+      <find>noAsigna</find>
+      <find>asociar</find>
+      <find>tomografi</find>
+      <find>crear</find>
+      <find>tipo</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\DTE\Doc-Boris\nordenrx</dir>
@@ -227,16 +223,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/nordenrx/src/assets/scss/theme/_home.scss" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.html" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/cliente/header/header.component.html" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.ts" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-edit/cliente-edit.component.ts" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/cliente/nosotros/nosotros.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/cliente/contactos/contactos.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/assets/css/main.css" />
         <option value="$PROJECT_DIR$/servidor/app/Http/Middleware/Cors.php" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts" />
         <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/API/ClienteController.php" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta.service.ts" />
         <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/API/ConsultaController.php" />
@@ -251,18 +240,13 @@
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/styles.css" />
         <option value="$PROJECT_DIR$/local/copy.bat" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html" />
         <option value="$PROJECT_DIR$/local/compress.bat" />
         <option value="$PROJECT_DIR$/local/zip.vbs" />
-        <option value="$PROJECT_DIR$/servidor/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/servidor/database/migrations/2019_02_12_122013_create_consultas_table.php" />
         <option value="$PROJECT_DIR$/servidor/app/Consulta.php" />
         <option value="$PROJECT_DIR$/servidor/database/migrations/2019_02_13_121335_create_tipos_table.php" />
         <option value="$PROJECT_DIR$/servidor/app/tipo.php" />
-        <option value="$PROJECT_DIR$/servidor/routes/api.php" />
         <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/RadiografiaController.php" />
-        <option value="$PROJECT_DIR$/servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php" />
         <option value="$PROJECT_DIR$/servidor/database/migrations/2019_01_21_083758_create_tomografias_table.php" />
         <option value="$PROJECT_DIR$/servidor/app/Tomografia.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8a8e380b-7710-431d-846e-3814395d9bdd/console.sql" />
@@ -276,8 +260,20 @@
         <option value="$PROJECT_DIR$/local/app/Http/Controllers/API/TomografiaController.php" />
         <option value="$PROJECT_DIR$/local/composer.json" />
         <option value="$PROJECT_DIR$/local/run.bat" />
-        <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" />
         <option value="$PROJECT_DIR$/local/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php" />
+        <option value="$PROJECT_DIR$/servidor/app/RadiografiaTomografia.php" />
+        <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" />
+        <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/API/TipoController.php" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.ts" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/admin-header/admin-header.component.html" />
+        <option value="$PROJECT_DIR$/servidor/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.html" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.html" />
+        <option value="$PROJECT_DIR$/servidor/routes/api.php" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html" />
       </list>
     </option>
   </component>
@@ -477,6 +473,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -487,34 +484,50 @@
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
-              <item name="servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tomografias" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Doc-Boris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Doc-Boris" type="462c0819:PsiDirectoryNode" />
+              <item name="nordenrx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -607,12 +620,14 @@
       <workItem from="1550888428793" duration="4517000" />
       <workItem from="1550926183899" duration="9510000" />
       <workItem from="1551125456428" duration="297000" />
-      <workItem from="1551185227438" duration="12133000" />
+      <workItem from="1551185227438" duration="12477000" />
+      <workItem from="1551266180006" duration="5664000" />
+      <workItem from="1551273601148" duration="1760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214018000" />
+    <option name="totallyTimeSpent" value="221786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,7 +663,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.32829046" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32829046" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25189108" />
@@ -684,63 +699,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/angular.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://bdc26d7f-9b82-4502-8084-62cf4a0a8c1e/schema/servidor/table/consultas" />
-    <entry file="file://$PROJECT_DIR$/servidor/database/migrations/2019_02_12_103010_create_profesionals_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/database/migrations/2019_01_06_112017_create_clientes_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!block;n#ngOnInit#0;n#RadiografiaComponent#0" />
-            <element signature="n#!!block;n#resetCliente#0;n#RadiografiaComponent#0" />
-            <element signature="n#!!block;n#resetValues#0;n#RadiografiaComponent#0" />
-            <element signature="n#!!block;n#load#0;n#RadiografiaComponent#0" />
-            <element signature="n#!!block;n#loadCliente#0;n#RadiografiaComponent#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/API/ProfesionalController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b011d04a-7657-45f5-b2d7-db58f503141f/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/servidor/database/migrations/2019_02_13_132013_create_consultas_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -758,31 +716,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/database/migrations/2019_02_13_121335_create_tipos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/servidor/app/tipo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="111" column="102" selection-start-line="111" selection-start-column="102" selection-end-line="111" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="14" column="59" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -880,15 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/app/RadiografiaTomografia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/servidor/app/Mail/RadiografiaMail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -903,13 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1006,109 +927,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/b011d04a-7657-45f5-b2d7-db58f503141f.SCHEMA:servidor">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>b011d04a-7657-45f5-b2d7-db58f503141f.SCHEMA:servidor</OriginalElement>
-          <nodes>
-            <node x="264.0" y="639.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.radiografias_tomografias</node>
-            <node x="0.0" y="912.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.colegas</node>
-            <node x="537.0839799178458" y="650.8849840255591">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.sucursales</node>
-            <node x="0.0" y="639.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.users</node>
-            <node x="301.0" y="0.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.clientes</node>
-            <node x="641.0" y="11.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.profesionales</node>
-            <node x="772.1889548151529" y="469.2145139205843">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.tomografias</node>
-            <node x="320.5" y="322.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consultas</node>
-            <node x="243.0" y="912.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consulta_tomografias</node>
-            <node x="0.0" y="55.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.tipos</node>
-            <node x="463.0" y="912.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.migrations</node>
-            <node x="683.0" y="912.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.password_resets</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consultas" target="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.clientes">
-              <point x="0.0" y="-136.0" />
-              <point x="0.0" y="136.0" />
-            </edge>
-            <edge source="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consultas" target="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.profesionales">
-              <point x="93.66666666666669" y="-136.0" />
-              <point x="554.6666666666667" y="297.0" />
-              <point x="750.5" y="297.0" />
-              <point x="0.0" y="125.0" />
-            </edge>
-            <edge source="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consultas" target="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.tipos">
-              <point x="-93.66666666666669" y="-136.0" />
-              <point x="367.3333333333333" y="297.0" />
-              <point x="140.5" y="297.0" />
-              <point x="0.0" y="81.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.1779569892473118" x="167.15125301179242" y="625.7425832952989" />
-          <SelectedNodes>
-            <node>b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.radiografias_tomografias</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/run.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/serve.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local/aplicacion.vbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/RadiografiaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
-          <folding>
-            <element signature="e#40#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
-          <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b011d04a-7657-45f5-b2d7-db58f503141f/schema/servidor/table/sucursales">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
+        <state relative-caret-position="1173">
           <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
           <folding>
             <element signature="e#31#76#0#PHP" expanded="true" />
@@ -1123,10 +944,220 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://b011d04a-7657-45f5-b2d7-db58f503141f/schema/servidor/table/sucursales">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/serve.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/aplicacion.vbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/run.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://b011d04a-7657-45f5-b2d7-db58f503141f/schema/servidor/table/radiografias_tomografias">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b011d04a-7657-45f5-b2d7-db58f503141f/schema/servidor/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/admin-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/RadiografiaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="e#40#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#40#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/b011d04a-7657-45f5-b2d7-db58f503141f.SCHEMA:servidor">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>b011d04a-7657-45f5-b2d7-db58f503141f.SCHEMA:servidor</OriginalElement>
+          <nodes>
+            <node x="0.0" y="639.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.radiografias_tomografias</node>
+            <node x="0.0" y="934.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.colegas</node>
+            <node x="857.0" y="639.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.sucursales</node>
+            <node x="329.0" y="639.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.users</node>
+            <node x="540.0" y="0.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.clientes</node>
+            <node x="0.0" y="11.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.profesionales</node>
+            <node x="593.0" y="639.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.tomografias</node>
+            <node x="239.0" y="322.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consultas</node>
+            <node x="243.0" y="934.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consulta_tomografias</node>
+            <node x="239.0" y="55.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.tipos</node>
+            <node x="463.0" y="934.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.migrations</node>
+            <node x="683.0" y="934.0">b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.password_resets</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consultas" target="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.clientes">
+              <point x="93.66666666666669" y="-136.0" />
+              <point x="473.1666666666667" y="297.0" />
+              <point x="700.0" y="297.0" />
+              <point x="0.0" y="136.0" />
+            </edge>
+            <edge source="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consultas" target="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.profesionales">
+              <point x="-93.66666666666669" y="-136.0" />
+              <point x="285.8333333333333" y="297.0" />
+              <point x="109.5" y="297.0" />
+              <point x="0.0" y="125.0" />
+            </edge>
+            <edge source="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consultas" target="b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.tipos">
+              <point x="0.0" y="-136.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.421792618629174" x="529.0" y="559.0" />
+          <SelectedNodes>
+            <node>b011d04a-7657-45f5-b2d7-db58f503141f.TABLE:servidor.consulta_tomografias</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/app/RadiografiaTomografia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/database/migrations/2018_12_27_213652_create_radiografias_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/database/migrations/2019_02_13_121335_create_tipos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/admin-header/admin-header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="13" column="68" selection-start-line="13" selection-start-column="68" selection-end-line="13" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/API/TipoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="119" column="93" selection-start-line="119" selection-start-column="93" selection-end-line="119" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="222" column="5" lean-forward="true" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+            <element signature="n#!!block;n#ngOnInit#0;n#RadiografiaComponent#0" />
+            <element signature="n#!!block;n#resetCliente#0;n#RadiografiaComponent#0" />
+            <element signature="n#!!block;n#resetValues#0;n#RadiografiaComponent#0" />
+            <element signature="n#!!block;n#loadCliente#0;n#RadiografiaComponent#0" />
+          </folding>
         </state>
       </provider>
     </entry>

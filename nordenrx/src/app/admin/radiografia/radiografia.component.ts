@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {RadiografiaService} from './radiografia.service';
 import { environment } from '../../../environments/environment.prod';
 import {ClienteService} from '../cliente/cliente.service';
@@ -10,12 +10,14 @@ import {ProfesionalService} from '../profesional/profesional.service';
 
 @Component({
   selector: 'app-radiografia',
+  changeDetection: ChangeDetectionStrategy.Default,
   templateUrl: './radiografia.component.html',
   styleUrls: ['./radiografia.component.css']
 })
 export class RadiografiaComponent implements OnInit {
 
   radiografias: any = [];
+  tipos: any = [];
   clientes: any = [];
   cliente: any = {
     cliente_id : 0,
@@ -34,6 +36,8 @@ export class RadiografiaComponent implements OnInit {
   profesional_id: number = null;
   img = environment.servidor + 'radiografia/';
   consultaGroup: FormGroup;
+  categoria = null;
+  tomografias = null;
 
   constructor(private radiografiaService: RadiografiaService,
               private consultaService: ConsultaService,
@@ -45,6 +49,10 @@ export class RadiografiaComponent implements OnInit {
       this.profesionalService.listar()
           .subscribe((res: any) => {
               this.profesionales = res;
+          });
+      this.radiografiaService.tomografiasNoAsignadas()
+          .subscribe((res: any) => {
+            this.tomografias = res;
           });
     this.load();
     this.createForm();
@@ -181,20 +189,37 @@ export class RadiografiaComponent implements OnInit {
         });
   }
 
+  asociar(categoria: string) {
+    this.asociado = true;
+    this.categoria = categoria;
+    if (categoria === 'radiografia') {
+        this.radiografiaService.tipoRadiografias()
+            .subscribe((res: any) => {
+                this.tipos = res;
+            });
+    }  else {
+        this.radiografiaService.tipoTomografias()
+            .subscribe((res: any) => {
+                this.tipos = res;
+            });
+    }
+  }
+
   save() {
     this.consultaGroup.patchValue({
       'radiografia_id' : +this.imagen.radiografia_id,
       'cliente_id' : +this.consultaGroup.value.cliente_id,
       'imagen' : this.imagen.archivo
     });
-    if (confirm(`¿Esta seguro que desea registrar la consulta con número de factura: ${this.consultaGroup.value.numero_factura}?`)) {
+    const question  = '¿Esta seguro que desea registrar la consulta con número de factura: ';
+    if (confirm(`${question} ${this.consultaGroup.value.numero_factura}?`)) {
       this.consultaService.store(this.consultaGroup.value)
-        .subscribe((res: any) => {
-          this.resetValues();
-          this.load();
-          this.consultaGroup.reset();
-          console.log(res);
-        });
+          .subscribe((res: any) => {
+            this.resetValues();
+            this.load();
+            this.consultaGroup.reset();
+            console.log(res);
+          });
     }
   }
 }

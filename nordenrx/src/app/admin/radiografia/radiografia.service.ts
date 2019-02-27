@@ -13,6 +13,15 @@ export class RadiografiaService {
   noAsignadas() {
     return this.http.get(this.base + 'radiografias-no-asignadas');
   }
+  tomografiasNoAsignadas() {
+    return this.http.get(this.base + 'tomografias-no-asignadas');
+  }
+  tipoRadiografias() {
+    return this.http.get(this.base + 'tipo-radiografias');
+  }
+  tipoTomografias() {
+    return this.http.get(this.base + 'tipo-tomografias');
+  }
   sri(documento: string) {
     return this.http.get(`${this.base}sri/${documento}`);
   }
