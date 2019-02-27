@@ -219,7 +219,6 @@ export class RadiografiaComponent implements OnInit {
         break;
       case 'tomografia' :
         this.consultaGroup.patchValue({
-          'radiografia_tomografia_id' : +this.consultaGroup.value.radiografia_tomografia_id,
           'cliente_id' : +this.consultaGroup.value.cliente_id,
           'imagen' : '../../assets/img/tomografia.jpg',
           'categoria' : this.categoria
@@ -233,6 +232,7 @@ export class RadiografiaComponent implements OnInit {
             this.resetValues();
             this.load();
             this.consultaGroup.reset();
+            this.toastrService.success('asignacion exitosa', this.categoria);
             console.log(res);
           });
     }

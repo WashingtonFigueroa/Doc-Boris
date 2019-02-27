@@ -45,6 +45,7 @@
                                     <section class="form-group" *ngIf="categoria === 'tomografia'">
                                         <label for="tomografia">Tomografia</label>
                                         <select name="radiografia_tomografia_id"
+                                                formControlName="radiografia_tomografia_id"
                                                 class="form-control"
                                                 id="tomografia">
                                             <option [value]="record.radiografia_tomografia_id" *ngFor="let record of tomografias">{{ record.nombre }}</option>
@@ -121,8 +122,6 @@
                                             <option [value]="tipo.tipo_id" *ngFor="let tipo of tipos">{{ tipo.tipo }}</option>
                                         </select>
                                     </div>
-
-
                                 </div>
                             </div>
                             <section class="text-right">
