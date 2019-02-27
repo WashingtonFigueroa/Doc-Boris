@@ -220,7 +220,7 @@ export class RadiografiaComponent implements OnInit {
       case 'tomografia' :
         this.consultaGroup.patchValue({
           'cliente_id' : +this.consultaGroup.value.cliente_id,
-          'imagen' : '../../assets/img/tomografia.jpg',
+          'imagen' : '../../../assets/img/tomografia.jpg',
           'categoria' : this.categoria
         });
         break;

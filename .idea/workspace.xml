@@ -82,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/API/ConsultaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="504">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="235" selection-start-line="235" selection-end-line="235" />
+            <state relative-caret-position="144">
+              <caret line="222" column="56" selection-start-line="222" selection-start-column="56" selection-end-line="222" selection-end-column="56" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
                 <element signature="n#!!block;n#ngOnInit#0;n#RadiografiaComponent#0" />
@@ -202,8 +202,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="47" column="90" selection-start-line="47" selection-start-column="90" selection-end-line="47" selection-end-column="90" />
+            <state relative-caret-position="368">
+              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,7 +216,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>form</find>
       <find>create</find>
       <find>radiografi</find>
       <find>reques</find>
@@ -242,6 +245,7 @@
       <find>tipo_id</find>
       <find>radiografia_tomografia</find>
       <find>tomografias</find>
+      <find>ngif</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\DTE\Doc-Boris\nordenrx</dir>
@@ -642,12 +646,12 @@
       <workItem from="1551125456428" duration="297000" />
       <workItem from="1551185227438" duration="12477000" />
       <workItem from="1551266180006" duration="5664000" />
-      <workItem from="1551273601148" duration="5134000" />
+      <workItem from="1551273601148" duration="5994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225160000" />
+    <option name="totallyTimeSpent" value="226020000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1148,22 +1152,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/servidor/app/Http/Controllers/API/ConsultaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="504">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="47" column="90" selection-start-line="47" selection-start-column="90" selection-end-line="47" selection-end-column="90" />
+        <state relative-caret-position="368">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="235" selection-start-line="235" selection-end-line="235" />
+        <state relative-caret-position="144">
+          <caret line="222" column="56" selection-start-line="222" selection-start-column="56" selection-end-line="222" selection-end-column="56" />
           <folding>
             <element signature="e#0#73#0" expanded="true" />
             <element signature="n#!!block;n#ngOnInit#0;n#RadiografiaComponent#0" />
