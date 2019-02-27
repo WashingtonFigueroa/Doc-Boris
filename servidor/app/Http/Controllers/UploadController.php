@@ -25,6 +25,8 @@ class UploadController extends Controller
                 ]);
                 Mail::send(new RadiografiaMail([
                     'filename' => $radiografia->nombre,
+                    'email' => 'info@nordentrx.com',
+                    'razon_social' => 'Doc. Boris',
                     'created_at' => $radiografia->created_at
                 ]));
             }
