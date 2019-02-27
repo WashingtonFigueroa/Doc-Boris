@@ -213,14 +213,16 @@ export class RadiografiaComponent implements OnInit {
         this.consultaGroup.patchValue({
           'radiografia_tomografia_id' : +this.imagen.radiografia_tomografia_id,
           'cliente_id' : +this.consultaGroup.value.cliente_id,
-          'imagen' : this.imagen.archivo
+          'imagen' : this.imagen.archivo,
+          'categoria' : this.categoria
         });
         break;
       case 'tomografia' :
         this.consultaGroup.patchValue({
           'radiografia_tomografia_id' : +this.consultaGroup.value.radiografia_tomografia_id,
           'cliente_id' : +this.consultaGroup.value.cliente_id,
-          'imagen' : '../../assets/img/tomografia.jpg'
+          'imagen' : '../../assets/img/tomografia.jpg',
+          'categoria' : this.categoria
         });
         break;
     }
