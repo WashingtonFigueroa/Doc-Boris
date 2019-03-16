@@ -234,7 +234,7 @@ export class RadiografiaComponent implements OnInit {
             this.resetValues();
             this.load();
             this.consultaGroup.reset();
-            this.toastrService.success('asignacion exitosa', this.categoria);
+            this.toastrService.success('Asignación exitosa', this.categoria);
             console.log(res);
           });
     }

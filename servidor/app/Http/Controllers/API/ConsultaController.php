@@ -85,8 +85,6 @@ class ConsultaController extends Controller
             ]));
 
         }
-
-
         return response()->json($consulta, 201);
     }
 
