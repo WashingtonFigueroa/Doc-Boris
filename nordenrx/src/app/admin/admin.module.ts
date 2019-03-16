@@ -81,7 +81,8 @@ import {SucursalesService} from "./sucursales/sucursales.service";
       ReporteService,
       ProfesionalService,
       TipoService,
-      SucursalesService
+      SucursalesService,
+      ConsultaService
   ]
 })
 export class AdminModule { }
