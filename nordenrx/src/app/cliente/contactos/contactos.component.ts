@@ -27,8 +27,6 @@ mensajeGroup:FormGroup;
       })
   }
   store(){
-      console.log(this.mensajeGroup.value);
-      
 this.mensajeService.store(this.mensajeGroup.value).subscribe((res: any) => {
   this.toastrService.info('Enviado', 'Mensaje');
   this.mensajeGroup.reset();
