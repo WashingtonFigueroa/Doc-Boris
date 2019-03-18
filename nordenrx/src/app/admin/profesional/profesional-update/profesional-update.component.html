@@ -27,7 +27,6 @@
                   <label for="especialidad">Especialidad</label>
                   <input type="text" class="form-control" formControlName="especialidad" name="especialidad" id="especialidad">
                 </section>
-
                 <section class="form-group">
                   <label for="email">Email</label>
                   <input type="email" class="form-control" formControlName="email" name="email" id="email">
@@ -36,13 +35,11 @@
                   <label for="celular">Celular</label>
                   <input type="number" class="form-control" formControlName="celular" name="celular" id="celular">
                 </section>
-
                 <section class="text-right">
+                  <button [disabled]="profesionalGroup.status === 'INVALID'"
+                          class="btn btn-primary">Actualizar</button>&nbsp;&nbsp;
                   <a routerLink="/admin/profesionales"
                      class="btn-danger-link"> Cancelar</a>
-                  <button
-                          [disabled]="profesionalGroup.status === 'INVALID'"
-                          class="btn btn-primary">Actualizar</button>
                 </section>
               </div>
             </div>

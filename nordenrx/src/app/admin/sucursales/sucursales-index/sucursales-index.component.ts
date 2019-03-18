@@ -61,7 +61,7 @@ export class SucursalesIndexComponent implements OnInit {
     }
 
     destroy(sucursal, index) {
-        if (confirm('Esta seguro de eliminar a ' + sucursal.ciudad + '?')) {
+        if (confirm('Esta seguro de eliminar la sucursal de : ' + sucursal.ciudad + '?')) {
             this.sucursalService.destroy(sucursal.sucursal_id)
                 .subscribe((res: any) => {
                     this.paginacion.data.splice(index, 1);

@@ -30,6 +30,7 @@ export class TipoUpdateComponent implements OnInit {
 
     createForm() {
         this.tipoGroup = this.fb.group({
+            'categoria' : new FormControl(this.tipo.categoria, [Validators.required]),
             'tipo' : new FormControl(this.tipo.tipo, [Validators.required])
         });
     }

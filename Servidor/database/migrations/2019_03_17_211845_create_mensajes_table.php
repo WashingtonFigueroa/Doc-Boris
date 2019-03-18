@@ -18,7 +18,7 @@ class CreateMensajesTable extends Migration
             $table->string('nombre');
             $table->string('asunto');
             $table->string('email');
-            $table->string('mensaje');
+            $table->string('mensaje',2500);
             $table->softDeletes();
             $table->timestamps();
         });

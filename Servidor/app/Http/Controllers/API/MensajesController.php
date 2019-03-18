@@ -10,15 +10,15 @@ class MensajesController extends Controller
 {
     public function index()
     {
-        $mensaje = Mensajes::orderBy('mensaje_id')->paginate(10);
+        $mensaje = Mensajes::orderBy('mensaje_id','desc')->paginate(10);
         return response()->json($mensaje, 200);
     }
     public function listar() {
-        return response()->json(Mensajes::orderBy('mensaje_id')->get(), 200);
+        return response()->json(Mensajes::orderBy('mensaje_id','desc')->get(), 200);
     }
     public function buscar($valor = null) {
         if ($valor === null) {
-            $mensaje = Mensajes::orderBy('mensaje_id')->paginate(10);
+            $mensaje = Mensajes::orderBy('mensaje_id','desc')->paginate(10);
         } else {
             $mensaje = Mensajes::where('nombre', 'like', '%' . $valor . '%')
                 ->orWhere('asunto', 'like', '%' . $valor . '%')

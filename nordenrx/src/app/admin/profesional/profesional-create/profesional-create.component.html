@@ -5,7 +5,6 @@
       <div class="card">
         <div class="card-body">
           <form [formGroup]="profesionalGroup" (submit)="store()">
-
             <div class="row">
               <div class="col-md-6">
                 <section class="form-group">
@@ -41,7 +40,6 @@
                   <label for="especialidad">Especialidad</label>
                   <input type="text" class="form-control" formControlName="especialidad" name="especialidad" id="especialidad">
                 </section>
-
                 <section class="form-group">
                   <label for="email">Email</label>
                   <input type="email" class="form-control" formControlName="email" name="email" id="email">
@@ -51,10 +49,9 @@
                   <input type="number" class="form-control" formControlName="celular" name="celular" id="celular">
                 </section>
                 <section class="text-right">
+                  <button [disabled]="profesionalGroup.status === 'INVALID'"
+                          class="btn btn-primary">Guardar</button>&nbsp;&nbsp;
                   <a routerLink="/admin/clientes" class="btn-danger-link">Cancelar</a>
-                  <button
-                          [disabled]="profesionalGroup.status === 'INVALID'"
-                          class="btn btn-primary">Guardar</button>
                 </section>
               </div>
             </div>

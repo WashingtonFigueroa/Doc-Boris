@@ -8,24 +8,19 @@ use App\Http\Controllers\Controller;
 
 class ClienteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $clientes = Cliente::orderBy('razon_social')->paginate(10);
+        $clientes = Cliente::orderBy('razon_social','desc')->paginate(5);
         return response()->json($clientes, 200);
     }
 
     public function listar() {
-        return response()->json(Cliente::orderBy('razon_social')->get(), 200);
+        return response()->json(Cliente::orderBy('razon_social','desc')->get(), 200);
     }
 
     public function buscar($valor = null) {
         if ($valor === null) {
-            $clientes = Cliente::orderBy('razon_social')->paginate(10);
+            $clientes = Cliente::orderBy('razon_social','desc')->paginate(10);
         } else {
             $clientes = Cliente::Where('documento', 'like', '%' . $valor . '%')
                 ->orWhere('razon_social', 'like', '%' . $valor . '%')

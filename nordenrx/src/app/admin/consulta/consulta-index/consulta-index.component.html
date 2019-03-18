@@ -1,25 +1,17 @@
 <div class="container">
   <h3 class="header-title">Consultas</h3>
   <div class="row">
-    <div class="col-4">
+    <div class="col-8">
       <a
         routerLink="/admin/radiografias"
         class="btn-create"><i class="fa fa-check"></i> Nueva consulta</a>
     </div>
-    <div class="col-8">
-      <form
-              (submit)="buscar()"
-              [formGroup]="consultaGroup"
-              class="form-inline form-right">
+    <div class="col-4">
+      <form (submit)="buscar(valor)" class="form-inline" role="form">
         <div class="form-group">
-          <label for=""></label>
-          <input
-                  type="search"
-                  name="valor" id=""
-                  formControlName="valor"
-                  class="form-control" placeholder="Buscar..." aria-describedby="helpId">
+          <input type="dato" class="form-control" [(ngModel)]="valor" name="valor">
         </div>
-        <button class="btn btn-primary">Buscar</button>
+        <button type="submit" class="btn btn-primary">Buscar</button>
       </form>
     </div>
   </div>
@@ -35,7 +27,7 @@
             <th>Razon Social</th>
             <th>Tipo Radiografía</th>
             <th>Valor</th>
-            <th>Imagen</th>
+            <!--<th>Imagen</th>-->
             <th>Enviar</th>
           </tr>
           </thead>
@@ -46,7 +38,7 @@
             <td>{{ consulta.razon_social }}</td>
             <td>{{ consulta.tipo }}</td>
             <td>{{ consulta.valor | currency : 'USD' : 'symbol' : '1.2' }}</td>
-            <td><img src="{{base}}radiografia/{{consulta.imagen.split('/')[1]}}" class="img-radiografia"></td>
+            <!--<td><img src="{{base}}radiografia/{{consulta.imagen.split('/')[1]}}" class="img-radiografia"></td>-->
             <td>
               <button routerLink="/consultas/" type="button" class="btn-ctrl">
               <i class="fa fa-envelope-o fa-fw"></i>

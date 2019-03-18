@@ -60,7 +60,7 @@ export class MensajesIndexComponent implements OnInit {
             });
     }
     destroy(mensaje, index) {
-        if (confirm('Esta seguro de eliminar al mensaje ' + mensaje.asunto)) {
+        if (confirm('Esta seguro de eliminar al mensaje :' + mensaje.asunto + ' ?.' )) {
             this.mensajeService.destroy(mensaje.mensaje_id)
                 .subscribe((res: any) => {
                     this.mensajes.data.splice(index, 1);

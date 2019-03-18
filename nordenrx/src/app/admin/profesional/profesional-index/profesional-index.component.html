@@ -7,26 +7,18 @@
               class="btn-create"><i class="fa fa-check"></i> Crear Profesionales</a>
     </div>
     <div class="col-8">
-      <form
-              (submit)="buscar()"
-              [formGroup]="profesionalGroup"
-              class="form-inline form-right">
+      <form (submit)="buscar(valor)" class="form-inline" role="form">
         <div class="form-group">
-          <label for=""></label>
-          <input
-                  type="search"
-                  name="valor" id=""
-                  formControlName="valor"
-                  class="form-control" placeholder="Buscar..." aria-describedby="helpId">
+          <input type="email" class="input-search" [(ngModel)]="valor" name="valor">
         </div>
-        <button class="btn btn-primary">Buscar</button>
+        <button type="submit" class="btn btn-primary">Buscar</button>
       </form>
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col-12">
-      <div class="table-responsive" *ngIf="paginacion !== null">
+      <div class="table-responsive" *ngIf="profesionales !== null">
         <table class="table table-hover">
           <thead style="background-color: #0f192a">
           <tr>
@@ -37,11 +29,11 @@
             <th>Dirección</th>
             <th>Email</th>
             <th>Celular</th>
-            <th>Acciones</th>
+            <th class="text-center">Acciones</th>
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let profesional of paginacion.data; let i = index">
+          <tr *ngFor="let profesional of profesionales.data; let i = index">
             <td>{{ i + 1 }}</td>
             <td>{{ profesional.documento }}</td>
             <td>{{ profesional.razon_social }}</td>
@@ -49,7 +41,7 @@
             <td>{{ profesional.direccion }}</td>
             <td>{{ profesional.email }}</td>
             <td>{{ profesional.celular }}</td>
-            <td>
+            <td class="text-center">
               <button
                       routerLink="/admin/profesionales/editar/{{profesional.profesional_id}}"
                       class="btn btn-xs btn-info">
@@ -65,14 +57,15 @@
           </tbody>
         </table>
       </div>
-      <div *ngIf="paginacion !== null && paginacion.last_page > 1">
-        <button class="btn-pagination" [disabled]="paginacion.first_page_url === null" (click)="go(paginacion.first_page_url)">Primero</button>
-        <button class="btn-pagination" [disabled]="paginacion.prev_page_url === null" (click)="go(paginacion.prev_page_url)">&laquo;</button>
-        <button class="btn-pagination"
-                (click)="go(page.url)"
-                *ngFor="let page of pages">{{ page.page }}</button>
-        <button class="btn-pagination" [disabled]="paginacion.next_page_url === null" (click)="go(paginacion.next_page_url)">&raquo;</button>
-        <button class="btn-pagination" [disabled]="paginacion.last_page_url === null" (click)="go(paginacion.last_page_url)">Último</button>
+      <div *ngIf="profesionales !== null && profesionales.last_page > 1" class="paginacion text-center">
+        <div>
+          Página {{ profesionales.current_page }} de {{ profesionales.last_page }}
+        </div>
+        <button class="paginacion-btn" (click)="loadPagination(profesionales.first_page_url)"><i class="fa fa-backward"></i></button>
+        <button class="paginacion-btn" (click)="loadPagination(profesionales.prev_page_url)" [disabled]="profesionales.prev_page_url === null"><i class="fa fa-chevron-left"></i></button>
+        <button class="paginacion-btn" *ngFor="let page of pages" [class.activated]="page.page == profesionales.current_page" (click)="loadPagination(page.url)">{{ page.page }}</button>
+        <button class="paginacion-btn" (click)="loadPagination(profesionales.next_page_url)" [disabled]="profesionales.next_page_url === null"><i class="fa fa-chevron-right"></i></button>
+        <button class="paginacion-btn" (click)="loadPagination(profesionales.last_page_url)"><i class="fa fa-forward"></i></button>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <div class="container">
   <h3 class="header-title">Registrar Tipo de Radiografía o Tomografía</h3>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-body">
           <form [formGroup]="tipoGroup" (submit)="store()">
@@ -19,10 +19,9 @@
                   <input type="text" class="form-control" formControlName="tipo" name="tipo" id="tipo">
                 </section>
                 <section class="text-right">
-                  <a routerLink="/admin/tipos" class="btn-danger-link">Cancelar</a>
-                  <button
-                          [disabled]="tipoGroup.status === 'INVALID'"
-                          class="btn btn-primary">Guardar</button>
+                    <button [disabled]="tipoGroup.status === 'INVALID'"
+                            class="btn btn-primary">Guardar</button> &nbsp;&nbsp;
+                    <a routerLink="/admin/tipos" class="btn-danger-link">Cancelar</a>
                 </section>
           </form>
         </div>

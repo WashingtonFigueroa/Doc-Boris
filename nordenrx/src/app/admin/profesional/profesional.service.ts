@@ -37,4 +37,7 @@ export class ProfesionalService {
     sri(documento: string) {
         return this.http.get(`${this.base}sri/${documento}`);
     }
+    pagination(url: string) {
+        return this.http.get(url);
+    }
 }
