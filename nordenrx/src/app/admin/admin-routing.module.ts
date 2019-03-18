@@ -24,6 +24,8 @@ import {SucursalesComponent} from './sucursales/sucursales.component';
 import {SucursalesIndexComponent} from './sucursales/sucursales-index/sucursales-index.component';
 import {SucursalesCreateComponent} from './sucursales/sucursales-create/sucursales-create.component';
 import {SucursalesUpdateComponent} from './sucursales/sucursales-update/sucursales-update.component';
+import {MensajesComponent} from './mensajes/mensajes.component';
+import {MensajesIndexComponent} from './mensajes/mensajes-index/mensajes-index.component';
 
 const routes: Routes = [
   {
@@ -87,6 +89,21 @@ const routes: Routes = [
                 {
                     path: 'editar/:cliente_id',
                     component: ReporteUpdateComponent
+                },
+                {
+                    path: '',
+                    redirectTo: 'listar',
+                    pathMatch: 'full'
+                }
+            ]
+        },
+        {
+            path: 'mensajes',
+            component: MensajesComponent,
+            children: [
+                {
+                    path: 'listar',
+                    component: MensajesIndexComponent
                 },
                 {
                     path: '',
