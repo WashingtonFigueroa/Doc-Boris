@@ -11,13 +11,20 @@ class User extends Authenticatable
 {
     use Notifiable;
     use SoftDeletes;
+
+    protected $table = 'usuarios';
+    protected $primaryKey = 'usuario_id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'cargo_id',
+        'nombres',
+        'cuenta',
+        'password',
+        'email',
     ];
 
     /**
@@ -25,9 +32,13 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $hidden = [
+        'password'
+    ];
+
     protected $dates = ['deleted_at'];
 
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function cargo() {
+        return $this->belongsTo('App\Cargo', 'cargo_id');
+    }
 }
