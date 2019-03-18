@@ -28,30 +28,32 @@
                 </section>
                 <section class="form-group">
                   <label for="razon_social">Razón Social</label>
-                  <input type="text" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
+                  <input type="text" onKeyUp="this.value=this.value.toUpperCase();" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
                 </section>
                 <section class="form-group">
                   <label for="direccion">Dirección</label>
-                  <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
+                  <input type="text" onKeyUp="this.value=this.value.toUpperCase();" class="form-control" formControlName="direccion" name="direccion" id="direccion">
                 </section>
               </div>
               <div class="col-md-6">
                 <section class="form-group">
                   <label for="especialidad">Especialidad</label>
-                  <input type="text" class="form-control" formControlName="especialidad" name="especialidad" id="especialidad">
+                  <input type="text" onKeyUp="this.value=this.value.toUpperCase();" class="form-control" formControlName="especialidad" name="especialidad" id="especialidad">
                 </section>
                 <section class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" formControlName="email" name="email" id="email">
+                  <input type="email" class="form-control" id="email" name="email" formControlName="email" />
+                  <small class="alert-danger" *ngIf="profesionalGroup.get('email').status ==='INVALID' && profesionalGroup.get('email').dirty">Correo invalido</small>
+
                 </section>
                 <section class="form-group">
                   <label for="celular">Celular</label>
-                  <input type="number" class="form-control" formControlName="celular" name="celular" id="celular">
+                  <input type="text" maxlength="10" onkeypress="if(event.keyCode < 45 || event.keyCode > 57) event.returnValue=false" class="form-control" formControlName="celular" name="celular" id="celular">
                 </section>
                 <section class="text-right">
                   <button [disabled]="profesionalGroup.status === 'INVALID'"
                           class="btn btn-primary">Guardar</button>&nbsp;&nbsp;
-                  <a routerLink="/admin/clientes" class="btn-danger-link">Cancelar</a>
+                  <a routerLink="/admin/profesionales" class="btn-danger-link">Cancelar</a>
                 </section>
               </div>
             </div>

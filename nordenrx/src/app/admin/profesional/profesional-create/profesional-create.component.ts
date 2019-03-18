@@ -37,13 +37,20 @@ export class ProfesionalCreateComponent implements OnInit {
             'razon_social' : new FormControl('', [Validators.required]),
             'especialidad' : new FormControl(''),
             'direccion' : new FormControl(''),
-            'email' : new FormControl(''),
+            'email': new FormControl('', [Validators.pattern(/^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/)]),
             'celular' : new FormControl('')
         });
     }
 
     store() {
-        this.profesionalService.store(this.profesionalGroup.value)
+        const formData = new FormData();
+        formData.append('documento', this.profesionalGroup.value.documento);
+        formData.append('razon_social', this.profesionalGroup.value.razon_social.toUpperCase());
+        formData.append('especialidad', this.profesionalGroup.value.especialidad.toUpperCase());
+        formData.append('direccion', this.profesionalGroup.value.direccion.toUpperCase());
+        formData.append('email', this.profesionalGroup.value.email);
+        formData.append('celular', this.profesionalGroup.value.celular);
+        this.profesionalService.store(FormData)
             .subscribe((res: any) => {
                 this.toastrService.success('El profesional ' + res.razon_social + ' fue guardado exitosamente');
                 this.router.navigate(['/admin/profesionales']);

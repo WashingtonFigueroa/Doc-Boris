@@ -2,39 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595c7e26-8189-4e83-8430-2045099d99a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/MensajesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/MensajesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/ProfesionalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/ProfesionalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/TipoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/TipoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/database/migrations/2019_03_17_211845_create_mensajes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/database/migrations/2019_03_17_211845_create_mensajes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/admin-header/admin-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/admin-header/admin-header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-edit/cliente-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-edit/cliente-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-update/profesional-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-update/profesional-update.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-create/sucursales-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-create/sucursales-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-index/sucursales-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-index/sucursales-index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-index/sucursales-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-index/sucursales-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-update/sucursales-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-update/sucursales-update.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-create/tipo-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-index/tipo-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-update/tipo-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-update/tipo-update.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-update/tipo-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo-update/tipo-update.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/cliente/contactos/contactos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/cliente/contactos/contactos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nordenrx/src/app/cliente/contactos/contactos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nordenrx/src/app/cliente/contactos/contactos.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,38 +103,38 @@
         <counts>
           <entry key="env" value="6" />
           <entry key="example" value="1" />
-          <entry key="html" value="37" />
+          <entry key="html" value="43" />
           <entry key="php" value="33" />
           <entry key="scss" value="4" />
-          <entry key="ts" value="44" />
+          <entry key="ts" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="6" />
-          <entry key="HTML" value="37" />
+          <entry key="HTML" value="43" />
           <entry key="PHP" value="33" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="4" />
-          <entry key="TypeScript" value="44" />
+          <entry key="TypeScript" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="47" />
-          <entry key="html" value="805" />
+          <entry key="html" value="845" />
           <entry key="php" value="208" />
           <entry key="scss" value="5" />
-          <entry key="ts" value="917" />
+          <entry key="ts" value="1003" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="47" />
-          <entry key="HTML" value="805" />
+          <entry key="HTML" value="845" />
           <entry key="PHP" value="208" />
           <entry key="SCSS" value="5" />
-          <entry key="TypeScript" value="917" />
+          <entry key="TypeScript" value="1003" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -175,10 +148,45 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.ts">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="210">
+              <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+              <folding>
+                <element signature="e#2823#2829#0" expanded="true" />
+                <element signature="e#2829#2835#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-edit/cliente-edit.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
+              <folding>
+                <element signature="e#2457#2463#0" expanded="true" />
+                <element signature="e#2463#2469#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="44" selection-start-line="44" selection-end-line="45" selection-end-column="40" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -187,34 +195,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente.service.ts">
+        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-update/profesional-update.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+            <state relative-caret-position="198">
+              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -264,7 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/servidor/app/Http/Controllers/UploadController.php" />
         <option value="$PROJECT_DIR$/servidor/app/Mail/RadiografiaMail.php" />
         <option value="$PROJECT_DIR$/servidor/resources/views/radiografia.blade.php" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/radiografia/radiografia.component.html" />
@@ -281,7 +264,6 @@
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes.service.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/admin-routing.module.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/admin.module.ts" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/admin-header/admin-header.component.html" />
         <option value="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/TipoController.php" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/tipo/tipo.service.ts" />
@@ -294,11 +276,8 @@
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-create/sucursales-create.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-update/sucursales-update.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/sucursales/sucursales-index/sucursales-index.component.ts" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional.service.ts" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.html" />
         <option value="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/ProfesionalController.php" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-update/profesional-update.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/cliente/contactos/contactos.component.html" />
@@ -308,13 +287,18 @@
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente.service.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.html" />
-        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-edit/cliente-edit.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.ts" />
         <option value="$PROJECT_DIR$/Servidor/app/Http/Controllers/API/ClienteController.php" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.html" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta.service.ts" />
         <option value="$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.html" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.html" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.html" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.ts" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-update/profesional-update.component.html" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.html" />
+        <option value="$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-edit/cliente-edit.component.html" />
       </list>
     </option>
   </component>
@@ -575,7 +559,7 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="consulta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cliente" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -584,8 +568,18 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="consulta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="consulta-index" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cliente" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cliente-create" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Doc-Boris" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="nordenrx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cliente" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cliente-edit" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="Doc-Boris" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -740,12 +734,12 @@
       <workItem from="1552746089031" duration="7869000" />
       <workItem from="1552844157753" duration="7226000" />
       <workItem from="1552872661901" duration="8916000" />
-      <workItem from="1552916263736" duration="9568000" />
+      <workItem from="1552916263736" duration="11094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265298000" />
+    <option name="totallyTimeSpent" value="266824000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -760,7 +754,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2473525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28214827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -815,13 +809,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Servidor/app/Http/Controllers/API/ConsultaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -874,13 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1062">
           <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1020,17 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding>
-            <element signature="e#2823#2829#0" expanded="true" />
-            <element signature="e#2829#2835#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1045,24 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="80" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-update/profesional-update.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#2214#2220#0" expanded="true" />
-            <element signature="e#2220#2226#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="38" column="43" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1169,13 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="55" column="208" selection-start-line="55" selection-start-column="208" selection-end-line="55" selection-end-column="208" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -1193,17 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-edit/cliente-edit.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#2457#2463#0" expanded="true" />
-            <element signature="e#2463#2469#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-index/cliente-index.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1211,13 +1144,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente.service.ts">
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="43" column="52" lean-forward="true" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1225,6 +1155,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -1241,10 +1181,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/consulta/consulta-index/consulta-index.component.html">
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/mensajes/mensajes-index/mensajes-index.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+        <state relative-caret-position="108">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-index/profesional-index.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-update/profesional-update.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="44" selection-start-line="44" selection-end-line="45" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/profesional/profesional-create/profesional-create.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+          <folding>
+            <element signature="e#2823#2829#0" expanded="true" />
+            <element signature="e#2829#2835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-create/cliente-create.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nordenrx/src/app/admin/cliente/cliente-edit/cliente-edit.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
+          <folding>
+            <element signature="e#2457#2463#0" expanded="true" />
+            <element signature="e#2463#2469#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
