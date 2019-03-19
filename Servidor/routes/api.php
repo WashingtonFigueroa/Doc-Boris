@@ -43,6 +43,8 @@ Route::apiResources([
     'tipos' => 'API\TipoController',
     'sucursales' => 'API\SucursalesController',
     'mensajes' => 'API\MensajesController',
+    'cargos' => 'API\CargosController',
+    'privilegios' => 'API\PrivilegiosController',
 ]);
 /*Clientes*/
 Route::get('buscar-clientes/{valor?}', 'API\ClienteController@buscar');

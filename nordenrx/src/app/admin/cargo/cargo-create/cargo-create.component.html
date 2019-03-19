@@ -1,3 +1,27 @@
-<p>
-  cargo-create works!
-</p>
+<div class="container">
+  <h3 class="header-title">Registrar Cargo</h3>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="cargoGroup" (submit)="store()">
+            <section class="form-group">
+              <label for="nombre">Cargo</label>
+              <input type="text" class="form-control" formControlName="nombre" name="nombre" id="nombre">
+            </section>
+            <section class="form-group">
+              <label for="descripcion">Descripción</label>
+              <input type="text" class="form-control" formControlName="descripcion" name="descripcion" id="descripcion">
+            </section>
+            <section class="text-right">
+              <button [disabled]="cargoGroup.status === 'INVALID'"
+                      class="btn btn-primary">Guardar</button>&nbsp;&nbsp;
+              <a routerLink="/admin/cargos" class="btn-danger-link">Cancelar</a>
+            </section>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

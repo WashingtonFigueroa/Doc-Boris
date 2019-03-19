@@ -1,3 +1,44 @@
-<p>
-  cargo-index works!
-</p>
+<div class="container">
+  <h3 class="header-title">Lista Cargos</h3>
+  <div class="row">
+    <div class="col-4">
+      <a
+              routerLink="/admin/cargos/crear"
+              class="btn-create"><i class="fa fa-check"></i> Crear Cargo</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-12">
+        <div *ngIf="!loading" class="table-responsive">
+        <table class="table table-hover">
+          <thead style="background-color: #0f192a">
+          <tr>
+            <th>N.</th>
+            <th>Cargo</th>
+            <th>Descripción</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let cargo of cargos; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ cargo.nombre }}</td>
+            <td>{{ cargo.descripcion }}</td>
+            <td class="text-center">
+              <button routerLink="/admin/cargos/editar/{{cargo.cargo_id}}"
+                      class="btn btn-xs btn-info">
+                <i class="fa fa-pencil-square-o"></i>
+              </button>
+              <button (click)="destroy(cargo, i)"
+                      class="btn btn-xs btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
