@@ -50,7 +50,7 @@ export class ProfesionalCreateComponent implements OnInit {
         formData.append('direccion', this.profesionalGroup.value.direccion.toUpperCase());
         formData.append('email', this.profesionalGroup.value.email);
         formData.append('celular', this.profesionalGroup.value.celular);
-        this.profesionalService.store(FormData)
+        this.profesionalService.store(formData)
             .subscribe((res: any) => {
                 this.toastrService.success('El profesional ' + res.razon_social + ' fue guardado exitosamente');
                 this.router.navigate(['/admin/profesionales']);
