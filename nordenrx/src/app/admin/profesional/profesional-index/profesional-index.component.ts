@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {environment} from "../../../../environments/environment.prod";
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
-import {ProfesionalService} from "../profesional.service";
+import {ProfesionalService} from '../profesional.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-profesional-index',
@@ -9,62 +9,62 @@ import {ProfesionalService} from "../profesional.service";
   styleUrls: ['./profesional-index.component.scss']
 })
 export class ProfesionalIndexComponent implements OnInit {
-
-    base = environment.servidor;
-    paginacion: any = null;
+    prev_page: string = null;
+    next_page: string = null;
+    last_page: number = null;
     pages: any = [];
-    profesionalGroup: FormGroup;
+    current_page: any = null;
+    profesionales: any = null;
+    valor = '';
     constructor(private profesionalService: ProfesionalService,
-                private fb: FormBuilder) {
-        this.createForm();
-        this.profesionalService.index()
-            .subscribe((res: any) => {
-                this.paginacion = res;
-                this.loadPages();
-            });
+                private toastrService:ToastrService ) {
+        this.profesionalService.index().subscribe((res: any) => {
+            this.profesionales = res;
+            this.current_page = this.profesionales.current_page;
+            this.prev_page = this.profesionales.prev_page_url;
+            this.next_page = this.profesionales.next_page_url;
+            this.last_page = this.profesionales.last_page;
+            this.loadPages();
+        });
     }
-
     ngOnInit() {
     }
-
-    createForm() {
-        this.profesionalGroup = this.fb.group({
-            'valor' : new FormControl()
-        });
-    }
-
     loadPages() {
         this.pages = [];
-        for (let i = 1; i <= this.paginacion.last_page; i++) {
+        for (let i = 1; i <= this.profesionales.last_page;  i++) {
             this.pages.push({
                 page: i,
-                url: this.base + 'profesionales?page=' + i
-        });
+                url: this.profesionales.path + '?page=' + i
+            });
         }
     }
-
-    go(url) {
-        this.profesionalService.go(url)
+    loadPagination(url: string) {
+        this.profesionalService.pagination(url)
             .subscribe((res: any) => {
-                this.paginacion = res;
+                this.profesionales = res;
+                this.current_page = this.profesionales.current_page;
+                this.prev_page = this.profesionales.prev_page_url;
+                this.next_page = this.profesionales.next_page_url;
+                this.last_page = this.profesionales.last_page;
                 this.loadPages();
             });
     }
-
-    buscar() {
-        const valor = this.profesionalGroup.value.valor;
+    buscar(valor: string) {
         this.profesionalService.buscar(valor)
             .subscribe((res: any) => {
-                this.paginacion = res;
+                this.profesionales = res;
+                this.current_page = this.profesionales.current_page;
+                this.prev_page = this.profesionales.prev_page_url;
+                this.next_page = this.profesionales.next_page_url;
+                this.last_page = this.profesionales.last_page;
                 this.loadPages();
             });
     }
-
-    destroy(profesional, index) {
-        if (confirm('Esta seguro de eliminar a ' + profesional.nombres + '?')) {
-            this.profesionalService.destroy(profesional.profesional_id)
+    destroy(profesionales, index) {
+        if (confirm('Esta seguro de eliminar al Sr/a: ' + profesionales.razon_social +'  ?.')) {
+            this.profesionalService.destroy(profesionales.profesional_id)
                 .subscribe((res: any) => {
-                    this.paginacion.data.splice(index, 1);
+                    this.profesionales.data.splice(index, 1);
                 });
         }
     }

@@ -5,7 +5,6 @@
       <div class="card">
         <div class="card-body">
           <form [formGroup]="clienteGroup" (submit)="store()">
-
             <div class="row">
               <div class="col-md-6">
                 <section class="form-group">
@@ -20,20 +19,33 @@
                   </select>
                 </section>
                 <section class="form-group">
-                  <label for="documento">Documento</label>
-                  <input type="text" class="form-control" formControlName="documento" name="documento" id="documento" maxlength="13">
+                  <label>Documento</label>
+                  <div class="row">
+                    <div class="col-8">
+                      <input type="text" class="form-control" placeholder="Documento" formControlName="documento">
+                    </div>
+                    <div class="block">
+                      <p class="circle">
+                        <span *ngIf="mostrar">
+                        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="col-2 text-right">
+                      <button class="btn btn-primary" (click)="searchPerson()"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
                 </section>
                 <section class="form-group">
                   <label for="razon_social">Razón Social</label>
-                  <input type="text" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
+                  <input type="text" onKeyUp="this.value=this.value.toUpperCase();" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
                 </section>
                 <section class="form-group">
                   <label for="direccion">Dirección</label>
-                  <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
+                  <input type="text" onKeyUp="this.value=this.value.toUpperCase();" class="form-control" formControlName="direccion" name="direccion" id="direccion">
                 </section>
               </div>
-
-
               <div class="col-md-6">
                 <section class="form-group">
                   <label for="fecha_nacimiento">Fecha Nacimiento</label>
@@ -41,7 +53,7 @@
                 </section>
                 <section class="form-group">
                   <label for="celular">Celular</label>
-                  <input type="text" class="form-control" formControlName="celular" name="celular" id="celular" maxlength="10">
+                  <input type="text" maxlength="10" onkeypress="if(event.keyCode < 45 || event.keyCode > 57) event.returnValue=false" class="form-control" formControlName="celular" name="celular" id="celular">
                 </section>
                 <section class="form-group">
                   <label for="genero">Seleccione Genero</label>
@@ -49,20 +61,17 @@
                           class="form-control"
                           formControlName="genero"
                           id="genero">
-                    <option value="Femenino">Femenino</option>
-                    <option value="Masculino">Masculino</option>
+                    <option value="FEMENINO">FEMENINO</option>
+                    <option value="MASCULINO">MASCULINO</option>
                   </select>
                 </section>
                 <section class="text-right">
+                  <button [disabled]="clienteGroup.status === 'INVALID'"
+                          class="btn btn-primary">Guardar</button>&nbsp;&nbsp;
                   <a routerLink="/admin/clientes" class="btn-danger-link">Cancelar</a>
-                  <button
-                          [disabled]="clienteGroup.status === 'INVALID'"
-                          class="btn btn-primary">Guardar</button>
                 </section>
               </div>
             </div>
-
-
           </form>
         </div>
       </div>

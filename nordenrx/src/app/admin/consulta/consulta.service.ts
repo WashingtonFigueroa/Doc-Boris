@@ -25,4 +25,7 @@ export class ConsultaService {
   sri(tipo_documento: string, documento: string) {
     return this.http.get(`${this.base}sri/${tipo_documento}/${documento}`);
   }
+    pagination(url: string) {
+        return this.http.get(url);
+    }
 }

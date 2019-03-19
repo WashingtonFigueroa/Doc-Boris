@@ -3,6 +3,7 @@ import {ConsultaService} from '../consulta.service';
 import {environment} from '../../../../environments/environment.prod';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import {ProfesionalService} from "../../profesional/profesional.service";
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-consulta-index',
@@ -10,54 +11,56 @@ import {ProfesionalService} from "../../profesional/profesional.service";
   styleUrls: ['./consulta-index.component.scss']
 })
 export class ConsultaIndexComponent implements OnInit {
-    base = environment.servidor;
-    consultas: any = null;
+    prev_page: string = null;
+    next_page: string = null;
+    last_page: number = null;
     pages: any = [];
-    consultaGroup: FormGroup;
+    current_page: any = null;
+    consultas: any = null;
+    url_base = environment.servidor + 'consultas-imagen/';
+    valor = '';
     constructor(private consultaService: ConsultaService,
-                private fb: FormBuilder) {
-        this.createForm();
-        this.consultaService.index()
-            .subscribe((res: any) => {
-                this.consultas = res;
-                this.loadPages();
-            });
-    }
-
-    ngOnInit() {
-    }
-
-    createForm() {
-        this.consultaGroup = this.fb.group({
-            'valor' : new FormControl()
+                private toastrService:ToastrService ) {
+        this.consultaService.index().subscribe((res: any) => {
+            this.consultas = res;
+            this.current_page = this.consultas.current_page;
+            this.prev_page = this.consultas.prev_page_url;
+            this.next_page = this.consultas.next_page_url;
+            this.last_page = this.consultas.last_page;
+            this.loadPages();
         });
     }
-
+    ngOnInit() {
+    }
     loadPages() {
         this.pages = [];
-        for (let i = 1; i <= this.consultas.last_page; i++) {
+        for (let i = 1; i <= this.consultas.last_page;  i++) {
             this.pages.push({
                 page: i,
-                url: this.base + 'profesionales?page=' + i
+                url: this.consultas.path + '?page=' + i
             });
         }
     }
-
-    go(url) {
-        this.consultaService.go(url)
+    loadPagination(url: string) {
+        this.consultaService.pagination(url)
             .subscribe((res: any) => {
                 this.consultas = res;
+                this.current_page = this.consultas.current_page;
+                this.prev_page = this.consultas.prev_page_url;
+                this.next_page = this.consultas.next_page_url;
+                this.last_page = this.consultas.last_page;
                 this.loadPages();
             });
     }
-
-    buscar() {
-        const valor = this.consultaGroup.value.valor;
+    buscar(valor: string) {
         this.consultaService.buscar(valor)
             .subscribe((res: any) => {
                 this.consultas = res;
+                this.current_page = this.consultas.current_page;
+                this.prev_page = this.consultas.prev_page_url;
+                this.next_page = this.consultas.next_page_url;
+                this.last_page = this.consultas.last_page;
                 this.loadPages();
             });
     }
-
 }

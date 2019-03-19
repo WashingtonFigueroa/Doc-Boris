@@ -24,6 +24,13 @@ import {SucursalesComponent} from './sucursales/sucursales.component';
 import {SucursalesIndexComponent} from './sucursales/sucursales-index/sucursales-index.component';
 import {SucursalesCreateComponent} from './sucursales/sucursales-create/sucursales-create.component';
 import {SucursalesUpdateComponent} from './sucursales/sucursales-update/sucursales-update.component';
+import {MensajesComponent} from './mensajes/mensajes.component';
+import {MensajesIndexComponent} from './mensajes/mensajes-index/mensajes-index.component';
+import {CargoComponent} from './cargo/cargo.component';
+import {CargoIndexComponent} from './cargo/cargo-index/cargo-index.component';
+import {CargoCreateComponent} from './cargo/cargo-create/cargo-create.component';
+import {CargoUpdateComponent} from './cargo/cargo-update/cargo-update.component';
+import {PrivilegioComponent} from './privilegio/privilegio.component';
 
 const routes: Routes = [
   {
@@ -87,6 +94,48 @@ const routes: Routes = [
                 {
                     path: 'editar/:cliente_id',
                     component: ReporteUpdateComponent
+                },
+                {
+                    path: '',
+                    redirectTo: 'listar',
+                    pathMatch: 'full'
+                }
+            ]
+        },
+        {
+            path: 'cargos',
+            component: CargoComponent,
+            children: [
+                {
+                    path: 'listar',
+                    component: CargoIndexComponent
+                },
+                {
+                    path: 'crear',
+                    component: CargoCreateComponent
+                },
+                {
+                    path: 'editar/:cliente_id',
+                    component: CargoUpdateComponent
+                },
+                {
+                    path: '',
+                    redirectTo: 'listar',
+                    pathMatch: 'full'
+                }
+            ]
+        },
+        {
+            path: 'privilegios',
+            component: PrivilegioComponent
+        },
+        {
+            path: 'mensajes',
+            component: MensajesComponent,
+            children: [
+                {
+                    path: 'listar',
+                    component: MensajesIndexComponent
                 },
                 {
                     path: '',

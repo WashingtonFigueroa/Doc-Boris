@@ -1,0 +1,58 @@
+<div class="container">
+  <h3 class="header-title">Lista de Mensajes</h3>
+  <div class="row">
+    <div class="col-sm">
+      <form (submit)="buscar(valor)" class="form-inline" role="form">
+        <div class="form-group">
+          <input type="email" class="form-control" [(ngModel)]="valor" name="valor">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive" *ngIf="mensajes !== null">
+        <table class="table table-hover">
+          <thead style="background-color: #0f192a">
+          <tr>
+            <th>N.</th>
+            <th>Nombres</th>
+            <th>Asunto</th>
+            <th>Email</th>
+            <th>Mensaje</th>
+            <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let mensaje of mensajes.data; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ mensaje.nombre }}</td>
+            <td>{{ mensaje.asunto }}</td>
+            <td>{{ mensaje.email }}</td>
+            <td>{{ mensaje.mensaje }}</td>
+            <td>
+              <button
+                      (click)="destroy(mensaje, i)"
+                      class="btn btn-xs btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="mensajes !== null && mensajes.last_page > 1" class="paginacion text-center">
+        <div>
+          Página {{ mensajes.current_page }} de {{ mensajes.last_page }}
+        </div>
+        <button class="paginacion-btn" (click)="loadPagination(mensajes.first_page_url)"><i class="fa fa-backward"></i></button>
+        <button class="paginacion-btn" (click)="loadPagination(mensajes.prev_page_url)" [disabled]="mensajes.prev_page_url === null"><i class="fa fa-chevron-left"></i></button>
+        <button class="paginacion-btn" *ngFor="let page of pages" [class.activated]="page.page == mensajes.current_page" (click)="loadPagination(page.url)">{{ page.page }}</button>
+        <button class="paginacion-btn" (click)="loadPagination(mensajes.next_page_url)" [disabled]="mensajes.next_page_url === null"><i class="fa fa-chevron-right"></i></button>
+        <button class="paginacion-btn" (click)="loadPagination(mensajes.last_page_url)"><i class="fa fa-forward"></i></button>
+      </div>
+    </div>
+  </div>
+</div>

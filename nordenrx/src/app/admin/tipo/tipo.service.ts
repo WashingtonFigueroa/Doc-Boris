@@ -32,4 +32,7 @@ export class TipoService {
     buscar(valor: string) {
         return this.http.get(this.base + 'buscar-tipos/' + valor);
     }
+    pagination(url: string) {
+        return this.http.get(url);
+    }
 }

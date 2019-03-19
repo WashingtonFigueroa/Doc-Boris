@@ -90,16 +90,17 @@
           <form [formGroup]="mensajeGroup" (submit)="store()">
           <div class="row">
             <div class="col-lg-6 form-group">
-              <input name="nombre" formControlName="nombre" placeholder="Ingrese su nombre" class="common-input mb-20 form-control" required="" type="text">
-              <input name="email" formControlName="email" placeholder="Ingrese su email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" class="common-input mb-20 form-control" required="" type="email">
-              <input name="asunto" formControlName="asunto" placeholder="Asunto"  class="common-input mb-20 form-control" required="" type="text">
+              <input name="nombre" onKeyUp="this.value=this.value.toUpperCase();" formControlName="nombre" placeholder="Ingrese su nombre" class="common-input mb-20 form-control" required="" type="text">
+                <input type="email" placeholder="Ingrese su email" class="common-input mb-20 form-control" id="email" name="email" formControlName="email" />
+                <small class="alert-danger" *ngIf="mensajeGroup.get('email').status ==='INVALID' && mensajeGroup.get('email').dirty">Correo invalido</small>
+                <input name="asunto" onKeyUp="this.value=this.value.toUpperCase();" formControlName="asunto" placeholder="Asunto"  class="common-input mb-20 form-control" required="" type="text">
             </div>
             <div class="col-lg-6 form-group">
-              <textarea class="common-textarea form-control" formControlName="mensaje" name="mensaje" placeholder="Mensaje" required=""></textarea>
+              <textarea class="common-textarea form-control" onKeyUp="this.value=this.value.toUpperCase();" formControlName="mensaje" name="mensaje" placeholder="Mensaje" required=""></textarea>
             </div>
             <div class="col-lg-12">
               <div class="alert-msg" style="text-align: left;"></div>
-              <button class="genric-btn primary circle" style="float: right;">Enviar Mensaje</button>
+              <button class="genric-btn primary circle" style="float: right;" [disabled]="mensajeGroup.status === 'INVALID'">Enviar Mensaje</button>
             </div>
           </div>
         </form>

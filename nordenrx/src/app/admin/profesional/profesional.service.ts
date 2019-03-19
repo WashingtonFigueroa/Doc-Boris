@@ -13,6 +13,9 @@ export class ProfesionalService {
     index() {
         return this.http.get(this.base + 'profesionales');
     }
+    buscar(valor: string) {
+        return this.http.get(this.base + 'buscar-profesionales/' + valor);
+    }
     listar() {
         return this.http.get(this.base + 'listar-profesionales');
     }
@@ -31,10 +34,10 @@ export class ProfesionalService {
     go(url: string) {
         return this.http.get(url);
     }
-    buscar(valor: string) {
-        return this.http.get(this.base + 'buscar-profesionales/' + valor);
-    }
     sri(documento: string) {
         return this.http.get(`${this.base}sri/${documento}`);
+    }
+    pagination(url: string) {
+        return this.http.get(url);
     }
 }

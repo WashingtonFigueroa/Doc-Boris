@@ -23,11 +23,11 @@
                 </section>
                 <section class="form-group">
                   <label for="razon_social">Razón Social</label>
-                  <input type="text" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
+                  <input type="text" onKeyUp="this.value=this.value.toUpperCase();" class="form-control" formControlName="razon_social" name="razon_social" id="razon_social">
                 </section>
                 <section class="form-group">
                   <label for="direccion">Dirección</label>
-                  <input type="text" class="form-control" formControlName="direccion" name="direccion" id="direccion">
+                  <input type="text" onKeyUp="this.value=this.value.toUpperCase();" class="form-control" formControlName="direccion" name="direccion" id="direccion">
                 </section>
               </div>
               <div class="col-md-6">
@@ -37,19 +37,16 @@
                 </section>
                 <section class="form-group">
                   <label for="celular">Celular</label>
-                  <input type="text" class="form-control" formControlName="celular" name="celular" id="celular" maxlength="10">
+                  <input type="text" class="form-control" formControlName="celular" name="celular" id="celular" maxlength="10" onkeypress="if(event.keyCode < 45 || event.keyCode > 57) event.returnValue=false">
                 </section>
                 <section class="text-right">
+                  <button [disabled]="clienteGroup.status === 'INVALID'"
+                          class="btn btn-primary">Actualizar</button>&nbsp;&nbsp;
                   <a routerLink="/admin/clientes"
                      class="btn-danger-link"> Cancelar</a>
-                  <button
-                          [disabled]="clienteGroup.status === 'INVALID'"
-                          class="btn btn-primary">Actualizar</button>
                 </section>
               </div>
             </div>
-
-
           </form>
         </div>
       </div>

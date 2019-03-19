@@ -6,15 +6,21 @@
         <div class="card-body">
           <form *ngIf="tipo !== null" [formGroup]="tipoGroup" (submit)="update()">
             <section class="form-group">
-              <label for="tipo">Tipo Radiografía</label>
+              <label for="categoria">Categoria</label>
+              <select name="categoria" id="categoria"
+                      formControlName="categoria"
+                      class="form-control">
+                <option value="radiografia">Radiografía</option>
+                <option value="tomografia">Tomografía</option>
+              </select>
+            </section>
+            <section class="form-group">
+              <label for="tipo">Tipo {{ tipoGroup.value.categoria }}</label>
               <input type="text" class="form-control" formControlName="tipo" name="tipo" id="tipo">
             </section>
             <section class="text-right">
-              <a routerLink="/admin/tipos"
-                 class="btn-danger-link"> Cancelar</a>
-              <button
-                      [disabled]="tipoGroup.status === 'INVALID'"
-                      class="btn btn-primary">Actualizar</button>
+              <button [disabled]="tipoGroup.status === 'INVALID'" class="btn btn-primary">Actualizar</button>&nbsp;&nbsp;
+              <a routerLink="/admin/tipos" class="btn-danger-link"> Cancelar</a>
             </section>
           </form>
         </div>

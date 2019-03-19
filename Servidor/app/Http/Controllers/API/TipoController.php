@@ -10,7 +10,7 @@ class TipoController extends Controller
 {
     public function index()
     {
-        $tipo = tipo::orderBy('tipo_id','desc')->paginate(10);
+        $tipo = tipo::orderBy('tipo_id','desc')->paginate(5);
         return response()->json($tipo, 200);
     }
 

@@ -9,6 +9,6 @@ export class ContactosService {
     base = environment.servidor;
     constructor(private http: HttpClient) { }
     store(request) {
-        return this.http.post(this.base + 'mensaje', request);
+        return this.http.post(this.base + 'mensajes', request);
     }
 }

@@ -10,7 +10,7 @@ class ProfesionalController extends Controller
 {
     public function index()
     {
-        $profesional = Profesional::orderBy('profesional_id','desc')->paginate(10);
+        $profesional = Profesional::orderBy('profesional_id','desc')->paginate(5);
         return response()->json($profesional, 200);
     }
 

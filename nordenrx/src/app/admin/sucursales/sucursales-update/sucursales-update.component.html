@@ -5,8 +5,6 @@
       <div class="card">
         <div class="card-body">
           <form *ngIf="sucursal !== null" [formGroup]="sucursalGroup" (submit)="update()">
-
-
               <section class="form-group">
                 <label for="ciudad">Ciudad</label>
                 <input type="text" class="form-control" formControlName="ciudad" name="ciudad" id="ciudad" >
@@ -20,16 +18,11 @@
                 <input type="text" class="form-control" formControlName="telefono" name="telefono" id="telefono">
               </section>
               <section class="text-right">
-                <a routerLink="/admin/sucursales"
+                  <button [disabled]="sucursalGroup.status === 'INVALID'"
+                          class="btn btn-primary">Actualizar</button>&nbsp;&nbsp;
+                  <a routerLink="/admin/sucursales"
                    class="btn-danger-link"> Cancelar</a>
-                <button
-                        [disabled]="sucursalGroup.status === 'INVALID'"
-                        class="btn btn-primary">Actualizar</button>
               </section>
-
-
-
-
           </form>
         </div>
       </div>
