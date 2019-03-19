@@ -9,6 +9,7 @@ use App\Mail\TomografiaMail;
 use App\Profesional;
 use App\Radiografia;
 use App\RadiografiaTomografia;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
@@ -76,6 +77,10 @@ class ConsultaController extends Controller
                 'razon_social' => $profesional->razon_social,
                 'created_at' => $radiografia->created_at
             ]));
+            $cliente = new Client();
+            $local = 'http://localhost:8080/api/';
+            $response = $cliente->get($local . 'consultas-zip/' . $radiografia->nombre);
+
         } else {
             Mail::send(new TomografiaMail([
                 'filename' => $radiografia->nombre,

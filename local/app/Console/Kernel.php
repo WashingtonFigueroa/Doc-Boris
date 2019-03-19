@@ -99,29 +99,6 @@ class Kernel extends ConsoleKernel
                 ];
                 $response = $cliente->post($local . 'tomografias', $params);
             }
-
-            $tomografias = Tomografia::where('creado', '=', false)
-                ->selectRaw('zip, carpeta')
-                ->get();
-/*            $data = \GuzzleHttp\json_decode( $result->getBody() );*/
-            $public = public_path() ;
-            foreach ($tomografias as $tomografia) {
-                $carpeta = $public .'\\tomografias\\'. explode("/", $tomografia->carpeta)[1];
-                $zip = $public . '\\tomografias\\' .$tomografia->zip;
-                $script = base_path() . '\zip.vbs';
-                $command = 'CScript "' . $script .'" "'. $carpeta .'" "'. $zip .'"';
-
-/*                $process = new Process('CScript "C:\Users\HP User\Documents\trabajos\washington\Doc-Boris\local\zip.vbs" "C:\Users\HP User\Desktop\prueba" "C:\Users\HP User\Desktop\prueba.zip"');*/
-                $process = new Process($command);
-                $process->run();
-                if (!$process->isSuccessful()){
-                    throw new ProcessFailedException($process);
-                }
-                echo $process->getOutput();
-                $tomografia_no_creada = Tomografia::where('zip', '=', $tomografia->zip)->first();
-                $tomografia_no_creada->creado = true;
-                $tomografia_no_creada->save();
-            }
         })->everyMinute();
     }
 

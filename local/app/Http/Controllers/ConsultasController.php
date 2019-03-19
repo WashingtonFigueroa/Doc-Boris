@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Consultas;
+use Chumper\Zipper\Facades\Zipper;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process;
 
 class ConsultasController extends Controller
 {
@@ -104,5 +107,24 @@ class ConsultasController extends Controller
             'storage_path' => storage_path('app/radiografias/' . $filename)
         ], 200);*/
         return response()->file(storage_path('app/radiografias/' . $filename));
+    }
+
+    public function zip($radiografia) {
+        $archivo = substr($radiografia, 0, -4);
+        $programa = base_path() . '\\comprimir-archivo.bat';
+
+        $command = '"' . $programa .'" '.  $archivo . " " . $radiografia;
+/*        exec('c:\WINDOWS\system32\cmd.exe /c START ' . $script);*/
+        $process = new Process($command);
+        $process->run();
+        if (!$process->isSuccessful()){
+            throw new ProcessFailedException($process);
+        }
+        $data = $process->getOutput();
+
+        $files = glob(storage_path('app/warehouse/' . $archivo . '/*'));
+        Zipper::make(storage_path('app/warehouse/' . $archivo . '.zip'))->add($files)->close();
+
+        return response()->json("exito de zip", 200);
     }
 }

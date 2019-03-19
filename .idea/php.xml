@@ -186,7 +186,15 @@
       <path value="$PROJECT_DIR$/servidor/vendor/nexmo/client" />
       <path value="$PROJECT_DIR$/Servidor/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/Servidor/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/local/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/local/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/local/vendor/chumper/zipper" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/local/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
 </project>
