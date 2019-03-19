@@ -41,6 +41,13 @@ import {SucursalesService} from "./sucursales/sucursales.service";
 import { MensajesComponent } from './mensajes/mensajes.component';
 import { MensajesIndexComponent } from './mensajes/mensajes-index/mensajes-index.component';
 import {MensajesService} from './mensajes/mensajes.service';
+import { CargoComponent } from './cargo/cargo.component';
+import { CargoIndexComponent } from './cargo/cargo-index/cargo-index.component';
+import { CargoUpdateComponent } from './cargo/cargo-update/cargo-update.component';
+import { CargoCreateComponent } from './cargo/cargo-create/cargo-create.component';
+import { PrivilegioComponent } from './privilegio/privilegio.component';
+import {CargoService} from './cargo/cargo.service';
+import {PrivilegioService} from './privilegio/privilegio.service';
 
 @NgModule({
   imports: [
@@ -79,7 +86,13 @@ import {MensajesService} from './mensajes/mensajes.service';
     SucursalesUpdateComponent,
     SucursalesCreateComponent,
     MensajesComponent,
-    MensajesIndexComponent],
+    MensajesIndexComponent,
+    CargoComponent,
+    CargoIndexComponent,
+    CargoUpdateComponent,
+    CargoCreateComponent,
+    PrivilegioComponent,
+    ],
   providers: [RadiografiaService,
       ClienteService,
       ConsultaService,
@@ -89,6 +102,8 @@ import {MensajesService} from './mensajes/mensajes.service';
       SucursalesService,
       ConsultaService,
       MensajesService,
+      CargoService,
+      PrivilegioService,
   ]
 })
 export class AdminModule { }
